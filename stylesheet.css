@@ -43,6 +43,7 @@ header {
 .header h1 {
   margin: 0;
   padding-left: 10px;
+  font-size: 20px;
 }
 
 .header ul {
@@ -59,6 +60,7 @@ header {
   padding-right: 10px;
   padding-top: 10px;
   font-weight: 700;
+  font-size: 20px;
 }
 
 a {
@@ -67,6 +69,25 @@ a {
 a:visited {
   color: white;
   text-decoration: none;
+}
+
+.mainheader {
+  display:flex;
+  justify-content: center;
+  text-align: center;
+  padding-top: 250px;
+  flex-direction: column;
+}
+.mainheader h1 {
+  color: white;
+  font-size: 40px;
+  padding-bottom: 50px;
+}
+
+.mainheader p {
+  color: White;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 
