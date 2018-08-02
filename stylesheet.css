@@ -8,6 +8,7 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+
 @font-face {
   font-family: "Roboto";
   src: url("Roboto-light-webfont.woff") format("woff");
@@ -43,6 +44,7 @@ header {
 .header h1 {
   margin: 0;
   padding-left: 10px;
+  padding-top: 10px;
   font-size: 20px;
 }
 
@@ -103,4 +105,37 @@ article {
   margin-left: auto;
   margin-right: auto;
   z-index: 0;
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 400px) {
+ .header h1 {
+   font-size: 40px;
+   text-align: center;
+   width: 100%;
+   padding-top: 100px;
+
+
+ }
+ .header ul {
+   width: 100%;
+ }
+
+ .mainheader {
+   padding-top: 20%;
+ }
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+  header {
+    font-size: 60px;
+  }
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 961px) {
+  body {
+    background-color: #E5E5E5; /* Blue */
+  }
 }
