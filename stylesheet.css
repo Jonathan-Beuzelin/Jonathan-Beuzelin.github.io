@@ -128,8 +128,34 @@ article {
 
 /* Tablet Styles */
 @media only screen and (min-width: 401px) and (max-width: 960px) {
-  header {
+  .header h1 {
+    font-size: 70px;
+    text-align: center;
+    width: 100%;
+    padding-top: 100px;
+
+
+  }
+  .header ul {
+    width: 100%;
+  }
+
+  .header li {
+    font-size: 30px;
+  }
+
+  .mainheader {
+    padding-top: 20%;
+  }
+
+  .mainheader h1 {
     font-size: 60px;
+  }
+
+  .mainheader p {
+    font-size: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 
