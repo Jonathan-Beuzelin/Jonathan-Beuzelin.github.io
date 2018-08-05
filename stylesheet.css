@@ -26,7 +26,8 @@ header {
   background-image: url(background.jpg);
   width: 100%;
   height: 100vh;
-  padding: 0 0 40%;
+  padding-left: 20px;
+  padding-right:20px;
   background-size: 100%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -59,19 +60,33 @@ header {
 
 .header li {
   padding-left: 10px;
-  padding-right: 10px;
   padding-top: 10px;
   font-weight: 700;
   font-size: 20px;
 }
 
-a {
-  text-decoration: none;
+.header li:last-of-type {
+  padding-right: 20px;
 }
+
 a:visited {
   color: white;
   text-decoration: none;
 }
+
+a:hover {
+  color: lightblue;
+}
+
+a:active {
+  color: darkblue;
+}
+
+a {
+  color: #DEDEDE;
+  text-decoration: none;
+}
+
 
 .mainheader {
   display:flex;
@@ -92,9 +107,12 @@ a:visited {
   font-size: 20px;
 }
 
+/*bio*/
 
 article {
   background-color: #34404C;
+  padding-left: 20px;
+  padding-right: 20px;
   width: 100%;
   height: 100vh;
   padding: 0 0 40%;
@@ -103,7 +121,6 @@ article {
   z-index: 0;
 }
 
-/*Main section*/
 .toparticle {
   display: flex;
   justify-content: flex-start;
@@ -155,7 +172,8 @@ article li {
 }
 
 .whatido {
-  padding-left: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .bottomarticle {
@@ -219,6 +237,7 @@ form h1 {
   padding-top: 150px;
 }
 
+
 .contactme {
   display: flex;
   flex-direction: column;
@@ -240,7 +259,23 @@ form h1 {
 .formrow input {
   background-color: #E5E5E5;
   border-radius: 5px;
+  border: black solid 1px;
+  padding: 0px 10px 0px 10px;
+  font-weight: 600;
 }
+
+textarea {
+  border: ridge 3px black;
+  padding: 5px 10px 5px 10px;
+  font-weight: 600;
+}
+
+.formrow input[type=name]:focus,
+.formrow input[type=company]:focus,
+textarea:focus {
+    background-color: lightblue;
+}
+
 
 .formrow:first-of-type {
   padding-top: 25px;
@@ -257,10 +292,6 @@ form h1 {
   padding-right: 5px;
 }
 
-.checkbox1 {
-  padding-right: 10px;
-}
-
 .textarea {
   resize:none;
   margin-top: 20px;
@@ -275,6 +306,8 @@ form h1 {
   padding: 10px;
   border-radius: 5px;
   font-weight: bold;
+  background-color: lightblue;
+  border: solid 1px black;
 }
 
 
