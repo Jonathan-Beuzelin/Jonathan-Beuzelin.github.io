@@ -395,11 +395,16 @@ article p {
   width: 100%;
 }
 
+
+.contactmeform {
+  height: 90vh;
+}
+
 .contactme {
   padding: 15px;
   margin:0;
   width: 100%;
-  height:68%;
+  padding-bottom: 30px;
 }
 
  form h1 {
@@ -407,6 +412,10 @@ article p {
    width: 100%;
    padding-top: 105px;
    padding-bottom: 40px;
+ }
+
+ .contactmeform p {
+   text-align: center;
  }
 
  .textarea {
