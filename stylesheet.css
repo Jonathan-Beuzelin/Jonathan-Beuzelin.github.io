@@ -404,7 +404,8 @@ article p {
 
 
 .contactmeform {
-  height: 100vh;
+  min-height: 100vh;
+  height: 100%;
 }
 
 .contactme {
@@ -412,6 +413,7 @@ article p {
   margin:0;
   width: 100%;
   padding-bottom: 30px;
+  margin-bottom: 10px
 }
 
  form h1 {
