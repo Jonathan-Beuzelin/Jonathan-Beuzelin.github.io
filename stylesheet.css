@@ -207,7 +207,7 @@ article li {
   background-color: #92A2BB;
   width: 100%;
   height: 100vh;
-  padding: 0 0 40%;
+  padding:0;
   margin-left: auto;
   margin-right: auto;
   z-index: 0;
@@ -218,27 +218,50 @@ article li {
   width: 100%;
   padding-top: 50px;
   font-size: 40px;
-  margin-bottom: 200px;
+  margin-bottom: 100px;
 }
 
-.projectsicons {
+.projecticons {
   display: flex;
-  flex-direction: row;
+  height: 0 auto;
+  width: 0 auto;
+  justify-content: space-around;
 }
 
-.projecticons a {
-  width: 0;
-  padding: 100px;
-  background-image: url(drums.jpg);
-  align-items: center;
+.container {
+  display: flex;
+  justify-content: space-around;
+  box-sizing: border-box;
+  text-align: center;
+  height: 188px;
+  width: 250px;
+  overflow: hidden;
   margin-right: 15px;
   margin-left: 15px;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  font-weight: bold;
-  font-size: 30px;
+  border-radius: 20px;
+
 }
 
+.container a {
+  position: relative;
+  height: 0;
+  padding: 50%;
+  padding-top: 25%;
+  font-weight: bold;
+  font-size: 50px;
+}
+
+.drumset a {
+  background-image: linear-gradient(to left bottom, #2468cf, #0099f2, #00bfd4, #00dc85, #a8eb12);
+}
+
+.clock a {
+  background-image: linear-gradient(to left top, #9d18b9, #fa007b, #ff542f, #f3aa00, #a8eb12);
+}
+
+.fit a {
+  background-image: linear-gradient(to bottom, #edcf65, #edae45, #eb8a2f, #e76128, #e02c2c);
+}
 
 
 /*contactme*/

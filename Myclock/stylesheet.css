@@ -1,0 +1,49 @@
+* {
+  margin: auto;
+  padding: auto;
+}
+
+
+header h1 {
+  text-align: center;
+}
+
+.clockface {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-content: center;
+  margin-top: 12%;
+  z-index: 2;
+}
+
+.hands {
+  width:12%;
+  height:6px;
+  background:black;
+  position: absolute;
+  top: 50%;
+  left: 37.8%;
+  margin: 0;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  transition: all 0.5s;
+  border-radius: 10px;
+}
+
+
+.minute-hand {
+  height: 7px;
+}
+
+.second-hand {
+  height: 5px;
+}
+
+.hour-hand {
+  height: 10px;
+}
+
+html {
+  background-color: lightgrey;
+}
