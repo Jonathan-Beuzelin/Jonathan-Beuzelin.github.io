@@ -51,7 +51,7 @@ kbd {
   border-radius: 50%;
   margin-right: 10px;
   margin-left: 10px;
-  margin-bottom: 30px;
+  margin-top: 30px;
   font-size: 35px;
   font-weight: bold;
   color: lightgrey;
@@ -63,4 +63,5 @@ kbd {
   border: silver 6px solid;
   font-size: 40px;
   color: gold;
+  margin-bottom: -25px;
 }
