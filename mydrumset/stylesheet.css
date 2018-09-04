@@ -40,6 +40,12 @@ kbd {
   flex-direction: row;
   flex-wrap: wrap;
 }
+
+
+.keycontainer {
+  height: 300px;
+  width: 270px;
+}
 .key {
   display: flex;
   flex-direction: column;
@@ -64,4 +70,5 @@ kbd {
   font-size: 40px;
   color: gold;
   margin-bottom: -25px;
+  margin-left:
 }
