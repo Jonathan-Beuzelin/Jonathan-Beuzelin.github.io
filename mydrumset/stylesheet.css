@@ -23,10 +23,17 @@ section {
 }
 
 header h1{
-  margin-bottom: 90px;
+  margin-bottom: 50px;
   text-align: center;
   color: lightgrey;
   font-size: 40px;
+}
+
+header p {
+  color: lightgrey;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
 }
 
 kbd {
@@ -70,5 +77,19 @@ kbd {
   font-size: 40px;
   color: gold;
   margin-bottom: -25px;
-  margin-left:
+  transition: all .07s;
+}
+
+
+/*responsiveness*/
+
+@media only screen and (min-width: 1680px) and (max-width: 1919px) {
+
+.keycontainer {
+  height: 340px;
+  width: 300px;
+}
+
+.key {
+  padding: 7rem;
 }
