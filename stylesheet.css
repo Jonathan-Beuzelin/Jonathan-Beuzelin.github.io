@@ -123,9 +123,12 @@ article {
 
 .toparticle {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-around;
   flex-direction: row;
   text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 100px;
 }
 
 article h1 {
@@ -134,14 +137,14 @@ article h1 {
   text-align: center;
   color: #e6e6e6;
   padding-top: 50px;
+  font-weight: bolder;
 }
 
 article p {
   text-align: left;
-  padding-left: 20px;
-  line-height: 1.8em;
+  line-height: 1.4em;
   padding-bottom: 10px;
-  font-weight: 400;
+  font-weight: bold;
   font-size: 20px;
 }
 
@@ -150,30 +153,28 @@ article li {
   color: #e6e6e6;
   font-size: 20px;
   list-style: none;
+  font-weight: bold;
 }
 
 .aboutme {
-  width: 50%;
+  width: 33%;
 }
 
-.aboutme h1 {
-  padding-right: 200px;
-}
 
-.aboutme img {
-  float: right;
+
+.aboutmeimage {
   border-radius: 10px;
-}
-
-
-.whatido {
-  width: 50%;
-}
-
-.whatido {
+  padding-top: 50px;
   padding-left: 20px;
   padding-right: 20px;
+  width: 33%;
 }
+
+
+.whatido {
+  width: 33%;
+}
+
 
 .bottomarticle {
   display: flex;
