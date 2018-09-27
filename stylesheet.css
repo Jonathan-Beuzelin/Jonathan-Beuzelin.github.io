@@ -419,6 +419,12 @@ article h2 {
 
 .aboutmeimage {
   width: auto;
+  padding: 0;
+}
+
+.aboutmeimage img {
+  height: 200px;
+  width: 260px;
 }
 
 .toparticle {
