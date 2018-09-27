@@ -222,46 +222,47 @@ article li {
   margin-bottom: 100px;
 }
 
+
 .projecticons {
   display: flex;
-  height: 0 auto;
-  width: 0 auto;
   justify-content: space-around;
 }
 
-.container {
-  display: flex;
-  justify-content: space-around;
-  box-sizing: border-box;
-  text-align: center;
-  height: 188px;
-  width: 250px;
-  overflow: hidden;
-  margin-right: 15px;
-  margin-left: 15px;
-  border-radius: 20px;
 
-}
-
-.container a {
-  position: relative;
-  height: 0;
-  padding: 50%;
-  padding-top: 25%;
-  font-weight: bold;
-  font-size: 50px;
-}
-
-.drumset a {
+.drumset {
   background-image: linear-gradient(to left bottom, #2468cf, #0099f2, #00bfd4, #00dc85, #a8eb12);
+  width: 200px;
+  height: 200px;
+  font-size: 50px;
+  border-radius: 20px;
+  padding: auto;
+  line-height: 181px;
+  text-align: center;
+  font-weight: bold;
 }
 
-.clock a {
+.clock  {
   background-image: linear-gradient(to left top, #9d18b9, #fa007b, #ff542f, #f3aa00, #a8eb12);
+  width: 200px;
+  height: 200px;
+  font-size: 50px;
+  border-radius: 20px;
+  padding: auto;
+  line-height: 181px;
+  text-align: center;
+  font-weight: bold;
 }
 
-.quiz a {
+.quiz  {
   background-image: linear-gradient(to bottom, #edcf65, #edae45, #eb8a2f, #e76128, #e02c2c);
+  width: 200px;
+  height: 200px;
+  font-size: 50px;
+  border-radius: 20px;
+  padding: auto;
+  line-height: 181px;
+  text-align: center;
+  font-weight: bold;
 }
 
 
@@ -359,7 +360,7 @@ form p {
 
 /* Mobile Styles */
 @media only screen and (max-width: 414px) {
-
+/* landing page */
  .header h1 {
    font-size: 40px;
    text-align: center;
@@ -385,6 +386,7 @@ form p {
    padding-top: 20%;
  }
 
+/*about me section*/
 article {
   height: auto;
   display: flex;
@@ -395,8 +397,12 @@ article {
 article p {
   font-size: 16px;
   padding: 0;
-  text-align: center;
+  text-align: left;
   padding-bottom: 15px;
+}
+
+article h2 {
+  margin-top: 20px;
 }
 
 .aboutme,
@@ -406,15 +412,14 @@ article p {
   flex-direction: column;
   padding: 0;
 }
-.aboutme img {
-  align-self:center;
-  margin-bottom: 15px;
-}
 
 .aboutme h1 {
   padding-right: 0px;
 }
 
+.aboutmeimage {
+  width: auto;
+}
 
 .toparticle {
   display: flex;
@@ -423,6 +428,7 @@ article p {
   align-items: center;
   padding-left: 5px;
   padding-right:5px;
+  margin-bottom: 0;
 }
 
 .bottomarticle {
@@ -451,6 +457,24 @@ article p {
   width: 100%;
 }
 
+/*project section*/
+.projecticons {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.projecticons a{
+  height: 100px;
+  width: 45%;
+  line-height: 100px;
+  font-size: 187%;
+  margin-bottom: 10px;
+}
+
+
+
+
+/* contact section */
 
 .contactmeform {
   min-height: 100vh;
