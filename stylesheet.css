@@ -359,13 +359,14 @@ form p {
 
 
 /* Mobile Styles */
-@media only screen and (min-width: 320px) and (max-width: 679px) {
+@media only screen and (min-width: 320px) and (max-width: 479px) {
 /* landing page */
+
  .header h1 {
    font-size: 40px;
    text-align: center;
    width: 100%;
-   padding-top: 100px;
+   padding-top: 48px;
  }
 
  .mainheader h1 {
@@ -373,7 +374,7 @@ form p {
  }
 
  .mainheader p {
-   padding: 5px;
+   padding: 10px;
     background-color: rgba(255, 255, 255, .4);
     color: #252525;
  }
@@ -383,7 +384,167 @@ form p {
  }
 
  .mainheader {
-   padding-top: 20%;
+   padding-top: 3%;
+ }
+
+/*about me section*/
+article {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10px;
+}
+
+article p {
+  font-size: 16px;
+  padding: 0;
+  text-align: left;
+  padding-bottom: 15px;
+}
+
+article h2 {
+  margin-top: 20px;
+}
+
+.aboutme,
+.whatido {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+.aboutme h1 {
+  padding-right: 0px;
+}
+
+.aboutmeimage {
+  width: auto;
+  padding: 0;
+}
+
+.aboutmeimage img {
+  height: 200px;
+  width: 260px;
+}
+
+.toparticle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 5px;
+  padding-right:5px;
+  margin-bottom: 0;
+}
+
+.bottomarticle {
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.hobbies h1,
+.links h1,
+.reading h1 {
+  font-size: 24px;
+}
+
+.hobbies li,
+.link li,
+.reading li {
+  font-size: 16px;
+}
+
+.hobbies,
+.links {
+  width: 50%;
+}
+
+.reading {
+  width: 100%;
+}
+
+/*project section*/
+.projecticons {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.projecticons a{
+  height: 100px;
+  width: 45%;
+  line-height: 100px;
+  font-size: 187%;
+  margin-bottom: 10px;
+}
+
+/* contact section */
+
+.contactmeform {
+  min-height: 100vh;
+  height: 100%;
+}
+
+.contactme {
+  padding: 15px;
+  margin:0;
+  width: 100%;
+  padding-bottom: 30px;
+  margin-bottom: 10px
+}
+
+ form h1 {
+   font-size: 28px;
+   width: 100%;
+   padding-top: 65px;
+   padding-bottom: 40px;
+ }
+
+form p {
+  text-align: center;
+  padding-bottom: 35px;
+  font-weight: 600;
+}
+
+ .textarea {
+   padding: 0;
+   width: 100%;
+   margin-top: 30px;
+   margin-bottom: 30px;
+ }
+
+ .submit {
+   width: 50%;
+   align-self: center;
+ }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 679px) {
+/* landing page */
+
+ .header h1 {
+   font-size: 40px;
+   text-align: center;
+   width: 100%;
+   padding-top: 160px;
+ }
+
+ .mainheader h1 {
+   padding-bottom: 30px;
+ }
+
+ .mainheader p {
+   padding: 10px;
+    background-color: rgba(255, 255, 255, .4);
+    color: #252525;
+ }
+
+ .header ul {
+   width: 100%;
+ }
+
+ .mainheader {
+   padding-top: 26%;
  }
 
 /*about me section*/
@@ -519,6 +680,37 @@ form p {
    width: 50%;
    align-self: center;
  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 679px) and (orientation: landscape) {
+
+/*landing page*/
+  .header h1 {
+    font-size: 40px;
+    text-align: center;
+    width: 100%;
+    padding-top: 100px;
+  }
+
+  .mainheader {
+    padding-top: 35px;
+  }
+/*bio*/
+
+  .projects h1 {
+    margin-bottom: 15px;
+  }
+
+  .projecticons {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .projecticons a {
+    margin-left: 9px;
+    margin-right: 5px;
+    width: 31%;
+  }
 }
 
 /* Tablet Styles */
@@ -732,8 +924,18 @@ form p {
   .links h1,
   .reading h1 {
    font-size: 30px;
+   padding: 10px;
+  }
+}
+
+@media only screen and (min-width: 1441px) and (max-width:2000px) {
+  .hobbies h1,
+  .links h1,
+  .reading h1 {
+    padding-top: 0;
   }
 
-
-
+  .toparticle {
+    margin-bottom: 0;
+  }
 }
