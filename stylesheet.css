@@ -6,7 +6,7 @@
 
 body {
   font-family: "Roboto", sans-serif;
-  color: #e6e6e6;
+  color: white;
 }
 
 
@@ -55,12 +55,20 @@ header ul {
   top: 0;
   right: 8px;
   flex-direction: row;
+  transition: top 0.3s;
+  z-index: 10;
 }
 
 header li {
+  display: flex;
+  flex-direction: row;
   padding-right: 15px;
   font-weight: bold;
-  font-size: 21px;
+  font-size: 19px;
+}
+
+header li:first-of-type {
+  padding-left: 15px;
 }
 
 
@@ -94,9 +102,8 @@ header h1 {
   font-weight: bold;
   text-align: center;
   width: auto;
-  color: black;
   background-color: #fff;
-  background-color: rgba(255,255,255,0.5);
+  background-color: rgba(143,147,153,0.6);
 }
 
  /*about me*/
@@ -104,7 +111,7 @@ header h1 {
 article {
   min-width: 320px;
   max-width: auto;
-  background-color: #2fa9f2;
+  background-color: #1D1D1D;
 }
 
 article li {
@@ -115,6 +122,8 @@ article li {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  flex-direction: column;
+  height: 100%;
 }
 
 .aboutme h1 {
@@ -124,22 +133,31 @@ article li {
   margin-bottom: 25px;
 }
 
+.aboutme img {
+  margin-bottom: 40px;
+  align-self: center;
+}
+
 .aboutme p {
   padding-left: 15px;
   padding-right: 15px;
-  padding-bottom: 15px;
+  padding-bottom: 40px;
 }
 
-.aboutmeimage {
+.whatidomain {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  min-width: 320px;
+  height: auto;
+  text-align: center;
+  background-color: #424242;
 }
 
 .whatido {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   flex-direction: column;
-  text-align: center;
 }
 
 .whatido h1 {
@@ -164,22 +182,20 @@ article li {
 }
 
 
-.bottomarticle ul {
+.whatidomain ul {
   text-align: center;
 }
 
-.bottomarticle li {
+.whatidomain li {
   padding-top: 5px;
 }
 
-.bottomarticle a {
+.whatidomain a {
   color: gold;
 }
 
-.bottomarticle h1 {
-  text-align: center;
-  margin-top: 15px;
-  margin-bottom: 15px;
+.reading {
+  padding-bottom: 15px;
 }
 
 .hobbies {
@@ -196,7 +212,7 @@ section {
   min-width: 320px;
   min-height: 100vh;
   text-align: center;
-  background-color: #6e9dff;
+  background-color: #4F4F4F;
 }
 
 .projects {
@@ -269,13 +285,14 @@ form {
   width: 100%;
   min-width: 320px;
   min-height: 100vh;
+  background-color: #1C1C1C;
+  align-items: center;
 }
 
 .contactmeform {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #548afd
 }
 
 .contactmeform h1 {
@@ -302,12 +319,10 @@ form {
 
 .labelone {
   margin-left: 25px;
-  color:#817E7E;
   font-weight: bold;
 }
 
 .labeltwo {
-  color: #817E7E;
   font-weight: bold;
 }
 
@@ -333,6 +348,7 @@ textarea {
   font-weight: bold;
   font-size: 16px;
   background-color: #466df6;
+  color: #e6e6e6;
   padding-top: 5px;
   padding-bottom: 5px;
   padding-left: 15px;
@@ -393,36 +409,40 @@ form h1 {
   .toparticle {
     display: flex;
     flex-direction: row;
+    justify-content: center;
   }
   .aboutme {
-    width: 33%;
-  }
-
-  .aboutmeimage {
-    width: 33%;
-    margin-top: 15px;
+    width: 65%;
   }
 
   .whatido {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-self: center;
+  }
+
+  .whatidolower {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin-top: 50px;
+  }
+
+  .reading {
     width: 33%;
   }
 
-  .bottomarticle {
-    display: flex;
-    flex-direction: row;
- }
+  .hobbies{
+    width: 33%;
+  }
 
- .reading {
-   width: 33%;
- }
+  .links {
+    width: 33%;
+  }
 
- .hobbies {
-   width: 33%;
- }
-
- .links {
-   width: 33%;
- }
 
  form h1 {
    font-size: 42px;
@@ -468,17 +488,28 @@ form h1 {
     font-size: 20px;
   }
 
-
-  .aboutmeimage img {
-    width: 500px;
-    height: 429px;
+  .whatidomain {
+    min-height: 100vh;
   }
 
-  .aboutmeimage {
-    margin-top: 70px;
+  .whatidomain h1 {
+    font-size: 32px;
+  }
+
+  .whatidomain p {
+    font-size: 18px;
+  }
+
+  .whatidomain a {
+    font-size: 20px;
+  }
+
+  .whatidomain li {
+    font-size: 20px;
   }
 
   .contactme {
+    width: 50%;
     margin-left: 15px;
     margin-right: 15px;
     min-height: 500px;
@@ -489,7 +520,7 @@ form h1 {
   }
 
   textarea {
-    width: 75%;
+    width: 90%;
     height: 300px;
   }
 
@@ -516,6 +547,22 @@ form h1 {
   }
 
   article li {
+    font-size: 22px;
+  }
+
+  .whatidomain h1 {
+    font-size: 44px;
+  }
+
+  .whatidomain p {
+    font-size: 22px;
+  }
+
+  .Whatidomain a {
+    font-size: 22px;
+  }
+
+  .whatidomain li {
     font-size: 22px;
   }
 }
