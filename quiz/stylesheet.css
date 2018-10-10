@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.output {
+  width: 100%;
+  height: auto;
+  background-color: lightgrey;
+  text-align: center;
+}
+
+header h1  {
+  padding-bottom: 15px;
+  text-align: center;
+}
+
+.output h1  {
+  padding-bottom: 15px;
+  text-align: center;
+}
+
+.output h2  {
+  padding-bottom: 15px;
+}
+
+.output li {
+  line-height: 1.8;
+}
+
+.output li:last-of-type {
+  padding-bottom: 15px;
+}
