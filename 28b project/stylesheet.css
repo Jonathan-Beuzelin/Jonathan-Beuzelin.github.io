@@ -1,0 +1,305 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  color: #404347;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    font-size: 30px;
+    padding-bottom: 35px;
+}
+
+h2 {
+  font-size: 25px;
+  padding-bottom: 25px;
+}
+
+h3 {
+  font-size: 20px;
+  padding-bottom: 30px;
+}
+
+a {
+  text-decoration: none;
+  color: #a5a5a5;
+}
+
+a:hover {
+  color: #d9d9db;
+}
+
+
+nav {
+  min-width: 20%;
+  height: 100%;
+  background-color: #404347;
+  text-align: left;
+  padding-left: 30px;
+}
+
+nav h1 {
+  color: #a5a5a5;
+  padding-top: 40px;
+}
+
+nav h2 {
+  color: #a5a5a5;
+}
+
+
+nav h3 {
+  padding-top: 70px;
+  font-size: 30px;
+  color: #a5a5a5;
+}
+
+nav li {
+  padding-bottom: 15px;
+  color: lightgrey;
+  font-weight: bold;
+  list-style: none;
+  font-size: 18px;
+}
+
+
+nav p {
+  position: absolute;
+  bottom: 5px;
+  left: 10px;
+  font-weight: bold;
+  color: lightgrey;
+  font-size: 18px;
+}
+
+/*Overview*/
+.main {
+  width: 100%;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+
+.uppermain {
+  display: flex;
+  flex-direction: row;
+}
+
+.overview {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: left;
+  width: 50%;
+  padding: 40px;
+  padding-bottom: 10px;
+}
+
+.calls {
+  width: 50%;
+  text-align: left;
+  padding: 40px;
+  padding-bottom: 10px;
+}
+
+/* circle chart*/
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  margin: 0 20px 0 0;
+}
+
+.donut-chart {
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.donut-chart{
+  width: 200px;
+  height: 200px;
+  background: lightgrey;
+}
+
+.slice {
+  position:absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.slice.one {
+  clip: rect(0 200px 100px 0);
+  transform: rotate(90deg);
+  background-color: orange;
+  overflow: hidden;
+}
+
+.slice.two {
+  clip: rect(0 100px 200px 0);
+  transform: rotate(270deg);
+  background: lightgrey;
+}
+
+.chart-center {
+  position: absolute;
+  border-radius: 50%;
+  top: 10px;
+  left: 10px;
+  width: 180px;
+  height: 180px;
+  background: white;
+}
+
+.chart-center h1 {
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 20px;
+  color: black;
+  text-align: left;
+  margin-left: 40px;
+  margin-top: 51px;
+  padding: 0;
+}
+
+.chart-center h3 {
+  font-size: 47px;
+  font-weight: 700;
+  line-height: 112px;
+  color: #a5a5a5;
+  text-align: right;
+  margin-right: 38px;
+}
+
+/*middle of page*/
+
+.midheader h1 {
+  text-align: left;
+  padding: 15px;
+  padding-left: 40px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/*indicators*/
+
+.legends ul {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  list-style: none;
+  padding: 20px;
+  padding-bottom: 0;
+}
+
+.legends li {
+  margin-left: -70px;
+}
+
+.diamond {
+  background: #fff;
+  height: 10px;
+  transform:rotate(45deg);
+	width:10px;
+  margin-top: 3px;
+}
+
+.diamondone {
+  background-color: #4f7df2;
+}
+
+.diamondtwo {
+  background-color: lightgreen;
+}
+
+.diamondthree {
+  background-color: #dbd843;
+}
+
+.diamondfour {
+  background-color: #db8943;
+}
+
+.diamondfive {
+  background-color: #9c43bc;
+}
+
+.diamondsix {
+  background-color: lightgrey;
+}
+
+/*bottom chart*/
+
+.chartcontainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+  text-align: left;
+}
+
+.chartcontainer h3 {
+  padding: 5px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  height: 40px;
+  width: 100%;
+}
+
+.block {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/*Adherence*/
+.blockone {
+  width: 16%;
+  background: #4f7df2;
+  border-top-left-radius:20px;
+  border-bottom-left-radius: 20px;
+}
+
+/*Combination therapy*/
+.blocktwo {
+  width: 16%;
+  background-color: lightgreen;
+}
+
+/*Dosing*/
+.blockthree {
+  width: 16%;
+  background-color: #dbd843;
+}
+
+/*Guidelines*/
+.blockfour{
+  width: 16%;
+  background-color: #db8943;
+}
+
+/*Safety*/
+.blockfive {
+  width: 16%;
+  background-color: #9c43bc;
+}
+
+/*Other*/
+.blocksix {
+  width: 16%;
+  background-color: lightgrey;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
