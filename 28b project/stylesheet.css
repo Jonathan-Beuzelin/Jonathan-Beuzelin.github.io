@@ -122,8 +122,6 @@ nav p {
   position: relative;
   border-radius: 50%;
   overflow: hidden;
-}
-.donut-chart{
   width: 200px;
   height: 200px;
   background: lightgrey;
