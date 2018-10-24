@@ -6,7 +6,7 @@
 
 body {
   font-family: "Roboto", sans-serif;
-  color: white;
+  color: #e6e6e6;
 }
 
 
@@ -103,7 +103,7 @@ header h1 {
   text-align: center;
   width: auto;
   background-color: #fff;
-  background-color: rgba(143,147,153,0.6);
+  background-color: rgba(143,147,153,0.9);
 }
 
  /*about me*/
@@ -269,6 +269,18 @@ section {
 
 .quiz  {
   background-image: linear-gradient(to bottom, #edcf65, #edae45, #eb8a2f, #e76128, #e02c2c);
+  width: 200px;
+  height: 200px;
+  font-size: 50px;
+  border-radius: 20px;
+  padding: auto;
+  line-height: 181px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.twentyeightb {
+  background-image: linear-gradient(to right bottom, #accaf8, #90b0e2, #7497cd, #577fb8, #3967a3);
   width: 200px;
   height: 200px;
   font-size: 50px;
