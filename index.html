@@ -4,115 +4,109 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="stylesheet.css"/>
-  <title>JB | Jonathan Beuzelin</title>
+  <link rel="stylesheet" href="stylesheet.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <title>TwentyEightb</title>
 </head>
 <body>
-  <header>
-    <div class="section header">
-      <h1>Jonathan Beuzelin</h1>
-      <span id="time">&nbsp;</span>
+  <nav>
+    <ul>
+      <h1>Welcome,</h1>
+      <li></li>
+    </ul>
+    <ul>
+      <h3>Metrics</h3>
+      <li><a href="#">Overview</a></li>
+      <li><a href="#">Detailing</a></li>
+    </ul>
+    <ul>
+      <h3>Information</h3>
+      <li><a href="#">About profiles</a></li>
+      <li><a href="#">Detailing targets</a></li>
+    </ul>
+    <p>v1.1.7</p>
+  </nav>
+  <div class="main">
+    <div class="uppermain">
+      <section class="overview">
+        <h1>Overview</h1>
+        <h2>Next Call</h2>
+        <h3>Date:</h3>
+        <h3>account:</h3>
+        <h3>speciality:</h3>
+        <h3>profile:</h3>
+      </section>
+      <section class="calls">
+        <h1>Calls this month:</h1>
+        <div class="container">
+          <div class="donut-chart">
+            <div id="sliceOne" class="slice one"></div>
+            <div id="sliceTwo" class="slice two"></div>
+            <div id="centerChart" class="chart-center"></div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="midmain">
+     <section class="midheader">
+       <h1>Detailing topic Breakdown</h1>
+     </section>
+     <section class="legends">
         <ul>
-          <li><a href="#hiddenanchor">About me</a></li>
-          <li><a href="#hiddenanchor1">What I do</a></li>
-          <li><a href="#hiddenanchor2">Projects</a></li>
-          <li><a href="#hiddenanchor3">Contact</a></li>
+         <div class="diamond diamondone"></div>
+         <li>Adherence</li>
+         <div class="diamond diamondtwo"></div>
+         <li>Combination therapy</li>
+         <div class="diamond diamondthree"></div>
+         <li>Dosing</li>
+         <div class="diamond diamondfour"></div>
+         <li>Guidelines</li>
+         <div class="diamond diamondfive"></div>
+         <li>Safety</li>
+         <div class="diamond diamondsix"></div>
+         <li>Other</li>
         </ul>
-   </div>
-   <div class="section mainheader">
-     <h1>Front-End Developer.</h1>
-     <p>Based in Kingston-Upon-Hull, East Riding Of Yorkshire, I have learnt HTML, CSS and the basics of JavaScript.</p>
-   </div>
-
-
-  </header>
-
-<article>
-  <div class="section toparticle">
-    <a id="hiddenanchor" name="hiddenanchor"></a>
-    <div class="aboutme">
-      <h1>About me</h1>
-      <img src="me.png" width="310" height="220">
-      <p>Im 26, self-taught, extremely passionate about learning as much as I can about coding.</p>
-      <p>I look to expanding and improving my skillset who can work by himself or with a team, contributing ideas and discussion.</p>
-      <p>I see web development as a constantly evolving profession and I see that as a career where i can build beautiful and interactive websites while also enables me to persistently look at ways to improve my way of working or new ways of working, learning from those around me.</p>
-      <p>I like to think I am a knowledge sponge and do this through reading and learning a new skill and then implementing it to the way that I work or just something new which you can see examples of this in my project section during my endeavour with JavaScript which I am still fine tuning.</p>
+      </section>
+    </div>
+    <div id="chartContainer" class="chartcontainer">
+     <h3>Avg.all</h3>
+      <div class="row">
+        <div id="avgOne" class="block blockone"></div>
+        <div id="avgTwo" class="block blocktwo"></div>
+        <div id="avgThree" class="block blockthree"></div>
+        <div id="avgFour" class="block blockfour"></div>
+        <div id="avgFive" class="block blockfive"></div>
+        <div id="avgSix" class="block blocksix"></div>
+      </div>
+      <h3>Cautious</h3>
+      <div class="row">
+        <div id="cautiousOne" class="block blockone"></div>
+        <div id="cautiousTwo" class="block blocktwo"></div>
+        <div id="cautiousThree" class="block blockthree"></div>
+        <div id="cautiousFour" class="block blockfour"></div>
+        <div id="cautiousFive" class="block blockfive"></div>
+        <div id="cautiousSix" class="block blocksix"></div>
+      </div>
+      <h3>Complacent</h3>
+      <div class="row">
+        <div id="complacentOne" class="block blockone"></div>
+        <div id="complacentTwo" class="block blocktwo"></div>
+        <div id="complacentThree" class="block blockthree"></div>
+        <div id="complacentFour" class="block blockfour"></div>
+        <div id="complacentFive" class="block blockfive"></div>
+        <div id="complacentSix" class="block blocksix"></div>
+      </div>
+      <h3>Confident</h3>
+      <div class="row">
+        <div id="confidentOne" class="block blockone"></div>
+        <div id="confidentTwo" class="block blocktwo"></div>
+        <div id="confidentThree" class="block blockthree"></div>
+        <div id="confidentFour" class="block blockfour"></div>
+        <div id="confidentFive" class="block blockfive"></div>
+        <div id="confidentSix" class="block blocksix"></div>
+      </div>
     </div>
   </div>
-</article>
-
-<section>
-  <a id="hiddenanchor1" name="hiddenanchor1"></a>
-  <div class="whatidomain">
-    <div class="whatido">
-      <h1>What I do</h1>
-      <p>Utilizing responsive design with HTML and CSS with different fonts, I look to make beautiful websites, layouts, accessible content and easy to read with my code, implementing Flexbox and CSS.</p>
-      <p>I have experience dealing with clients from working in a call centre both in a business setting and a domestic setting and this has heightened my listening and speaking skills as well as my numeracy and literacy</p>
-      <div class="languages">
-       <h2>Languages I can use:</h2>
-       <ul>
-         <li>HTML</li>
-         <li>CSS</li>
-         <li>Javascript(beginner)</li>
-       </ul>
-      </div>
-    </div>
-    <div class="whatidolower">
-      <div class="reading">
-        <h1>Reading list</h1>
-        <ul>
-          <li>Internetingishard.com by Oliver James.</li>
-          <li>JavaScript for beginners by Adam Vardy.</li>
-          <li>TeamTreehouse.com beginner level javascript.</li>
-        </ul>
-      </div>
-       <div class="hobbies">
-         <h1>Hobbies</h1>
-         <ul>
-           <li>Learning french</li>
-           <li>reading books</li>
-           <li>Meeting new people</li>
-           <li>Learning new skills</li>
-           <li>Psychology</li>
-         </ul>
-       </div>
-       <div class="links">
-         <h1>Links</h1>
-         <ul>
-           <li><a href="https://github.com/Jonathan-Beuzelin">My Github</a></li>
-         </ul>
-       </div>
-   </div>
-</div>
-</section>
-  <section>
-    <div class="projects">
-      <a id="hiddenanchor2" name="hiddenanchor2"></a>
-        <h1>Projects</h1>
-        <div class="projecticons">
-          <a class="drumset" href="mydrumset/index.html">Drumset</a>
-          <a class="clock" href="Myclock/index.html">Clock</a>
-          <a class="quiz" href="quiz/quiz.html">Quiz</a>
-          <a class="twentyeightb" href="28b project/index.html">28B</a>
-        </div>
-  </section>
-  <form class="contactmeform" action="index.html" method="get">
-    <a id="hiddenanchor3" Name="hiddenanchor3"></a>
-      <h1>Contact me!</h1>
-      <p>(In production please contact me at Jonathan.Beuzelin@gmail.com)</p>
-    <div class="contactme">
-      <div class="formrow one">
-        <label class="labelone" for="Name">Name</label>
-        <input type="Name" name="Full-Name" value=""/>
-      </div>
-      <div class="formrow two">
-        <label class="labeltwo" for="Company">Company</label>
-        <input type="Company" name="Company-Name" value=""/>
-      </div>
-      <textarea class="textarea"name="Contact" rows="8" cols="80" placeholder="Write your message here."></textarea>
-      <button class="submit"type="submit" name="submit">Submit</button>
-    </div>
-  </form>
-<script type="text/javascript" src="JavaScript.js"></script>
+  <script src="28b.js" charset="utf-8"></script>
 </body>
 </html>
