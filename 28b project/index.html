@@ -12,7 +12,7 @@
   <nav>
     <ul>
       <h1>Welcome,</h1>
-      <li></li>
+      <li id="welcome"></li>
     </ul>
     <ul>
       <h3>Metrics</h3>
@@ -30,29 +30,50 @@
     <div class="uppermain">
       <section class="overview">
         <h1>Overview</h1>
-        <h2>Next Call</h2>
-        <h3>Date:</h3>
-        <h3>account:</h3>
-        <h3>speciality:</h3>
-        <h3>profile:</h3>
+        <table id="tableprofile">
+            <thead>
+                <tr>
+                    <th colspan="1">Next Call</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Date:</td>
+                    <td id = "date"></td>
+                </tr>
+                <tr>
+                  <td>Account:</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Speciality:</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Profile:</td>
+                  <td></td>
+                </tr>
+            </tbody>
+
+        </table>
       </section>
       <section class="calls">
         <h1>Calls this month:</h1>
         <div class="container">
-        <div class="donut-chart">
-          <div id="sliceOne" class="slice one"></div>
-          <div id="sliceTwo" class="slice two"></div>
-          <div id="centerChart" class="chart-center"></div>
+          <div class="donut-chart">
+            <div id="sliceOne" class="slice one"></div>
+            <div id="sliceTwo" class="slice two"></div>
+            <div id="centerChart" class="chart-center"></div>
+          </div>
         </div>
-      </div>
-     </section>
-   </div>
-   <div class="midmain">
+      </section>
+    </div>
+    <div class="midmain">
      <section class="midheader">
-      <h1>Detailing topic Breakdown</h1>
+       <h1>Detailing topic Breakdown</h1>
      </section>
      <section class="legends">
-       <ul>
+        <ul>
          <div class="diamond diamondone"></div>
          <li>Adherence</li>
          <div class="diamond diamondtwo"></div>
@@ -65,48 +86,48 @@
          <li>Safety</li>
          <div class="diamond diamondsix"></div>
          <li>Other</li>
-       </ul>
-     </section>
-   </div>
-   <div id="chartContainer" class="chartcontainer">
-      <h3>Avg.all</h3>
-   <div class="row">
-      <div id="avgOne" class="block blockone"></div>
-      <div id="avgTwo" class="block blocktwo"></div>
-      <div id="avgThree" class="block blockthree"></div>
-      <div id="avgFour" class="block blockfour"></div>
-      <div id="avgFive" class="block blockfive"></div>
-      <div id="avgSix" class="block blocksix"></div>
-   </div>
-   <h3>Cautious</h3>
-   <div class="row">
-      <div id="cautiousOne" class="block blockone"></div>
-      <div id="cautiousTwo" class="block blocktwo"></div>
-      <div id="cautiousThree" class="block blockthree"></div>
-      <div id="cautiousFour" class="block blockfour"></div>
-      <div id="cautiousFive" class="block blockfive"></div>
-      <div id="cautiousSix" class="block blocksix"></div>
-   </div>
-   <h3>Complacent</h3>
-   <div class="row">
-      <div id="complacentOne" class="block blockone"></div>
-      <div id="complacentTwo" class="block blocktwo"></div>
-      <div id="complacentThree" class="block blockthree"></div>
-      <div id="complacentFour" class="block blockfour"></div>
-      <div id="complacentFive" class="block blockfive"></div>
-      <div id="complacentSix" class="block blocksix"></div>
-   </div>
-   <h3>Confident</h3>
-   <div class="row">
-      <div id="confidentOne" class="block blockone"></div>
-      <div id="confidentTwo" class="block blocktwo"></div>
-      <div id="confidentThree" class="block blockthree"></div>
-      <div id="confidentFour" class="block blockfour"></div>
-      <div id="confidentFive" class="block blockfive"></div>
-      <div id="confidentSix" class="block blocksix"></div>
-   </div>
+        </ul>
+      </section>
+    </div>
+    <div id="chartContainer" class="chartcontainer">
+     <h3>Avg.all</h3>
+      <div class="row">
+        <div id="avgOne" class="block blockone"></div>
+        <div id="avgTwo" class="block blocktwo"></div>
+        <div id="avgThree" class="block blockthree"></div>
+        <div id="avgFour" class="block blockfour"></div>
+        <div id="avgFive" class="block blockfive"></div>
+        <div id="avgSix" class="block blocksix"></div>
+      </div>
+      <h3>Cautious</h3>
+      <div class="row">
+        <div id="cautiousOne" class="block blockone"></div>
+        <div id="cautiousTwo" class="block blocktwo"></div>
+        <div id="cautiousThree" class="block blockthree"></div>
+        <div id="cautiousFour" class="block blockfour"></div>
+        <div id="cautiousFive" class="block blockfive"></div>
+        <div id="cautiousSix" class="block blocksix"></div>
+      </div>
+      <h3>Complacent</h3>
+      <div class="row">
+        <div id="complacentOne" class="block blockone"></div>
+        <div id="complacentTwo" class="block blocktwo"></div>
+        <div id="complacentThree" class="block blockthree"></div>
+        <div id="complacentFour" class="block blockfour"></div>
+        <div id="complacentFive" class="block blockfive"></div>
+        <div id="complacentSix" class="block blocksix"></div>
+      </div>
+      <h3>Confident</h3>
+      <div class="row">
+        <div id="confidentOne" class="block blockone"></div>
+        <div id="confidentTwo" class="block blocktwo"></div>
+        <div id="confidentThree" class="block blockthree"></div>
+        <div id="confidentFour" class="block blockfour"></div>
+        <div id="confidentFive" class="block blockfive"></div>
+        <div id="confidentSix" class="block blocksix"></div>
+      </div>
+    </div>
   </div>
- </div>
-    <script src="28b.js" charset="utf-8"></script>
+  <script src="28b.js" charset="utf-8"></script>
 </body>
 </html>

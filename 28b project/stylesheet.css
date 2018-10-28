@@ -38,6 +38,14 @@ a:hover {
   color: #d9d9db;
 }
 
+li {
+  text-decoration: none;
+}
+
+span {
+  font-weight: bold;
+}
+
 
 nav {
   min-width: 20%;
@@ -50,6 +58,7 @@ nav {
 nav h1 {
   color: #a5a5a5;
   padding-top: 40px;
+  padding-bottom: 10px;
 }
 
 nav h2 {
@@ -95,13 +104,36 @@ nav p {
 
 .overview {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: column;
   text-align: left;
   width: 50%;
   padding: 40px;
   padding-bottom: 10px;
+  padding-right: 0;
 }
+
+table#tableprofile th{
+  font-size: 24px;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+table#tableprofile tr td:first-child {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+tr td+td {
+  text-align: left;
+  width: 60%;
+
+}
+
+table#tableprofile td {
+  padding-bottom: 20px;
+}
+
 
 .calls {
   width: 50%;
