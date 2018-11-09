@@ -112,6 +112,7 @@ nav p {
   font-size: 28px;
   font-weight:600;
   padding-bottom: 20px;
+  font-stretch: expanded;
 }
 .uppermain {
   display: flex;
@@ -189,16 +190,16 @@ table#tableprofile td {
 
 .legends ul {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-direction: row;
   list-style: none;
-  padding: 20px;
+  padding: 40px;
   padding-bottom: 20px;
   padding-top: 0;
 }
 
 .legends li {
-  margin-left: -39px;
+  margin-left: -108px;
 }
 
 .diamond {
@@ -247,6 +248,7 @@ table#tableprofile td {
 
 .chartcontainer h3 {
   padding: 5px;
+  padding-left: 0;
   font-size: 14px;
   text-align: left;
 }
@@ -257,7 +259,7 @@ table#tableprofile td {
   flex-direction: row;
   height: 22px;
   width: 100%;
-  border-radius: 10px;
+  border-radius: 4px;
   overflow: hidden;
   margin-bottom: 20px;
 }
@@ -324,6 +326,69 @@ table#tableprofile td {
     font-weight: 600;
 }
 
-@media screen and (min-width: 900px) {
-   {
+@media screen and (width: 1024px) and (orientation: landscape) {
+
+  nav {
+    width: 30%;
   }
+
+  nav h1 {
+    padding-left: 35px;
+  }
+
+  nav h3 {
+    padding-left: 35px;
+    padding-top: 27px;
+  }
+
+  nav li {
+    padding-left: 35px;
+  }
+
+  .overview {
+    padding-top: 30px;
+  }
+
+  .main h1 {
+    font-size: 25px;
+  }
+
+  table#tableprofile th {
+    font-size: 16px;
+  }
+
+  table#tableprofile tr td:first-child {
+    font-size: 16px;
+  }
+
+  tr td+td {
+    font-size: 16px;
+  }
+
+  .calls h3 {
+    font-size: 16px;
+  }
+
+  .midheader h3 {
+    padding-top: 0;
+    font-size: 16px;
+  }
+
+  .legends ul {
+    padding-bottom: 5px;
+  }
+
+  .legends li {
+    font-size: 14px;
+    padding-right: 0;
+    margin-left: -63px;
+  }
+
+  .chartcontainer {
+    padding-bottom: 0;
+  }
+
+  .row {
+    height: 18px;
+  }
+}
