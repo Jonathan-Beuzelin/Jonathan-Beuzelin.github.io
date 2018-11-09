@@ -1,53 +1,65 @@
-let number = getRandomNumber(26); //creates a number from 0 to 26//
-var degrees = number / 26 * 360 - 90 + 'deg'; //first slice of chart to up to the 13//
-var degreesTwo = number / 26 * 360 + 'deg'; //if chart goes over 13 slice 2 will engage as seen by the donut function below//
-var maximum = 6;
-var numbersArray = [];
-var percentArray = [];
-var arrayOfIds = ['avgOne', 'avgTwo', 'avgThree', 'avgFour', 'avgFive', 'avgSix', 'cautiousOne', 'cautiousTwo', 'cautiousThree', 'cautiousFour', 'cautiousFive', 'cautiousSix', 'complacentOne',
-    'complacentTwo', 'complacentThree', 'complacentFour', 'complacentFive', 'complacentSix', 'confidentOne', 'confidentTwo', 'confidentThree', 'confidentFour', 'confidentFive', 'confidentSix'
+var maximum = 6; //the amount of numbers i want pushed out//
+var numbersArray = []; //the array of random numbers
+var percentArray = []; //numbers converted into percentages using the function getPercent//
+var arrayOfIds = ['avgOne', 'avgTwo', 'avgThree', 'avgFour', 'avgFive', 'avgSix', 'cautiousOne', 'cautiousTwo',
+'cautiousThree', 'cautiousFour', 'cautiousFive', 'cautiousSix', 'complacentOne','complacentTwo', 'complacentThree',
+'complacentFour', 'complacentFive', 'complacentSix', 'confidentOne', 'confidentTwo', 'confidentThree', 'confidentFour',
+'confidentFive', 'confidentSix'
+]; //id's of the blocks which gets pushed out 6 at a time and then the numbers get regenerated. This is repeated 4 times.
+var arrayOfToolTips = ['avgToolTipOne', 'avgToolTipTwo', 'avgToolTipThree', 'avgToolTipFour','avgToolTipFive','avgToolTipSix', 'cautiousToolTipOne', 'cautiousToolTipTwo',
+'cautiousToolTipThree', 'cautiousToolTipFour', 'cautiousToolTipFive', 'cautiousToolTipSix', 'complacentToolTipOne', 'complacentToolTipTwo', 'complacentToolTipThree', 'complacentToolTipFour',
+'complacentToolTipFive', 'complacentToolTipSix', 'confidentToolTipOne', 'confidentToolTipTwo', 'confidentToolTipThree', 'confidentToolTipFour', 'confidentToolTipFive',
+'confidentToolTipSix'
 ];
-var arrayOfUsers = ['Sam Rep', 'Dan Rep', 'Lukkio Rep', 'Manu Rep', 'Jere Rep', 'George Rep', 'Jacob Rep', 'Garry Rep'];
-var arrayOfMonths = ['January', 'Febuary', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
-var arrayOfYears = ['2019', '2020', '2021']
+var arrayOfUsers = ['Sam Rep', 'Dan Rep', 'Lukkio Rep', 'Manu Rep', 'Jere Rep', 'George Rep', 'Jacob Rep', 'Garry Rep']; //users that are picked by a random generated number//
+var arrayOfMonths = ['January', 'Febuary', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'] //months picked by random generated number//
+var arrayOfYears = ['2019', '2020', '2021'] //years picked by random generated number//
 var hours
 var minutes
 var years
 var user
 var days
 var months
+const loader = document.getElementById('outer')
+const number = document.getElementById('input')
+const circumference = 48 * 2 * Math.PI;
+let variable = getRandomNumber(27)
+let percentage = retrievePercent(variable)
+let displayedPercentage = givePercent()
+let display = strokeDashOffSet()
+const getTotal = () => {
+    return percentArray.reduce((total, amount) => total + amount);
+}
+//donut chart//
+
+function getRandomArbitrary(min, max) {
+  return Math.floor(Math.random() * (max - min) + min); //generates a number//
+}
+
+function  retrievePercent(variable) {
+   return Math.floor(variable * 100 / 26);  //gets the percentage out of 26//
+}
+
+function givePercent() {
+  return percentage / 100 * circumference; //gets what the percentage is equal to in the circumference//
+}
+
+function strokeDashOffSet() {
+  return circumference - displayedPercentage; //Substracts the circumference to leave the remaining display percentage//
+}
+
+
+document.getElementById('textid').textContent = variable;
+loader.style.strokeDasharray = `${circumference}`;
+loader.style.strokeDashoffset = -display
 
 
 
 
+//bottom chart//
 function getRandomNumber(max) {
-    return Math.floor(Math.random() * Math.floor(max));
+    return Math.floor(Math.random() * Math.floor(max)); //generates random number between 0 and max variable//
 };
-
-function variableForDates(max) {
-    return Math.floor(Math.random() * Math.floor(max) + 1);
-};
-
-function getRandomInt(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
-}
-
-function Donut() {
-    document.getElementById('centerChart').innerHTML += '<h1>' + number + '</h1>' + '<h3>' + '/26' + '</h3>';
-    document.getElementById('sliceOne').style.transform = 'rotate(' + degrees + ')';
-    if (number <= 13) {
-        document.getElementById('sliceTwo').style.transform = 'rotate(0)'
-    } else {
-        document.getElementById('sliceOne').style.transform = 'rotate(90deg)';
-        document.getElementById('sliceTwo').style.transform = 'rotate(' + degreesTwo + ')';
-        document.getElementById('sliceTwo').style.background = 'orange';
-    }
-}
-
-Donut();
-
 
 
 function getPercent() {
@@ -57,23 +69,34 @@ function getPercent() {
     }
     var sum = numbersArray.reduce((total, amount) => total + amount);
     for (var i = 0; i < numbersArray.length; i++) {
-        var percent = Math.floor(numbersArray[i] * 100 / sum);
+        var percent = Math.round(numbersArray[i] * 100 / sum);
         percentArray.push(percent)
     }
+    var percentTotal = getTotal();
+    if (percentTotal > 100) {
+        percentArray[5]--;
+    } else if (percentTotal < 100) {
+        percentArray[5]++;
+    }
+    percentTotal = getTotal();
+    console.log(percentTotal);
 }
 
+
+
 function widths() {
-    for (var i = 0; i < 6; i++) {
-        document.getElementById(arrayOfIds[i]).style.width = numbersArray[i] + "%";
+    for (var i = 0; i < maximum; i++) {
+        document.getElementById(arrayOfIds[i]).style.width = percentArray[i] + "%";
+        document.getElementById(arrayOfToolTips[i]).innerHTML = percentArray[i] + "%";
     }
     if (i === 6) {
         for (var i = 0; i < 6; i++) {
             percentArray.shift();
             arrayOfIds.shift();
             numbersArray.shift();
+            arrayOfToolTips.shift();
         }
-        getPercent();
-    }
+    } getPercent();
 }
 
 function repeat() {
@@ -82,8 +105,18 @@ function repeat() {
     }
 }
 
+//dates
+function variableForDates(max) {
+    return Math.floor(Math.random() * Math.floor(max) + 1); //generates random number between 1 and max variable
+};
 
-function displayInfo() {
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min)) + min; //generates a random number between min and max
+}
+
+function displayNextDate() {
     let hours = getRandomInt(9, 18),
         minutes = getRandomInt(1, 60),
         years = getRandomNumber(2),
@@ -112,10 +145,10 @@ function displayInfo() {
 };
 
 
-displayInfo()
+displayNextDate()
 getPercent();
 repeat();
-
+console.log(loader.style.strokeDashoffset)
 
 console.log(arrayOfIds)
 console.log(percentArray)

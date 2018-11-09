@@ -5,19 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="stylesheet.css">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" rel="stylesheet">
   <title>TwentyEightb</title>
 </head>
 <body>
   <nav>
     <ul>
       <h1>Welcome,</h1>
-      <li id="welcome"></li>
+      <li class="user" id="welcome"></li>
     </ul>
     <ul>
       <h3>Metrics</h3>
-      <li><a href="#">Overview</a></li>
+      <li class="highlight"><a href="#">Overview</a></li>
       <li><a href="#">Detailing</a></li>
+      <li><a href="#">Calls</li>
     </ul>
     <ul>
       <h3>Information</h3>
@@ -43,34 +44,42 @@
                 </tr>
                 <tr>
                   <td>Account:</td>
-                  <td></td>
+                  <td>Dr.Clinton Ackerman</td>
                 </tr>
                 <tr>
                   <td>Speciality:</td>
-                  <td></td>
+                  <td>Respiratory therapy<br>Assistive therapy</td>
                 </tr>
                 <tr>
                   <td>Profile:</td>
-                  <td></td>
+                  <td>Confident</td>
                 </tr>
             </tbody>
-
         </table>
       </section>
       <section class="calls">
-        <h1>Calls this month:</h1>
-        <div class="container">
-          <div class="donut-chart">
-            <div id="sliceOne" class="slice one"></div>
-            <div id="sliceTwo" class="slice two"></div>
-            <div id="centerChart" class="chart-center"></div>
-          </div>
+        <h3>Calls this month</h3>
+        <svg
+        class="loader"
+          height="230"
+          width="100%"
+          viewBox="0 0 130 130"
+        >
+        <text x="70" y="70" text-anchor="middle" class="heavy" id="textid"></text>
+        <text x="70" y="85" text-anchor="middle" class="light">/26</text>
+          <g
+          transform="rotate(-90)"
+          transform-origin="center">
+          <circle stroke="#dddddd" stroke-width="6"fill="transparent" r="44" cx="70" cy="70"/>
+          <circle id="outer" stroke="#f68b15" stroke-width="6" fill="transparent" r="48" cx="70" cy="70"/>
+          </g>
+        </svg>
+
         </div>
       </section>
-    </div>
     <div class="midmain">
      <section class="midheader">
-       <h1>Detailing topic Breakdown</h1>
+       <h3>Detailing topic Breakdown</h3>
      </section>
      <section class="legends">
         <ul>
@@ -90,41 +99,41 @@
       </section>
     </div>
     <div id="chartContainer" class="chartcontainer">
-     <h3>Avg.all</h3>
+     <h3>Avg. all</h3>
       <div class="row">
-        <div id="avgOne" class="block blockone"></div>
-        <div id="avgTwo" class="block blocktwo"></div>
-        <div id="avgThree" class="block blockthree"></div>
-        <div id="avgFour" class="block blockfour"></div>
-        <div id="avgFive" class="block blockfive"></div>
-        <div id="avgSix" class="block blocksix"></div>
+        <div id="avgOne" class="block blockone"><span class="tooltip" id="avgToolTipOne">44</span></div>
+        <div id="avgTwo" class="block blocktwo"><span class="tooltip"id="avgToolTipTwo">12%</span></div>
+        <div id="avgThree" class="block blockthree"><span class="tooltip"id="avgToolTipThree">3%</span></div>
+        <div id="avgFour" class="block blockfour"><span class="tooltip"id="avgToolTipFour"></span></div>
+        <div id="avgFive" class="block blockfive"><span class="tooltip"id="avgToolTipFive"></span></div>
+        <div id="avgSix" class="block blocksix"><span class="tooltip"id="avgToolTipSix"></span></div>
       </div>
       <h3>Cautious</h3>
       <div class="row">
-        <div id="cautiousOne" class="block blockone"></div>
-        <div id="cautiousTwo" class="block blocktwo"></div>
-        <div id="cautiousThree" class="block blockthree"></div>
-        <div id="cautiousFour" class="block blockfour"></div>
-        <div id="cautiousFive" class="block blockfive"></div>
-        <div id="cautiousSix" class="block blocksix"></div>
+        <div id="cautiousOne" class="block blockone"><span class="tooltip" id="cautiousToolTipOne"></span></div>
+        <div id="cautiousTwo" class="block blocktwo"><span class="tooltip" id="cautiousToolTipTwo"></span></div>
+        <div id="cautiousThree" class="block blockthree"><span class="tooltip" id="cautiousToolTipThree"></span></div>
+        <div id="cautiousFour" class="block blockfour"><span class="tooltip" id="cautiousToolTipFour"></span></div>
+        <div id="cautiousFive" class="block blockfive"><span class="tooltip" id="cautiousToolTipFive"></span></div>
+        <div id="cautiousSix" class="block blocksix"><span class="tooltip" id="cautiousToolTipSix"></span></div>
       </div>
       <h3>Complacent</h3>
       <div class="row">
-        <div id="complacentOne" class="block blockone"></div>
-        <div id="complacentTwo" class="block blocktwo"></div>
-        <div id="complacentThree" class="block blockthree"></div>
-        <div id="complacentFour" class="block blockfour"></div>
-        <div id="complacentFive" class="block blockfive"></div>
-        <div id="complacentSix" class="block blocksix"></div>
+        <div id="complacentOne" class="block blockone"><span class="tooltip" id="complacentToolTipOne"></span></div>
+        <div id="complacentTwo" class="block blocktwo"><span class="tooltip" id="complacentToolTipTwo"></span></div>
+        <div id="complacentThree" class="block blockthree"><span class="tooltip" id="complacentToolTipThree"></span></div>
+        <div id="complacentFour" class="block blockfour"><span class="tooltip" id="complacentToolTipFour"></span></div>
+        <div id="complacentFive" class="block blockfive"><span class="tooltip" id="complacentToolTipFive"></span></div>
+        <div id="complacentSix" class="block blocksix"><span class="tooltip" id="complacentToolTipSix"></span></div>
       </div>
       <h3>Confident</h3>
       <div class="row">
-        <div id="confidentOne" class="block blockone"></div>
-        <div id="confidentTwo" class="block blocktwo"></div>
-        <div id="confidentThree" class="block blockthree"></div>
-        <div id="confidentFour" class="block blockfour"></div>
-        <div id="confidentFive" class="block blockfive"></div>
-        <div id="confidentSix" class="block blocksix"></div>
+        <div id="confidentOne" class="block blockone"><span class="tooltip" id="confidentToolTipOne"></span></div>
+        <div id="confidentTwo" class="block blocktwo"><span class="tooltip" id="confidentToolTipTwo"></span></div>
+        <div id="confidentThree" class="block blockthree"><span class="tooltip" id="confidentToolTipThree"></span></div>
+        <div id="confidentFour" class="block blockfour"><span class="tooltip" id="confidentToolTipFour"></span></div>
+        <div id="confidentFive" class="block blockfive"><span class="tooltip" id="confidentToolTipFive"></span></div>
+        <div id="confidentSix" class="block blocksix"><span class="tooltip" id="confidentToolTipSix"></span></div>
       </div>
     </div>
   </div>
