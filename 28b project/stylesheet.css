@@ -241,6 +241,7 @@ table#tableprofile td {
   flex-direction: column;
   padding: 40px;
   padding-top: 0px;
+  padding-bottom: 10px;
   text-align: left;
 }
 
@@ -325,8 +326,3 @@ table#tableprofile td {
 @media screen and (min-width: 900px) {
    {
   }
-
-
-html {
-  overflow: hidden;
-}
