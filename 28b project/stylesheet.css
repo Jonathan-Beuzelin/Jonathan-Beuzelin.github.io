@@ -183,7 +183,7 @@ table#tableprofile td {
   padding-left: 40px;
   padding-bottom: 10px;
   font-size: 18px;
-  padding-top: 40px;
+  padding-top: 20px;
 }
 /*indicators*/
 
@@ -321,6 +321,10 @@ table#tableprofile td {
     height: 35px;
     text-align: center;
 }
+
+@media screen and (min-width: 900px) {
+   {
+  }
 
 
 html {
