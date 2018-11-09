@@ -321,6 +321,7 @@ table#tableprofile td {
     width: 35px;
     height: 35px;
     text-align: center;
+    font-weight: 600;
 }
 
 @media screen and (min-width: 900px) {
