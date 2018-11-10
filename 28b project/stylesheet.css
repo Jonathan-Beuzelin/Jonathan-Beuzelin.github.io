@@ -192,6 +192,7 @@ table#tableprofile td {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
+  flex-wrap: wrap;
   list-style: none;
   padding: 40px;
   padding-bottom: 20px;
@@ -326,7 +327,21 @@ table#tableprofile td {
     font-weight: 600;
 }
 
-@media screen and (width: 1024px) and (orientation: landscape) {
+@media screen and (max-width: 1023px) {
+
+  .legends ul {
+    display: flex;
+    justify-content: center;
+  }
+
+  .legends li{
+    margin-right: 48px;
+    margin-left: -8px;
+  }
+}
+
+
+@media screen and (min-width: 1024px) and (orientation: landscape) {
 
   nav {
     width: 30%;
