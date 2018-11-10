@@ -341,7 +341,7 @@ table#tableprofile td {
 }
 
 
-@media screen and (min-width: 1024px) and (orientation: landscape) {
+@media screen and (min-width: 1024px) and (max-width: 1679px) (orientation: landscape) {
 
   nav {
     width: 30%;
@@ -412,4 +412,90 @@ table#tableprofile td {
   .row {
     height: 18px;
   }
+}
+
+@media screen and (min-width: 1680px) {
+
+
+    nav {
+      width: 30%;
+    }
+
+    nav h1 {
+      font-size: 21px;
+    }
+
+    nav h3 {
+      padding-top: 40px;
+      font-size: 21px;
+    }
+
+    nav li {
+      font-size: 21px;
+    }
+
+    .user {
+      font-size: 21px;
+    }
+
+    .overview {
+      padding-top: 30px;
+    }
+
+    .main h1 {
+      font-size: 50px;
+    }
+
+    table#tableprofile th {
+      font-size: 26px;
+    }
+
+    table#tableprofile tr td:first-child {
+      font-size: 26px;
+    }
+
+    tr td+td {
+      font-size: 26px;
+    }
+
+    .calls h3 {
+      font-size: 26px;
+    }
+
+    .loader {
+      height: 300px;
+    }
+
+    .midheader h3 {
+      padding-top: 0;
+      font-size: 26px;
+    }
+
+    .legends ul {
+      padding-bottom: 5px;
+    }
+
+    .legends li {
+      font-size: 22px;
+      padding-right: 0;
+      margin-left: -63px;
+    }
+
+    .diamond {
+      margin-top: 29px;
+    }
+
+    .chartcontainer {
+      padding-bottom: 0;
+    }
+
+    .chartcontainer h3 {
+      font-size: 18px;
+    }
+
+    .row {
+      height: 22px;
+    }
+  }
+
 }
