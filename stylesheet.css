@@ -291,6 +291,19 @@ section {
   font-weight: bold;
 }
 
+
+.email {
+  background-image: linear-gradient(to right bottom, #2468cf, #90b0e2, #00bfd4, #577fb8, #edcf65);
+  width: 200px;
+  height: 200px;
+  font-size: 50px;
+  border-radius: 20px;
+  padding: auto;
+  line-height: 181px;
+  text-align: center;
+  font-weight: bold;
+}
+
 /*contact me*/
 
 form {
