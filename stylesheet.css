@@ -9,101 +9,125 @@ body {
   color: #e6e6e6;
 }
 
-
-@font-face {
-  font-family: "Roboto";
-  src: url("Roboto-light-webfont.woff") format("woff");
-}
-
-@font-face {
-  font-family: 'Roboto';
-  src: url('Roboto-Bold-webfont.woff') format('woff');
-  font-style: normal;
-  font-weight: 700;
-}
-
 /*landing page*/
 header {
-  background-image: url(background.jpg);
-  width: 100%;
-  min-width: 320px;
-  min-height: 100vh;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin-left: auto;
-  margin-right: auto;
-  z-index: 0;
-}
-
-a {
-  text-decoration: none;
-  color: #e6e6e6;
-}
-
-p {
-  padding-bottom: 15px;
-}
-
-li {
-  list-style: none;
-}
-
-header ul {
-  display: flex;
-  position: fixed;
-  top: 0;
-  right: 8px;
-  flex-direction: row;
-  transition: top 0.3s;
-  z-index: 10;
-}
-
-header li {
-  display: flex;
-  flex-direction: row;
-  padding-right: 15px;
-  font-weight: bold;
-  font-size: 19px;
-}
-
-header li:first-of-type {
-  padding-left: 15px;
-}
-
-
-header h1 {
-  text-align: center;
-  font-size: 36px;
-  padding-top: 65px;
-}
-
-.mainheader {
   display: flex;
   justify-content: center;
-  flex-direction: column;
-  align-items: center;
+  background-image: url(star.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: 'Roboto', sans-serif;
+  height: 100vh;
 }
 
-.mainheader h1 {
-  padding-top: 35px;
-  padding-left: 15px;
-  padding-right: 15px;
+.container {
+  width: 100%;
+  height: 100vh;
 }
 
-.mainheader p {
-  margin-left: 15px;
-  margin-right: 15px;
-  margin-top: 71px;
-  margin-bottom: 15px;
-  padding-left: 15px;
-  padding-bottom: 0;
-  border-radius: 5px;
+svg {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0px;
+  right: 0;
+  top:0;
+  width:100%;
+  height:100%;
+}
+
+text {
+  font-family: 'Mr Dafoe', cursive;
+  opacity: 10;
+  stroke-dasharray: 1480;
+  font-size: 262px;
+  fill: white;
+  stroke:white;
+  stroke-width: 2;
+  text-anchor: middle;
+  animation: csvg 3s cubic-bezier(0,0.23,1,1);
+}
+
+ nav ul{
+  list-style: none;
+  font-size: 3vw;
   font-weight: bold;
-  text-align: center;
-  width: auto;
-  background-color: #fff;
-  background-color: rgba(143,147,153,0.9);
+  color:white;
+  height: 100vh;
+  width:100%;
+  opacity: 0;
+  animation: fadeIn ease-in 3s;
+  animation-fill-mode: forwards;
+  animation-delay: 3.1s, 480ms;
+}
+
+ nav a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+ nav li {
+  padding:40px;
+}
+
+.bio {
+  position: absolute;
+  top:140px;
+  left:135px;
+}
+
+.skills {
+  position: absolute;
+  top: 140px;
+  right:135px;
+}
+
+.project-examples {
+  position: absolute;
+  bottom:150px;
+  left: 135px;
+}
+
+.contact {
+  position: absolute;
+  bottom:150px;
+  right:135px;
+}
+
+@keyframes csvg {
+
+  0%{
+
+    opacity:0;
+    fill:none;
+    stroke-dasharray:1480;
+  }
+
+  30%{
+
+    opacity:19;
+    fill:none;
+    stroke-dasharray:500;
+    font-size: 399px;
+  }
+
+  80% {
+    fill:rgba(255,255,255,0)
+  }
+
+  100%{
+    opacity:10;
+    fill:rgba(255,255,255,1);
+    stroke-dasharray:0;
+    stroke:white;
+    stroke-width:2;
+  }
+}
+
+@keyframes fadeIn {
+   0% {opacity: 0;}
+   100% {opacity: 1;}
 }
 
  /*about me*/
