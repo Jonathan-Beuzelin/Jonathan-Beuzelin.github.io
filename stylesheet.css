@@ -106,7 +106,7 @@ text {
 
   30%{
 
-    opacity:19;
+    opacity:0.3;
     fill:none;
     stroke-dasharray:500;
     font-size: 399px;
@@ -117,11 +117,9 @@ text {
   }
 
   100%{
-    opacity:10;
+    opacity:1;
     fill:rgba(255,255,255,1);
     stroke-dasharray:0;
-    stroke:white;
-    stroke-width:2;
   }
 }
 
