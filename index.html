@@ -10,41 +10,54 @@
 </head>
 <body>
   <header>
-    <div class="container">
-      <svg viewBox="0 0 1800 1800" width="800" height="324">
-        <g class="textgroup">
-          <text class="texto" style="transform: matrix(1,-0.005,0.004,1.092,820.526,103.791)" >
-            <tspan x="60" y="680" class="txt0">Jonathan</tspan>
-          </text>
-          <text class="texto" style="transform: matrix(1,0,0,1,858.609,307.164)" >
-            <tspan x="60" y="720.553" class="txt1">Beuzelin</tspan>
-          </text>
-        </g>
-      </svg>
-      <nav>
-        <ul>
-          <li class="bio"><a href="#hiddenanchor">About me</a></li>
-          <li class="skills"><a href="#hiddenanchor1">What I do</a></li>
-          <li class="project-examples"><a href="#hiddenanchor2">Projects</a></li>
-          <li class="contact"><a href="#hiddenanchor3">Contact me</a></li>
-        </ul>
-      </nav>
-    </div>
+    <nav id="navigationBar" class="">
+      <a href="#!" id="menu-icon"></a>
+      <ul id="navigationMenu">
+        <li class="skills"><a href="#hiddenanchor">About me</a></li>
+        <li class="skills"><a href="#hiddenanchor1">What I do</a></li>
+        <li class="project-examples"><a href="#hiddenanchor2">Projects</a></li>
+        <li class="contact"><a href="#hiddenanchor3">Contact me</a></li>
+      </ul>
+    </nav>
+    <main>
+      <div class="svgcontainer" id="svgCon">
+        <svg viewBox="0 0 2000 2000" width="100%" height="100%">
+          <g class="textgroup">
+            <text class="texto" style="transform: matrix(1,-0.005,0.004,1.092,820.526,103.791)" >
+              <tspan x="60" y="680" class="txt0">Jonathan</tspan>
+            </text>
+            <text class="texto" style="transform: matrix(1,0,0,1,858.609,307.164)" >
+              <tspan x="60" y="1270.553" class="txt1">Beuzelin</tspan>
+            </text>
+          </g>
+        </svg>
+      </div>
+      <div class="blurb">
+        <p>Im 26, self-taught since april 2018 and I am extremely passionate about learning as much as I can about coding and applying it to create aesthetically pleasing, easy to use and interactive websites.</p>
+        <p>My skills include HTML, CSS, basic JavaScript and i am currently learning advanced CSS and JavaScript.</p>
+      </div>
+      <div class="continue">
+        <p>Continue below to see more about me.</p>
+        <div class="arrowcontainer"><a href="#hiddenanchor">
+          <div class="arrow"></div>
+          </a>
+        </div>
+      </div>
+    </main>
   </header>
-
-<article>
-  <div class="section toparticle">
-    <a id="hiddenanchor" name="hiddenanchor"></a>
-    <div class="aboutme">
-      <h1>About me</h1>
-      <img src="me.png" width="310" height="220">
-      <p>Im 26, self-taught, extremely passionate about learning as much as I can about coding.</p>
-      <p>I look to expanding and improving my skillset who can work by himself or with a team, contributing ideas and discussion.</p>
-      <p>I see web development as a constantly evolving profession and I see that as a career where i can build beautiful and interactive websites while also enables me to persistently look at ways to improve my way of working or new ways of working, learning from those around me.</p>
-      <p>I like to think I am a knowledge sponge and do this through reading and learning a new skill and then implementing it to the way that I work or just something new which you can see examples of this in my project section during my endeavour with JavaScript which I am still fine tuning.</p>
+  <article>
+    <div class="section toparticle">
+      <a id="hiddenanchor" name="hiddenanchor"></a>
+      <div class="aboutme">
+        <h1>About me</h1>
+        <img src="me.png" width="310" height="220">
+        <p>Im 26, self-taught, extremely passionate about learning as much as I can about coding.</p>
+        <p>I look to expanding and improving my skillset who can work by himself or with a team, contributing ideas and discussion.</p>
+        <p>I see web development as a constantly evolving profession and I see that as a career where i can build beautiful and interactive websites while also enables me to persistently look at ways to improve my way of working or new ways of working, learning from those around me.</p>
+        <p>I like to think I am a knowledge sponge and do this through reading and learning a new skill and then implementing it to the way that I work or just something new which you can see examples of this in my project section during my endeavour with JavaScript which I am still fine tuning.</p>
+      </div>
     </div>
-  </div>
-</article>
+  </article>
 
 <section>
   <a id="hiddenanchor1" name="hiddenanchor1"></a>

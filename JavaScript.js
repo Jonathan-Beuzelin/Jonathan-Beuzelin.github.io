@@ -41,3 +41,35 @@ document.querySelectorAll('a[href^="#hiddenanchor3"]').forEach(anchor => {
         });
     });
 });
+
+
+window.onscroll = function functionName() {
+  myFunction()
+  fixed()
+}
+
+var navBar = document.getElementById('navigationBar')
+var svg = document.getElementById('svgCon')
+var menu = document.getElementById('navigationBar')
+
+var sticky = navBar.offsetTop
+
+function myFunction() {
+  if (screen.width > 960) {
+    if (window.pageYOffset > sticky) {
+      navBar.classList.add("sticky")
+    } else {
+      navBar.classList.remove("sticky")
+    }
+  }
+}
+
+function fixed() {
+  if (screen.width < 960) {
+    if (window.pageYOffset > sticky) {
+       menu.classList.add('stickto')
+      } else {
+         menu.classList.remove('stickto')
+        }
+      }
+    }

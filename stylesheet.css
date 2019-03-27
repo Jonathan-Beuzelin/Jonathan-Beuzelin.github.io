@@ -7,40 +7,41 @@
 body {
   font-family: "Roboto", sans-serif;
   color: #e6e6e6;
+  background-image: url(backgrounds-blank-blue-953214.jpg);
 }
 
-/*landing page*/
+/*BEGINNING OF HEADER*/
+
 header {
   display: flex;
-  justify-content: center;
-  background-image: url(star.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
+  flex-direction: column;
   font-family: 'Roboto', sans-serif;
   height: 100vh;
+  width: 100%;
+  align-items: center;
 }
 
-.container {
+/*My animated name*/
+
+.svgcontainer {
   width: 100%;
-  height: 100vh;
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 svg {
-  position: absolute;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0px;
-  right: 0;
-  top:0;
-  width:100%;
-  height:100%;
+  display: block;
+  margin: auto;
 }
+
 
 text {
   font-family: 'Mr Dafoe', cursive;
   opacity: 10;
   stroke-dasharray: 1480;
-  font-size: 262px;
+  font-size: 800px;
   fill: white;
   stroke:white;
   stroke-width: 2;
@@ -48,51 +49,174 @@ text {
   animation: csvg 3s cubic-bezier(0,0.23,1,1);
 }
 
- nav ul{
-  list-style: none;
-  font-size: 3vw;
-  font-weight: bold;
-  color:white;
-  height: 100vh;
+/*navigation bar*/
+nav {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  height: auto;
   width:100%;
-  opacity: 0;
-  animation: fadeIn ease-in 3s;
-  animation-fill-mode: forwards;
-  animation-delay: 3.1s, 480ms;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border-bottom: solid white 2px;
+  Transition: 1s all ease;
 }
 
- nav a {
-  color: inherit;
+/*hamburger icon*/
+
+#menu-icon {
+	width: 40px;
+	height: 40px;
+	background: white url(hamburger.png) center;
+  background-size: contain;
+  text-decoration: none;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+
+}
+
+#menu-icon a:active {
   text-decoration: none;
 }
 
 
- nav li {
-  padding:40px;
+/* Navigation menu */
+
+nav ul{
+ display: flex;
+ justify-content: space-around;
+ flex-direction: row;
+ list-style: none;
+ font-size: 20px;
+ font-weight: bold;
+ color:white;
+ width:100%;
+}
+
+
+/*links*/
+
+nav a {
+ color: inherit;
+ text-decoration: none;
+ text-align: center;
+ color: white;
+ padding-bottom: 3px;
+}
+
+/*links hover behavior*/
+
+nav ul a:hover {
+ border-bottom: white solid 2px;
+}
+
+/*class added when scrolldown*/
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 50%;
+  border-left: solid white 2px;
+  border-right: solid white 2px;
+  background: #006B90;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  width: 100%;
+  animation: slide ease-in 3s;
+  animation-fill-mode: forwards;
+}
+
+/*spacing for main content from the navigation bar*/
+
+
+main {
+  margin-top: 70px;
+}
+
+/*spacing for main when nav bar becomes positioned absolute*/
+
+.buffer {
+  margin-top: 105px;
+}
+
+/* hero text */
+
+.blurb {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+}
+
+.blurb p {
+  text-align: left;
+  padding-bottom: 10px;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+
+/* continued paragraph alignment*/
+
+.continue {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/*arrow made from slicing a div into a triangle*/
+
+.arrowcontainer {
+  height: auto;
+  width: auto;
+  padding-top: 5px;
+}
+.arrow {
+  width: 0;
+  height: 0;
+  padding: auto;
+  border-style: solid;
+  border-width: 15.2px 10px 0 10px;
+  border-color: #ffffff transparent transparent transparent;
+}
+
+
+/* END OF HEADER */
+
+
+.aboutme p {
+  text-align: left;
+  padding-bottom: 10px;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.aboutme img {
+  align-self: center;
+  border-radius: 50%;
 }
 
 .bio {
-  position: absolute;
-  top:140px;
-  left:135px;
+
 }
 
 .skills {
-  position: absolute;
-  top: 140px;
-  right:135px;
+
 }
 
 .project-examples {
-  position: absolute;
-  bottom:150px;
-  left: 135px;
+
 }
 
 .contact {
-  position: absolute;
-  bottom:150px;
-  right:135px;
+
 }
 
 @keyframes csvg {
@@ -113,7 +237,7 @@ text {
   }
 
   80% {
-    fill:rgba(255,255,255,0)
+    fill:rgba(0,0,0,0)
   }
 
   100%{
@@ -123,10 +247,6 @@ text {
   }
 }
 
-@keyframes fadeIn {
-   0% {opacity: 0;}
-   100% {opacity: 1;}
-}
 
  /*about me*/
 
@@ -145,7 +265,8 @@ article li {
   flex-wrap: wrap;
   justify-content: center;
   flex-direction: column;
-  height: 100%;
+  height: auto;
+  width: 100%;
 }
 
 .aboutme h1 {
@@ -155,16 +276,7 @@ article li {
   margin-bottom: 25px;
 }
 
-.aboutme img {
-  margin-bottom: 40px;
-  align-self: center;
-}
 
-.aboutme p {
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-bottom: 40px;
-}
 
 .whatidomain {
   display: flex;
@@ -424,9 +536,69 @@ html {
   min-width: 320px;
 }
 
-@media screen and (orientation: landscape) and (max-width: 599px) {
+@media screen and (max-width: 599px) {
 
-/* landing*/
+/* BEGINNING OF HEADER*/
+
+/*Hamburger icon, z-index is there to put the icon above the navigation menu*/
+
+#menu-icon {
+  margin-left: 15px;
+  z-index: 2;
+}
+
+/*navigation bar*/
+
+nav {
+  border-bottom: none;
+  width: auto;
+  align-self: flex-start;
+}
+
+/*Nav links changed color to increase visability*/
+
+nav a {
+  color: black;
+}
+
+/*Navigation menu changed to absolute and size to be usable on the phone and appears when hamburger icon is clicked on*/
+
+nav ul {
+
+  display: none;
+  position: absolute;
+  padding-top: 50px;
+  background: #fff;
+  border: 5px solid #444;
+  left: 0px;
+  top: -10px;
+  width: 150px;
+  border-radius: 4px 0 4px 4px;
+}
+
+
+.stickto {
+  position: fixed;
+}
+
+nav li {
+
+  text-align: center;
+  width: 100%;
+  padding: 10px;
+  margin: 0;
+  border-bottom: 2px solid black;
+
+}
+
+/* This allows the navigation bar to appear */
+nav:hover ul {
+  display: block;
+}
+
+
+/*END OF HEADER*/
+
 .mainheader p {
   margin-top: 35px;
  }
