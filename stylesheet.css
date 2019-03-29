@@ -56,28 +56,17 @@ nav {
   flex-direction: row;
   height: auto;
   width:100%;
-  margin-top: 30px;
   margin-bottom: 30px;
   border-bottom: solid white 2px;
   Transition: 1s all ease;
 }
 
+#menuToggle {
+  width: 100%;
+}
+
 /*hamburger icon*/
 
-#menu-icon {
-	width: 40px;
-	height: 40px;
-	background: white url(hamburger.png) center;
-  background-size: contain;
-  text-decoration: none;
-  background-repeat: no-repeat;
-  border-radius: 50%;
-
-}
-
-#menu-icon a:active {
-  text-decoration: none;
-}
 
 
 /* Navigation menu */
@@ -539,61 +528,25 @@ html {
 @media screen and (max-width: 599px) {
 
 /* BEGINNING OF HEADER*/
-
-/*Hamburger icon, z-index is there to put the icon above the navigation menu*/
-
-#menu-icon {
-  margin-left: 15px;
-  z-index: 2;
-}
-
-/*navigation bar*/
-
-nav {
-  border-bottom: none;
-  width: auto;
-  align-self: flex-start;
-}
-
-/*Nav links changed color to increase visability*/
-
-nav a {
-  color: black;
-}
-
-/*Navigation menu changed to absolute and size to be usable on the phone and appears when hamburger icon is clicked on*/
-
 nav ul {
+  font-size: 14px;
+  padding: 10px;
 
-  display: none;
-  position: absolute;
-  padding-top: 50px;
-  background: #fff;
-  border: 5px solid #444;
-  left: 0px;
-  top: -10px;
-  width: 150px;
-  border-radius: 4px 0 4px 4px;
 }
-
 
 .stickto {
-  position: fixed;
-}
-
-nav li {
-
-  text-align: center;
-  width: 100%;
-  padding: 10px;
-  margin: 0;
-  border-bottom: 2px solid black;
-
-}
-
-/* This allows the navigation bar to appear */
-nav:hover ul {
-  display: block;
+    position: fixed;
+    top: 0;
+    width: 50%;
+    border-left: solid white 2px;
+    border-right: solid white 2px;
+    background: #006B90;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    width: 100%;
+    animation: slide ease-in 3s;
+    animation-fill-mode: forwards;
+    font-size: 14px;
 }
 
 
