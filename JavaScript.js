@@ -73,3 +73,14 @@ function fixed() {
         }
       }
     }
+
+
+var a = document.getElementById("about").addEventListener("click", functionName)
+var b = document.getElementById("skills").addEventListener("click", functionName)
+var c = document.getElementById("project-examples").addEventListener("click", functionName)
+var d = document.getElementById("contact").addEventListener("click", functionName)
+
+
+function functionName() {
+  document.getElementById('checked').checked = false;
+}
