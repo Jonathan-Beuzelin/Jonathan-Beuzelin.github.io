@@ -31,6 +31,11 @@ header {
   margin-top: 20px;
 }
 
+
+img {
+  width: 100%;
+}
+
 svg {
   display: block;
   margin: auto;
