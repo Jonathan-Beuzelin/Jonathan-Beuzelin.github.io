@@ -220,7 +220,6 @@ main {
     opacity:0.3;
     fill:none;
     stroke-dasharray:500;
-    font-size: 399px;
   }
 
   80% {
@@ -537,10 +536,6 @@ nav ul{
 a:hover
 {
   color: tomato;
-}
-
-text {
-  font-size: 500px;
 }
 
 #menuToggle
