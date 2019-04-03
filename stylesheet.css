@@ -303,14 +303,6 @@ section {
   color: gold;
 }
 
-.reading {
-  padding-bottom: 15px;
-}
-
-.hobbies {
-  padding-bottom: 15px;
-}
-
 .links li:last-of-type {
   padding-bottom: 15px;
 }
@@ -708,6 +700,72 @@ form h1 {
   }
 }
 
+@media screen and (min-height: 1024px) {
+
+  body h1 {
+    font-size: 64px;
+  }
+
+  body p {
+    font-size: 30px;
+    margin-bottom: 35px;
+  }
+
+  body h2 {
+    font-size: 45px;
+    text-decoration: underline;
+    margin-bottom: 25px;
+  }
+
+  body h3 {
+    font-size: 35px;
+  }
+  body li {
+    font-size: 35px;
+  }
+
+  nav ul a{
+    font-size: 35px;
+  }
+
+  .svgcontainer {
+    height: auto;
+  }
+
+  header p {
+    font-size: 30px;
+  }
+
+  .whatido li:last-of-type {
+    margin-bottom: 35px;
+  }
+
+  .contactmeform {
+    justify-content: flex-start;
+  }
+
+  label {
+    font-size: 35px;
+  }
+
+  .formrow.two {
+    margin-right: 27px;
+  }
+
+  input {
+    height: 30px;
+    font-size: 25px;
+  }
+
+  textarea {
+    height: 540px;
+    font-size: 25px;
+  }
+
+  .submit {
+    font-size: 26px;
+  }
+}
 @media screen and (orientation: landscape) and (min-width: 1024px){
 
 /*about me */
