@@ -149,11 +149,17 @@ main {
   margin-top: 10px;
 }
 
+.continue p {
+  position: absolute;
+  margin-left: auto;
+  bottom: 45px;
+}
+
 /*arrow made from slicing a div into a triangle*/
 
 .arrowcontainer {
   position: absolute;
-  bottom: 0;
+  bottom: 25px;
   margin: auto;
   height: auto;
   width: auto;
@@ -587,11 +593,25 @@ a:hover
     position: fixed;
 }
 
+.arrowcontainer {
+  position: static;
+}
+
+.continue p {
+  position: static;
+  margin: auto;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+
+
 
 /*END OF HEADER*/
 .mainheader p {
   margin-top: 35px;
  }
+
 
 /*projects*/
 
