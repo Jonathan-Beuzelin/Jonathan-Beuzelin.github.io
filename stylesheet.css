@@ -152,7 +152,7 @@ main {
 .continue p {
   position: absolute;
   margin-left: auto;
-  bottom: 45px;
+  bottom: 55px;
 }
 
 /*arrow made from slicing a div into a triangle*/
@@ -446,7 +446,12 @@ html {
   min-width: 320px;
 }
 
+@media screen and (max-height: 480px) {
 
+  main {
+    margin-top: 0;
+  }
+}
 
 @media screen and (max-width: 830px) {
 
@@ -593,20 +598,6 @@ a:hover
     position: fixed;
 }
 
-.arrowcontainer {
-  position: static;
-}
-
-.continue p {
-  position: static;
-  margin: auto;
-  margin-top: 25px;
-  margin-bottom: 15px;
-}
-
-
-
-
 /*END OF HEADER*/
 .mainheader p {
   margin-top: 35px;
@@ -665,6 +656,14 @@ main {
 
 
 .arrowcontainer {
+  position: static;
+  margin-bottom: 25px;
+}
+
+.continue p {
+  position: static;
+  margin: auto;
+  margin-top: 25px;
   margin-bottom: 15px;
 }
 
