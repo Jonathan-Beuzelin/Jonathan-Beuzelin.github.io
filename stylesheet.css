@@ -1019,4 +1019,8 @@ form h1 {
       width: 33%;
       margin-top: 35px;
     }
+
+    textarea {
+      height: 500px;
+    }
   }
