@@ -195,18 +195,9 @@ main {
   text-align: center;
   margin-top: 10px;
 }
-
-.continue p {
-  position: absolute;
-  margin-left: auto;
-  bottom: 55px;
-}
-
 /*arrow made from slicing a div into a triangle*/
 
 .arrowcontainer {
-  position: absolute;
-  bottom: 25px;
   margin: auto;
   height: auto;
   width: auto;
