@@ -50,26 +50,31 @@ window.onscroll = function functionName() {
 
 var navBar = document.getElementById('navigationBar')
 var svg = document.getElementById('svgCon')
-var menu = document.getElementById('navigationBar')
+var about = document.getElementById('about')
+var skills = document.getElementById("skills")
+var projects = document.getElementById("project-examples")
+var contact = document.getElementById("contact")
 
 var sticky = navBar.offsetTop
 
 function myFunction() {
-  if (screen.width > 960) {
+  if (screen.width > 1024) {
     if (window.pageYOffset > sticky) {
       navBar.classList.add("sticky")
+      navBar.classList.add('shrink')
     } else {
       navBar.classList.remove("sticky")
+      navBar.classList.remove('shrink')
     }
   }
 }
 
 function fixed() {
-  if (screen.width < 960) {
+  if (screen.width < 1023) {
     if (window.pageYOffset > sticky) {
-       menu.classList.add('stickto')
+       navBar.classList.add('stickto')
       } else {
-         menu.classList.remove('stickto')
+         navBar.classList.remove('stickto')
         }
       }
     }
@@ -83,4 +88,17 @@ var d = document.getElementById("contact").addEventListener("click", functionNam
 
 function functionName() {
   document.getElementById('checked').checked = false;
+}
+
+navBar.addEventListener("mouseover", enlarge);
+navBar.addEventListener("mouseleave", minimize);
+
+function enlarge() {
+  navBar.classList.remove('shrink')
+}
+
+function minimize() {
+  if (window.pageYOffset > sticky) {
+    navBar.classList.add('shrink')
+  }
 }
