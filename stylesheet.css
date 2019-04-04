@@ -498,10 +498,15 @@ html {
   .continue p {
     font-size: 16px;
   }
-
 }
 
-@media screen and (min-width: 375px) and (max-width: 849px){
+@media screen and (min-width:375px) and (max-width:849px)  {
+  .continue {
+    margin-top: 10px;
+  }
+}
+
+@media screen and (min-width: 669px) and (max-width: 849px){
 
   body h1 {
   font-size: 40px;
@@ -511,7 +516,7 @@ html {
     font-size: 30px;
   }
   body p, li {
-    font-size: 20px;
+    font-size: 40px;
   }
 }
 
@@ -990,6 +995,10 @@ form h1 {
 }
 
   @media screen and (min-width: 1024px) {
+
+    header {
+      min-height: 765px
+    }
 
     .whatido {
       display: flex;
