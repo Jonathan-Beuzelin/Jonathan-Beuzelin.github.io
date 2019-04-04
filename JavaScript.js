@@ -58,7 +58,7 @@ var contact = document.getElementById("contact")
 var sticky = navBar.offsetTop
 
 function myFunction() {
-  if (screen.width > 1024) {
+  if (screen.width > 1023) {
     if (window.pageYOffset > sticky) {
       navBar.classList.add("sticky")
       navBar.classList.add('shrink')
@@ -70,7 +70,7 @@ function myFunction() {
 }
 
 function fixed() {
-  if (screen.width < 1023) {
+  if (screen.width < 1022) {
     if (window.pageYOffset > sticky) {
        navBar.classList.add('stickto')
       } else {

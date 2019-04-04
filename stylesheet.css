@@ -46,6 +46,7 @@ header {
   flex-direction: column;
   font-family: 'Roboto', sans-serif;
   height: 100vh;
+  min-height: 700px;
   width: 100%;
   align-items: center;
   color: #e6e6e6;
@@ -148,8 +149,8 @@ nav ul a:hover {
 
 .shrink {
   Transition: 1s all ease-in-out;
-  padding-top: 0px;
-  padding-bottom: 0px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 /*spacing for main content from the navigation bar*/
@@ -169,7 +170,7 @@ main {
 
 .blurb {
   display: flex;
-  flex-wrap: wrap;
+  position: static;
   justify-content: center;
   flex-direction: column;
   height: auto;
@@ -193,7 +194,7 @@ main {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin-top: 10px;
+  margin-top: 50px;
 }
 /*arrow made from slicing a div into a triangle*/
 
@@ -479,6 +480,27 @@ html {
   min-width: 320px;
 }
 
+@media screen and (min-width: 100px) and (max-width:374px) {
+
+  header {
+    min-height: 568px;
+  }
+
+  .blurb p {
+    font-size: 16px;
+    padding-bottom: 0;
+  }
+
+  .continue {
+    margin-top: 10px;
+  }
+
+  .continue p {
+    font-size: 16px;
+  }
+
+}
+
 @media screen and (min-width: 375px) and (max-width: 849px){
 
   body h1 {
@@ -498,6 +520,10 @@ html {
 @media screen and (max-width: 850px) {
 
 /* BEGINNING OF HEADER*/
+main {
+  margin-top: 50px;
+}
+
 nav {
   border:none;
   justify-content: flex-start;
@@ -660,6 +686,11 @@ a:hover
 /*form*/
 form h1 {
   margin-top: 35px;
+ }
+
+ input {
+   height: 18px;
+   font-size: 12px;
  }
 }
 
