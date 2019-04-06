@@ -4,6 +4,8 @@
   box-sizing: border-box;
 }
 
+/*Body styles*/
+
 body {
   font-family: "Roboto", sans-serif;
   color: black;
@@ -26,18 +28,42 @@ body p {
 body h2 {
   font-size: 35px;
   text-decoration: underline;
+  margin-top: 35px;
   margin-bottom: 15px;
 }
 
 body h3 {
   font-size: 25px;
 }
-body li {
+body p, li {
   font-size: 25px;
+  text-align: left;
+  padding-bottom: 10px;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+body ul {
+  text-align: center;
+}
+
+body li {
+  text-align: center;
+  list-style: none;
 }
 
 nav ul a{
   font-size: 25px;
+}
+
+section {
+  background-color: #F9F9F9;
+  text-align: center;
+}
+
+article {
+  background-color: #F9F9F9;
 }
 
 /*BEGINNING OF HEADER*/
@@ -47,32 +73,14 @@ header {
   flex-direction: column;
   font-family: 'Roboto', sans-serif;
   height: 100vh;
-  min-height: 700px;
+  min-height: 780px;
   width: 100%;
   align-items: center;
   color: #e6e6e6;
 }
 
-/*My animated name*/
+/*NAVIGATION BAR*/
 
-.svgcontainer {
-  width: 100%;
-  height: 30%;
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-
-img {
-  width: 100%;
-  height: 100%;
-}
-
-
-/*navigation bar*/
 nav {
   position: absolute;
   display: flex;
@@ -81,19 +89,15 @@ nav {
   padding: 20px;
   height: auto;
   width:100%;
-  margin-bottom: 30px;
   border: solid white 2px;
   Transition: 1s all ease-in-out;
 }
 
+/*hamburger icon*/
+
 nav input {
   display: none;
 }
-
-
-/*hamburger icon*/
-
-
 
 /* Navigation menu */
 
@@ -130,7 +134,7 @@ nav ul a:hover {
   color: gold;
 }
 
-/*class added when scrolldown*/
+/*SCROLLDOWN CLASSES*/
 
 .sticky {
   position: fixed;
@@ -139,7 +143,7 @@ nav ul a:hover {
   background: #006B90;
   padding-top: 20px;
   padding-bottom: 20px;
-  Transition: 1s all ease-in-out;
+  Transition: 0.5s all ease-in-out;
   width: 80%;
   z-index: 2;
 }
@@ -149,29 +153,33 @@ nav ul a:hover {
 }
 
 .shrink {
-  Transition: 1s all ease-in-out;
+  Transition: 0.5s all ease-in-out;
   padding-top: 10px;
   padding-bottom: 10px;
 }
 
-/*spacing for main content from the navigation bar*/
+/*Hero Image*/
 
-
-main {
-  margin-top: 70px;
+.hero-container {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
-/*spacing for main when nav bar becomes positioned absolute*/
 
-.buffer {
-  margin-top: 105px;
+img {
+  width: 100%;
+  height: 100%;
 }
 
-/* hero text */
+/* hero text and spacing*/
 
 .blurb {
   display: flex;
-  position: static;
   justify-content: center;
   flex-direction: column;
   height: auto;
@@ -194,9 +202,10 @@ main {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  text-align: center;
   margin-top: 50px;
 }
+
+
 /*arrow made from slicing a div into a triangle*/
 
 .arrowcontainer {
@@ -204,10 +213,10 @@ main {
   height: auto;
   width: auto;
 }
+
 .arrow {
   width: 0;
   height: 0;
-  padding: auto;
   border-style: solid;
   border-width: 15.2px 10px 0 10px;
   border-color: #ffffff transparent transparent transparent;
@@ -216,40 +225,8 @@ main {
 
 /* END OF HEADER */
 
+ /*BEGINNING OF ABOUT ME*/
 
-.bio {
-
-}
-
-.skills {
-
-}
-
-.project-examples {
-
-}
-
-.contact {
-
-}
-
-
- /*about me*/
-
-article {
-  min-width: 320px;
-  background-color: #F9F9F9;
-}
-
-article li {
-  line-height: 1.8;
-}
-
-.toparticle {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
 
 .aboutme {
   display: flex;
@@ -257,18 +234,11 @@ article li {
   justify-content: center;
   flex-direction: column;
   height: auto;
-  width: 65%;
+  margin: auto;
+  width: 95%;
 }
 
-.spliter {
- background-color: #006D95;
- height: 5px;
- width: 85%;
- margin: auto;
- border-radius: 10px;
- margin-top: 30px;
-}
-
+/*My picture*/
 .aboutme img {
   align-self: center;
   border-radius: 50%;
@@ -279,20 +249,22 @@ article li {
   height: 210px;
 }
 
-.aboutme p {
-  text-align: left;
-  padding-bottom: 10px;
-  padding-top: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
+/*SPLITTER FOR EACH SECTION*/
+
+.spliter {
+ background-color: #006D95;
+ height: 5px;
+ width: 85%;
+ margin: auto;
+ border-radius: 10px;
+ margin-top: 60px;
 }
 
+/*END OF SPLITTER*/
 
-section {
-  background-color: #F9F9F9;
-}
+/*BEGINNING OF WHAT I DO*/
 
-.whatidomain {
+.whatido-section {
   display: flex;
   flex-direction: column;
   min-width: 320px;
@@ -307,57 +279,17 @@ section {
   flex-wrap: wrap;
   justify-content: center;
   flex-direction: column;
-  width: 95%;
-  align-self: center;
 }
 
-.whatido h2 {
-  margin-top: 5px;
-  margin-bottom: 15px;
-}
+/*END OF WHAT I DO*/
 
-.whatido p {
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-bottom: 15px;
-  text-align: left;
-}
-
-.whatido li:last-of-type {
-  margin-bottom: 15px;
-}
-
-
-.whatidomain ul {
-  text-align: center;
-}
-
-.whatidomain li {
-  padding-top: 5px;
-  list-style: none;
-}
-
-.whatidomain a {
-  color: gold;
-}
-
-.links li:last-of-type {
-  padding-bottom: 15px;
-}
-
-/*projects*/
-section {
-  width: 100%;
-  min-width: 320px;
-  text-align: center;
-}
+/*BEGINNING OF PROJECTS*/
 
 .projects {
   width: 100%;
   height: auto;
+  margin: auto;
   padding:0;
-  margin-left: auto;
-  margin-right: auto;
   z-index: 0;
 }
 
@@ -381,7 +313,9 @@ section {
   overflow: hidden;
 }
 
-/*contact me*/
+/*END OF PROJECTS*/
+
+/*BEGINNING OF CONTACT ME*/
 
 form {
   width: 100%;
@@ -438,7 +372,7 @@ label {
 }
 
 .formrow.two {
-  margin-right: 27px;
+  margin-right: 28px;
 }
 
 
@@ -482,14 +416,30 @@ html {
   min-width: 320px;
 }
 
-@media screen and (min-width: 100px) and (max-width:374px) {
+/*END OF GLOBAL CSS*/
+
+/*BEGINNING OF @MEDIA QUERIES*/
+
+/*SMALL PHONES*/
+
+@media screen and (min-width: 270px) and (max-width: 355px) {
+
+  body h1 {
+  font-size: 24px;
+  }
+
+  body h2, h3 {
+    font-size: 20px;
+  }
+  body p, li {
+    font-size: 16px;
+  }
 
   header {
-    min-height: 568px;
+    min-height: 600px;
   }
 
   .blurb p {
-    font-size: 16px;
     padding-bottom: 0;
   }
 
@@ -500,29 +450,67 @@ html {
   .continue p {
     font-size: 16px;
   }
+
+  .contactmeform p {
+    font-size: 16px;
+  }
+
+  textarea {
+    height: 250px;
+  }
 }
 
-@media screen and (min-width:375px) and (max-width:849px)  {
+/*MEDIUM TO LARGE PHONES*/
+
+@media screen and (min-width:356px) and (max-width:668px)  {
+
+  body h1 {
+  font-size: 24px;
+  }
+
+  body h2, h3 {
+    font-size: 20px;
+  }
+  body p, li {
+    font-size: 18px;
+  }
+
+  header {
+    min-height: 668px;
+  }
+
   .continue {
     margin-top: 10px;
   }
 }
 
-@media screen and (min-width: 669px) and (max-width: 849px){
+/*Iphone x hero container fitting */
 
-  body h1 {
-  font-size: 40px;
-  }
-
-  body h2, h3 {
-    font-size: 30px;
-  }
-  body p, li {
-    font-size: 40px;
+@media screen and (max-height: 420px) and (min-width: 800px){
+  .hero-container {
+    margin: auto;
+    margin-top: 15px;
+    width: 90%;
   }
 }
 
+/*INCREASED FONT SIZE*/
 
+@media screen and (min-width: 669px) and (max-width: 849px){
+
+  body h1 {
+  font-size: 30px;
+  }
+
+  body h2, h3 {
+    font-size: 20px;
+  }
+  body p, li {
+    font-size: 26px;
+  }
+}
+
+/*GENERAL MOBILE SETTINGS*/
 
 @media screen and (max-width: 850px) {
 
@@ -540,341 +528,24 @@ nav ul{
   flex-direction: column;
 }
 
-nav ul a:hover {
- border-bottom: grey solid 2px;
-}
-
-a:hover
-{
-  color: grey;
-}
-
-#menuToggle
-{
-  display: block;
-
-  z-index: 1;
-
-  -webkit-user-select: none;
-  user-select: none;
-}
-
-#menuToggle input
-{
-  display: block;
-  width: 40px;
-  height: 32px;
-  position: absolute;
-  top: 14px;
-  left: 16px;
-  opacity: 0; /* hides the checkbox */
-  z-index: 2; /*This keeps the input clickable by keeping it over the menu button.*/
-
-}
-
-/*
- * Just a quick hamburger
- */
-#menuToggle span
-{
-  display: block;
-  width: 33px;
-  height: 4px;
-  margin-bottom: 5px;
-  position: relative; /*This allows for the use of z-index to keep the hamburger icon above the menu */
-  background: black;
-  border-radius: 3px;
-  z-index: 1;
-  transform-origin: 4px 0px; /* first value moves it top right, second value moves it bottom right */
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease;
-}
-
-#menuToggle span:first-child /*selects first span*/
-{
-  transform-origin: 0% 0%;
-}
-
-#menuToggle span:nth-last-child(2) /* with span the number seems to start from 2*/
-{
-  transform-origin: 0% 100%;
-}
-
-/*
- * Transform all the slices of hamburger
- * into a crossmark.
- */
-#menuToggle input:checked ~ span /*The general sibling combinator (~) separates two selectors and matches the second element only if it follows the first element (though not necessarily immediately), and both are children of the same parent element.*/
-{
-  opacity: 1;
-  transform: rotate(45deg) translate(-2px, -1px);
-  background: #232323;
-}
-
-/*
- * But let's hide the middle one.
- */
-#menuToggle input:checked ~ span:nth-last-child(3)
-{
-  opacity: 0;
-  transform: rotate(0deg) scale(0.2, 0.2);
-}
-
-/*
- * Ohyeah and the last one should go the other direction
- */
-#menuToggle input:checked ~ span:nth-last-child(2)
-{
-  transform: rotate(-45deg) translate(0, -1px);
-}
-
-/*
- * Make this absolute positioned
- * at the top left of the screen
- */
-#menu
-{
-  position: absolute;
-  width: 300px;
-  margin: -100px 0 0 -50px;
-  padding: 50px;
-  padding-top: 125px;
-  border: 1px solid white;
-  border-bottom-right-radius: 30px;
-  text-align: center;
-
-  background-image: url(backgrounds-blank-blue-953214.jpg);
-  list-style-type: none;
-  -webkit-font-smoothing: antialiased;
-  /* to stop flickering of text in safari */
-
-  transform-origin: 0% 0%;
-  transform: translate(-100%, 0);
-
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-}
-
-#menu li
-{
-  padding-bottom: 45px;
-}
-
-#menu a {
-  font-size: 22px;
-}
-
-/*
- * And let's slide it in from the left
- */
-#menuToggle input:checked ~ ul
-{
-  transform: none;
-}
-
 /*END OF HEADER*/
-.mainheader p {
-  margin-top: 35px;
- }
 
- .aboutme {
-   width: 100%;
- }
 
-/*projects*/
-
-.projecticons {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  flex-direction: column;
-}
-
-/*form*/
-form h1 {
-  margin-top: 35px;
- }
+/*BEGINNING OF FORM*/
 
  input {
    height: 18px;
    font-size: 12px;
- }
+ } /*END OF FORM*/
 }
 
-@media screen and (max-height: 420px) and (min-width: 812px){
-  .svgcontainer {
-    margin: auto;
-    margin-top: 15px;
-    width: 90%;
-  }
-}
+/*HAMBURGER MENU - Menu implemented up to 1023px but is changed 768px to an increased size*/
 
-@media screen and (max-width: 850px) and (orientation: landscape) {
-
-header {
-  height: auto;
-}
-
-nav {
-  border:none;
-}
-nav ul{
-  display: flex;
-  flex-direction: column;
-
-}
-a:hover
-{
-  color: tomato;
-}
-
-main {
-  margin-top: 0;
-}
-
-
-.arrowcontainer {
-  position: static;
-  margin-bottom: 25px;
-}
-
-.continue p {
-  position: static;
-  margin: auto;
-  margin-top: 25px;
-  margin-bottom: 15px;
-}
-
-/*END OF HEADER*/
-
-.mainheader p {
-  margin-top: 35px;
- }
-
-/*projects*/
-.projecticons a {
-  width: 28%;
-  height: 100px;
-  font-size: 200%;
-  line-height: 104px;
- }
-
-/*form*/
-form h1 {
-  margin-top: 35px;
- }
-}
-
-
-@media screen and (orientation: landscape) and (min-width: 600px) and (max-width: 1023px){
-  /*landing*/
-
-  .mainheader p {
-    margin-top: 35px;
-   }
-
- /*projects*/
-
-  .projects h1 {
-    margin-bottom: 5px;
-  }
-
-  /*contactme*/
-
-  form h1 {
-    margin-top: 35px;
-  }
-}
-
-@media screen and (max-width: 1025px) and (min-height: 1024px) {
-
-  body h1 {
-    font-size: 64px;
-  }
-
-  body p {
-    font-size: 30px;
-    margin-bottom: 35px;
-  }
-
-  body h2 {
-    font-size: 45px;
-    text-decoration: underline;
-    margin-bottom: 25px;
-  }
-
-  body h3 {
-    font-size: 35px;
-  }
-  body li {
-    font-size: 35px;
-  }
-
-  nav ul a{
-    font-size: 35px;
-  }
-
-  .svgcontainer {
-    height: auto;
-    margin-top: 50px;
-  }
-
-
-  .whatido li:last-of-type {
-    margin-bottom: 35px;
-  }
-
-  .contactmeform {
-    justify-content: flex-start;
-  }
-
-  label {
-    font-size: 35px;
-  }
-
-  .formrow.two {
-    margin-right: 27px;
-  }
-
-  input {
-    height: 30px;
-    font-size: 25px;
-  }
-
-  textarea {
-    height: 540px;
-    font-size: 25px;
-  }
-
-  .submit {
-    font-size: 26px;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1023px){
-  /* BEGINNING OF HEADER*/
-  nav {
-    border:none;
-    justify-content: flex-start;
-  }
-  nav ul{
-    display: flex;
-    flex-direction: column;
-  }
-
-  nav ul a:hover {
-   border-bottom: grey solid 2px;
-  }
-
-  a:hover
-  {
-    color: grey;
-  }
+@media screen and (max-width:1023px){
 
   #menuToggle
   {
     display: block;
-    padding: 20px;
 
     z-index: 1;
 
@@ -885,11 +556,11 @@ form h1 {
   #menuToggle input
   {
     display: block;
-    width: 80px;
-    height: 80px;
+    width: 40px;
+    height: 32px;
     position: absolute;
-    top: 18px;
-    left: 30px;
+    top: 14px;
+    left: 16px;
     opacity: 0; /* hides the checkbox */
     z-index: 2; /*This keeps the input clickable by keeping it over the menu button.*/
 
@@ -901,14 +572,14 @@ form h1 {
   #menuToggle span
   {
     display: block;
-    width: 44px;
-    height: 6px;
-    margin-bottom: 7px;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
     position: relative; /*This allows for the use of z-index to keep the hamburger icon above the menu */
     background: black;
     border-radius: 3px;
     z-index: 1;
-    transform-origin: 3px 0px; /* first value moves it top right, second value moves it bottom right */
+    transform-origin: 4px 0px; /* first value moves it top right, second value moves it bottom right */
     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
                 background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
                 opacity 0.55s ease;
@@ -959,7 +630,7 @@ form h1 {
   #menu
   {
     position: absolute;
-    width: 460px;
+    width: 300px;
     margin: -100px 0 0 -50px;
     padding: 50px;
     padding-top: 125px;
@@ -980,11 +651,11 @@ form h1 {
 
   #menu li
   {
-    padding-bottom: 75px;
+    padding-bottom: 45px;
   }
 
   #menu a {
-    font-size: 33px;
+    font-size: 22px;
   }
 
   /*
@@ -996,31 +667,270 @@ form h1 {
   }
 }
 
-  @media screen and (min-width: 1024px) {
 
-    header {
-      min-height: 790px
-    }
+/*INCREASED FONT SIZES FOR WIDER AND HIGHER DISPLAYS*/
 
-    .whatido {
-      display: flex;
-      flex-direction: row;
-    }
 
-    .whatido h2 {
-      margin-bottom: 45px;
+@media screen and (max-width: 1025px) and (min-height: 1024px) {
 
-    }
-    .languages {
-      width: 100%
-    }
-
-    .grouped {
-      width: 33%;
-      margin-top: 35px;
-    }
-
-    textarea {
-      height: 500px;
-    }
+  body h1 {
+    font-size: 64px;
   }
+
+  body p {
+    font-size: 30px;
+    margin-bottom: 35px;
+  }
+
+  body h2 {
+    font-size: 45px;
+    text-decoration: underline;
+    margin-bottom: 25px;
+  }
+
+  body h3 {
+    font-size: 35px;
+  }
+  body li {
+    font-size: 35px;
+  }
+
+  nav ul a{
+    font-size: 35px;
+  }
+
+  .hero-container {
+    margin-top: 50px;
+  }
+
+
+  .whatido li:last-of-type {
+    margin-bottom: 35px;
+  }
+
+  .contactmeform {
+    justify-content: flex-start;
+  }
+
+  label {
+    font-size: 35px;
+  }
+
+  .formrow.two {
+    margin-right: 28px;
+  }
+
+  input {
+    height: 30px;
+    font-size: 25px;
+  }
+
+  textarea {
+    height: 540px;
+    font-size: 25px;
+  }
+
+  .submit {
+    font-size: 26px;
+  }
+}
+
+/*INCREASED MENU SIZE - for bigger mobiles and tablets*/
+
+@media screen and (min-width: 768px) and (max-width: 1023px){
+  /* BEGINNING OF HEADER*/
+  nav {
+    border:none;
+    justify-content: flex-start;
+  }
+  nav ul{
+    display: flex;
+    flex-direction: column;
+  }
+
+  #menuToggle input
+  {
+    width: 60px;
+    height: 50px;
+    position: absolute;
+    top: 10px;
+    left: 14px;
+  }
+
+  #menuToggle span
+  {
+    display: block;
+    width: 44px;
+    height: 6px;
+    margin-bottom: 7px;
+    position: relative; /*This allows for the use of z-index to keep the hamburger icon above the menu */
+    background: black;
+    z-index: 1;
+    transform-origin: 3px 0px; /* first value moves it top right, second value moves it bottom right */
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                opacity 0.55s ease;
+  }
+
+  /*
+   * Make this absolute positioned
+   * at the top left of the screen
+   */
+  #menu {
+    position: absolute;
+    width: 460px;
+    padding: 50px;
+    padding-top: 125px;
+    text-align: center;
+  }
+
+  #menu li {
+    padding-bottom: 75px;
+  }
+
+  #menu a {
+    font-size: 33px;
+  }
+}
+
+/*BIG DISPLAY TABLETS & DESKTOP STYLES*/
+
+@media screen and (min-width: 1024px) {
+
+  header {
+    min-height: 970px
+  }
+
+  main {
+    margin-top: 100px;
+  }
+
+  .whatido {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .whatido h2 {
+    margin-bottom: 45px;
+  }
+
+  .languages {
+    width: 100%
+  }
+
+  .grouped {
+    width: 33%;
+    margin-top: 35px;
+  }
+
+  textarea {
+    height: 500px;
+  }
+}
+
+/*MOBILE IN LANDSCAPE*/
+/*LANDSCAPE SETTINGS*/
+@media screen and (orientation: landscape) and (min-width: 475px) and (max-width: 639px){
+
+ /*landing*/
+ .mainheader p {
+    margin-top: 35px;
+  }
+
+  #menu {
+    padding-top: 80px;
+  }
+
+  #menu li {
+    padding-bottom: 12px;
+  }
+
+  /*projects*/
+
+ .projects h1 {
+    margin-bottom: 5px;
+  }
+
+  /*contactme*/
+
+  form h1 {
+    margin-top: 35px;
+  }
+}
+
+/*BIGGER MOBILES IN LANDSCAPE*/
+
+@media screen and (min-width:640px) and (max-width: 850px) and (orientation: landscape) {
+
+ body h1 {
+    font-size: 30px;
+ }
+
+ body h2, h3 {
+    font-size: 26px;
+ }
+
+ body p, li {
+    font-size: 20px;
+ }
+
+ header {
+    height: auto;
+ }
+
+ nav {
+    border:none;
+ }
+
+ nav ul{
+    display: flex;
+    flex-direction: column;
+ }
+
+ #menu {
+    padding-top: 70px;
+ }
+
+ #menu li {
+    padding-bottom: 14px;
+ }
+
+ #menu a {
+    font-size: 28px;
+ }
+
+ main {
+    margin-top: 0;
+ }
+
+
+ .arrowcontainer {
+    position: static;
+    margin-bottom: 25px;
+ }
+
+ .continue p {
+    position: static;
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 15px;
+ }
+
+ /*END OF HEADER*/
+
+ .mainheader p {
+    margin-top: 35px;
+  }
+ /*projects*/
+ .projecticons a {
+    width: 28%;
+    height: 100px;
+    font-size: 200%;
+    line-height: 104px;
+  }
+
+ /*form*/
+ form h1 {
+    margin-top: 35px;
+  }
+ }
