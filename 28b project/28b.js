@@ -11,7 +11,7 @@ var arrayOfToolTips = ['avgToolTipOne', 'avgToolTipTwo', 'avgToolTipThree', 'avg
 'complacentToolTipFive', 'complacentToolTipSix', 'confidentToolTipOne', 'confidentToolTipTwo', 'confidentToolTipThree', 'confidentToolTipFour', 'confidentToolTipFive',
 'confidentToolTipSix'
 ];
-var arrayOfUsers = ['Sam Rep', 'Dan Rep', 'Lukkio Rep', 'Manu Rep', 'Jere Rep', 'George Rep', 'Jacob Rep', 'Garry Rep']; //users that are picked by a random generated number//
+var arrayOfUsers = ['Sam Repp', 'Dan Repp', 'Lukkio Repp', 'Manu Repp', 'Jere Repp', 'George Repp', 'Jacob Repp', 'Garry Repp']; //users that are picked by a random generated number//
 var arrayOfMonths = ['January', 'Febuary', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'] //months picked by random generated number//
 var arrayOfYears = ['2019', '2020', '2021'] //years picked by random generated number//
 var hours
@@ -79,7 +79,6 @@ function getPercent() {
         percentArray[5]++;
     }
     percentTotal = getTotal();
-    console.log(percentTotal);
 }
 
 
@@ -141,15 +140,15 @@ function displayNextDate() {
     } else {
         date.innerHTML = '<span>' + hours + ':' + minutes + '</span>' + '<br>' + days + ' ' + arrayOfMonths[months] + ' ' + arrayOfYears[years];
     };
-
 };
 
+function screenCheck() {
+  if (screen.width < 1024) {
+    window.alert("This interface is made primarily for tablets, laptops and desktops and may not be suitible for viewings on other platforms.")
+  }
+};
 
+screenCheck();
 displayNextDate()
 getPercent();
 repeat();
-console.log(loader.style.strokeDashoffset)
-
-console.log(arrayOfIds)
-console.log(percentArray)
-console.log(numbersArray)

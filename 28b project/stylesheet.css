@@ -37,6 +37,7 @@ a:hover {
 li {
   text-decoration: none;
   padding: 20px;
+  color: #ffffff;
 }
 
 
@@ -73,22 +74,12 @@ nav h3 {
 
 nav li {
   padding-bottom: 20px;
-  color: lightgrey;
   font-weight: 600;
   list-style: none;
   font-size: 15px;
   padding-left: 40px;
 }
 
-
-nav p {
-  position: absolute;
-  bottom: 5px;
-  left: 10px;
-  font-weight: bold;
-  color: lightgrey;
-  font-size: 18px;
-}
 
 .user {
   padding-top: 0;
@@ -200,7 +191,8 @@ table#tableprofile td {
 }
 
 .legends li {
-  margin-left: -108px;
+  margin-left: -40px;
+  color: #333333;
 }
 
 .diamond {
