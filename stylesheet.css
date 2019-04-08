@@ -186,11 +186,11 @@ img {
   justify-content: center;
   flex-direction: column;
   height: auto;
-  width: 100%;
+  margin: auto;
+  width: 85%;
 }
 
 .blurb p {
-  text-align: center;
   padding-bottom: 10px;
   padding-top: 20px;
   padding-left: 20px;
@@ -457,6 +457,7 @@ html {
 
   .continue p {
     font-size: 16px;
+    padding-top: 0px;
   }
 
   .contactmeform p {
@@ -488,7 +489,11 @@ html {
   }
 
   .continue {
-    margin-top: 10px;
+    margin-top: 0px;
+  }
+
+  .continue p {
+    padding-top: 0px;
   }
 }
 
@@ -811,6 +816,10 @@ nav ul{
 
   main {
     margin-top: 100px;
+  }
+
+  .blurb p {
+    text-align: center;
   }
 
   .whatido {
