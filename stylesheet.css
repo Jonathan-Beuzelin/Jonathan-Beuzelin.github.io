@@ -159,7 +159,7 @@ nav ul a:hover {
   Transition: 0.5s all ease-in-out;
   padding-top: 10px;
   padding-bottom: 10px;
-  width: 50%;
+  width: 82%;
 }
 
 /*Hero Image*/
@@ -209,6 +209,10 @@ img {
   margin-top: 50px;
 }
 
+.continue p {
+  margin-bottom: 0;
+}
+
 
 /*arrow made from slicing a div into a triangle*/
 
@@ -251,6 +255,13 @@ img {
   overflow: hidden;
   width: 210px;
   height: 210px;
+}
+
+.lists {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .link-icons ul {
@@ -658,7 +669,7 @@ nav ul{
   {
     position: absolute;
     width: 300px;
-    margin: -100px 0 0 -50px;
+    margin: -100px 0 0 -30px;
     padding: 50px;
     padding-top: 125px;
     border: 1px solid white;
@@ -744,7 +755,7 @@ nav ul{
   }
 
   .formrow.two {
-    margin-right: 28px;
+    margin-right: 52px;
   }
 
   input {
