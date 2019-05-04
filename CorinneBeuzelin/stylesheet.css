@@ -11,6 +11,7 @@ body {
 
 body h1 {
   font-size: 70px;
+  z-index: 1;
 }
 
 body h2 {
@@ -20,6 +21,7 @@ body h2 {
 body p {
   margin-top: 35px;
   font-size: 24px;
+  z-index: 1;
 }
 
 body li {
@@ -32,6 +34,7 @@ body a {
   font-weight: bold;
   color: #f30067;
 }
+
 
 .else h1 {
   font-size: 50px;
@@ -71,6 +74,8 @@ nav {
 
 .hamburger {
   width: 100%;
+  position: fixed;
+  z-index: 2;
 }
 
 .hero {
@@ -184,26 +189,17 @@ nav {
   margin: 0;
 }
 
-.backgroundone {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 320px;;
-  background-color: #00d1cd;
-  -webkit-clip-path: circle(94px at 0% 0%);
-  clip-path: circle(94px at 0% 0%);
+.circleone {
+  position: fixed;
 }
 
-.backgroundtwo {
+.circletwo {
+  width:200px;
+  height: 200px;
   position: fixed;
   bottom: 0;
   right: 0;
-  width: 320px;
-  height: 320px;;
-  background-color: #f30067;
-  -webkit-clip-path: circle(36px at 92% 92%);
-  clip-path: circle(45px at 92% 92%);
+  z-index: 0;
 }
 
 .arrow span {
@@ -235,3 +231,4 @@ nav {
 
 
 @media screen and (min-width: 320px) {
+}
