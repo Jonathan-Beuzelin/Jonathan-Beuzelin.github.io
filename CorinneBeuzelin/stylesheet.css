@@ -190,7 +190,7 @@ nav {
   background-color: white;
   transform-origin: 0% 0%;
   transform: translate(0, -107%);
-  height: auto;
+  height: 100%;
   overflow-y: auto;
 
 
@@ -207,10 +207,14 @@ nav {
 
 .menu li {
   list-style: none;
-  padding: 20px;
+  padding: 19px;
   width: 90%;
   margin: auto;
   border-bottom: 0.5px #00d1cd solid;
+}
+
+.spacing li {
+  padding: 21px;
 }
 
 .menu li:last-of-type {
