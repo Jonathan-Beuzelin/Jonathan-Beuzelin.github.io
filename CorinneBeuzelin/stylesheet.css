@@ -10,50 +10,93 @@ body {
 
 
 body h1 {
-  font-size: 70px;
+  font-size: 80px;
   z-index: 1;
+  line-height: 1;
+  text-align: center;
+  font-weight: 400;
+  margin-bottom: 20px;
 }
 
 body h2 {
   font-size: 34px;
+  font-weight: 400;
+}
+
+body h3 {
+  position: relative;
+  font-size: 22px;
+  margin: 15px;
+  z-index: 1;
+  font-weight: 400;
 }
 
 body p {
-  margin-top: 35px;
+  margin-top: 15px;
   font-size: 24px;
   z-index: 1;
 }
 
 body li {
+  position: relative;
   font-size: 20px;
+  margin: 15px;
+  z-index: 1;
+  list-style: none;
+  font-weight: 400;
 }
+
+.structure li:last-of-type {
+  margin-bottom: 25px;
+}
+
+.structure ul:first-of-type {
+  margin-top: 25px;
+}
+
 
 body a {
   text-decoration: none;
   font-size: 24px;
-  font-weight: bold;
+  font-weight: 400;
   color: #f30067;
 }
 
 
-.else h1 {
+.structure h1 {
   font-size: 50px;
   padding-top: 90px;
-  padding-bottom: 40px;
+  padding-bottom: 20px;
+  margin: 15px;
+  margin-bottom: 20px;
+  border-bottom: solid 2px #f30067;
 }
 
-.else p {
+.structure h2 {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  font-size: 33px;
+}
+
+.structure h3 {
+  font-size: 30px;
+}
+
+.structure p {
   font-size: 20px;
-  padding: 0px 15px 0px 15px;
+  margin: 15px;
   text-align: left;
 }
 
-.else p:last-of-type {
-  margin-bottom: 60px;
+.structure p:last-of-type {
+  margin-bottom: 90px;
+  padding-bottom: 25px;
+  border-bottom: 2px solid #00d1cd;
 }
 
 header {
-  height: 100vh;
+
+  min-height: 568px;
   background-image: url(background.jpg);
   background-size:  cover;
   background-repeat: no-repeat;
@@ -61,6 +104,7 @@ header {
 
 .else {
   background-image: none;
+  min-height: auto;
 }
 
 nav {
@@ -80,12 +124,16 @@ nav {
 
 .hero {
   background: rgba(0, 0, 0, 0.4);
+  min-height: 568px;
   height: 100vh;
   display: flex;
   justify-content: center;
   flex-direction: column;
   text-align: center;
   color: white;
+  padding: 50px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .hamburger input {
@@ -136,17 +184,21 @@ nav {
 }
 
 .menu {
-  position: absolute;
+  position: fixed;
   top: 0;
   margin: 0px 0 0 0px;
   background-color: white;
   transform-origin: 0% 0%;
   transform: translate(0, -107%);
+  height: auto;
+  overflow-y: auto;
 
 
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
   z-index: 1;
 }
+
+
 
 .hamburger ul {
   text-align: center;
@@ -173,21 +225,30 @@ nav {
   background-color: #00d1cd;
 }
 
-.contact {
-  position: absolute;
-  bottom: 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 100%;
-  border-top: inset 1px #00d1cd;
+.options {
+  background: rgba(0, 0, 0, 0.6);
+  margin: auto;
+  margin-bottom: -30px;
+  margin-top: 15px;
+  padding: 15px;
+  border: solid #00d1cd 2px;
+  max-width: 560px;
 }
 
-.contact p {
-  font-size: 14px;
-  padding: 15px;
+.options h3 {
   margin: 0;
 }
+
+.options a {
+  color: white;
+  font-size: 22px;
+  color: #f30067;
+}
+
+.options ul {
+  list-style: none;
+}
+
 
 .circleone {
   position: fixed;
@@ -214,21 +275,56 @@ nav {
   transform: rotate(45deg);
 }
 
-.aboutme {
+.structure {
   display: flex;
   justify-content: center;
   flex-direction: column;
   text-align: center;
 }
 
-.aboutme img {
+.structure img {
   height: 300px;
   width: 233px;
   margin: auto;
   border: solid 2px #f30067;
   border-radius: 50px;
+  margin-bottom: 25px;
 }
 
+@media all and (min-width: 480px) and (max-width: 735px) {
 
-@media screen and (min-width: 320px) {
+  .hero {
+    min-height: 770px
+  }
+
+  body h1 {
+    font-size: 120px;
+    z-index: 1;
+    line-height: 1;
+    margin: 15px;
+  }
+
+  body h2 {
+    font-size: 50px;
+    margin-top: 25px;
+    margin: 15px;
+  }
+
+  body h3 {
+    font-size: 36px;
+  }
+
+  body p {
+    margin-top: 15px;
+    font-size: 34px;
+    z-index: 1;
+  }
+
+  .options a {
+    font-size: 30px;
+  }
 }
+@media all and (max-width: 736px) {}
+@media all and (max-width: 980px) {}
+@media all and (max-width: 1280px) {}
+@media all and (max-width: 1690px) {}
