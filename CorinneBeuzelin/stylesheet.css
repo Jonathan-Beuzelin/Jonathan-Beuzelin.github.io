@@ -27,6 +27,7 @@ body h3 {
   position: relative;
   font-size: 22px;
   margin: 15px;
+  margin-top: 45px;
   z-index: 1;
   font-weight: 400;
 }
@@ -50,10 +51,6 @@ body li {
   margin-bottom: 25px;
 }
 
-.structure ul:first-of-type {
-  margin-top: 25px;
-}
-
 
 body a {
   text-decoration: none;
@@ -67,13 +64,13 @@ body a {
   font-size: 50px;
   padding-top: 90px;
   padding-bottom: 20px;
-  margin: 15px;
+  margin-top: 15px;
   margin-bottom: 20px;
   border-bottom: solid 2px #f30067;
 }
 
 .structure h2 {
-  margin-top: 25px;
+  margin-top: 55px;
   margin-bottom: 25px;
   font-size: 33px;
 }
@@ -84,14 +81,15 @@ body a {
 
 .structure p {
   font-size: 20px;
-  margin: 15px;
+  margin-left: auto;
+  margin-right: auto;
   text-align: left;
+  max-width: 730px;
+  padding: 15px;
 }
 
 .structure p:last-of-type {
-  margin-bottom: 90px;
   padding-bottom: 25px;
-  border-bottom: 2px solid #00d1cd;
 }
 
 header {
@@ -105,6 +103,11 @@ header {
 .else {
   background-image: none;
   min-height: auto;
+}
+
+.structure {
+  border-bottom: 2px solid #00d1cd;
+  margin-bottom: 90px;
 }
 
 nav {
@@ -299,6 +302,10 @@ nav {
 .iframe-mar {
   margin: 15px;
   height: 50vh;
+}
+
+span {
+  text-align: center;
 }
 
 @media all and (min-width: 480px) and (max-width: 735px) {
