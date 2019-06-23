@@ -1,0 +1,149 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  margin: auto;
+}
+header {
+  display: flex;
+  justify-content: center;
+  width: auto;
+  padding: 25px;
+  text-align: center;
+  animation: opacity 2s ease-in-out;
+}
+
+
+.welcome {
+  position: absolute;
+  width: 100%;
+  margin: auto;
+  animation-name: opacity, shrink;
+  animation-duration: 3s;
+  animation-delay: 0s, 3s;
+  animation-fill-mode: forwards, forwards;
+}
+
+.maincontent {
+  animation: opacity 2s ease-in;
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes shrink {
+  0% {
+    transform: scale(1) translate(0vh, 0vh);
+  }
+
+  100% {
+    transform: scale(0.5) translate(0vw, -90vh);
+  }
+}
+
+/*@keyframes movetotop {
+  0% {
+    transform: translate(0px, 0px);
+  }
+
+  100% {
+    transform: translate(10px, 10px);
+  }
+}*/
+
+h1 {
+  padding-bottom: 25px;
+  font-size: 50px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 35px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  animation: opacity 2s ease-in;
+  min-width: 100px;
+  align-self: center;
+}
+
+label {
+  text-align: center;
+  font-size: 26px;
+  padding-bottom: 10px;
+}
+
+input {
+  text-align: center;
+}
+
+#name {
+  height: 27px;
+  margin-bottom: 20px;
+}
+
+#submit {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: blue 2px solid;
+  margin: auto;
+}
+
+
+.subheader {
+  width: 100%;
+  padding-top: 50px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.Calculations {
+  width: 50%;
+  height: 100%;
+}
+
+.inputsection {
+  display: flex;
+  flex-direction: row;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.graph {
+  width: 50%;
+  height: 100%;
+}
