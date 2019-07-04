@@ -1,149 +1,107 @@
 * {
   box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 body {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  height: 100vh;
-  margin: auto;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f9ffff;
 }
-header {
-  display: flex;
-  justify-content: center;
-  width: auto;
-  padding: 25px;
-  text-align: center;
-  animation: opacity 2s ease-in-out;
-}
-
-
-.welcome {
-  position: absolute;
-  width: 100%;
-  margin: auto;
-  animation-name: opacity, shrink;
-  animation-duration: 3s;
-  animation-delay: 0s, 3s;
-  animation-fill-mode: forwards, forwards;
-}
-
-.maincontent {
-  animation: opacity 2s ease-in;
-}
-
-@keyframes opacity {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes shrink {
-  0% {
-    transform: scale(1) translate(0vh, 0vh);
-  }
-
-  100% {
-    transform: scale(0.5) translate(0vw, -90vh);
-  }
-}
-
-/*@keyframes movetotop {
-  0% {
-    transform: translate(0px, 0px);
-  }
-
-  100% {
-    transform: translate(10px, 10px);
-  }
-}*/
+/*HEADER*/
 
 h1 {
-  padding-bottom: 25px;
-  font-size: 50px;
-  text-align: center;
+  padding-bottom: 15px;
 }
 
-h2 {
-  font-size: 35px;
+header {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+  margin: 0 0 0 0;
+  min-height: 150px;
+  background-color: #ddf6fa;
+  border-bottom: solid 	#0072e9 3px;
 }
+
+
+/*MAIN SECTION*/
+
 
 main {
   display: flex;
-  flex-direction: column;
-  height: 100vh;
-  width: 100%;
-
+  justify-content: center;
+  flex-wrap: wrap;
+  height: calc(100vh - 150px)
 }
 
-form {
+
+section {
   display: flex;
-  justify-content: center;
   flex-direction: column;
-  animation: opacity 2s ease-in;
-  min-width: 100px;
-  align-self: center;
+  justify-content: flex-start;
+  width: 50%;
+  min-width: 300px;
+  text-align: center;
+  border: solid black 2px;
+  border-top: none;
+  border-bottom: none;
+  padding-top: 20px;
+}
+
+.inputform {
+  margin: 0 15px 20px 15px
+}
+
+.column {
+  width: 50%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.column-seperator {
+  display: flex;
+  flex-direction: row;
+}
+
+.section-header {
+  margin-bottom: 20px;
+}
+
+.section-header label {
+  display: inline-block;
+  margin: 20px 0 0 0;
+}
+
+#currency {
+  width: auto;
+}
+
+input[name="monthly"] {
+  width: 60%;
+  text-align: center;
 }
 
 label {
   text-align: center;
-  font-size: 26px;
-  padding-bottom: 10px;
-}
-
-input {
-  text-align: center;
-}
-
-#name {
-  height: 27px;
-  margin-bottom: 20px;
-}
-
-#submit {
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  border: blue 2px solid;
-  margin: auto;
 }
 
 
-.subheader {
-  width: 100%;
-  padding-top: 50px;
+input:first-of-type, select:first-of-type{
+  margin: 20px 0px 5px 0;
 }
 
-.row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+input, select {
+  margin: 0 0 5px 0;
+  align-self: center;
+  width:100%;
+  max-width: 200px;
 }
 
-.Calculations {
-  width: 50%;
-  height: 100%;
-}
-
-.inputsection {
-  display: flex;
-  flex-direction: row;
-}
-
-.column {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-}
-
-.graph {
-  width: 50%;
-  height: 100%;
+button {
+  width: 100px;
+  align-self: center;
+  margin: 20px 0 20px 0;
 }
