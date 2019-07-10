@@ -4,6 +4,24 @@
   padding: 0;
 }
 
+.pie-chart-value {
+  fill: none;
+  stroke-width: 119;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap:wrap;
+  list-style: none;
+  width: 100%;
+}
+
+li {
+  margin: 20px 20px 20px 20px
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
   background-color: #f9ffff;
@@ -40,7 +58,7 @@ main {
 section {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   width: 50%;
   min-width: 300px;
   text-align: center;
@@ -51,7 +69,7 @@ section {
 }
 
 .inputform {
-  margin: 0 15px 20px 15px
+  margin: 0 15px 20px 15px;
 }
 
 .column {
@@ -75,6 +93,17 @@ section {
   margin: 20px 0 0 0;
 }
 
+.row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+}
+
+.row span {
+  padding-right: 5px;
+}
+
 #currency {
   width: auto;
 }
@@ -86,11 +115,7 @@ input[name="monthly"] {
 
 label {
   text-align: center;
-}
-
-
-input:first-of-type, select:first-of-type{
-  margin: 20px 0px 5px 0;
+  margin: 0px 0px 20px 0;
 }
 
 input, select {
@@ -99,6 +124,10 @@ input, select {
   width:100%;
   max-width: 200px;
 }
+
+
+
+
 
 button {
   width: 100px;

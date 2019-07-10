@@ -20,27 +20,87 @@
           <h2>Finances</h2>
           <label for="monthly">Monthly Income</label>
           <select id="currency">
-            <option value="">£</option>
-            <option value="dog">$</option>
-            <option value="cat">€</option>
+            <option value="£">£</option>
+            <option value="$">$</option>
+            <option value="€">€</option>
           </select>
           <input type="text" name="monthly" value="" placeholder="Insert here" id="monthly">
         </div>
         <div class="column-seperator">
           <div class="column" id="columnone">
             <label for="expenditure">Expenditure</label>
-            <input type="text" name="expenditure" value=""  placeholder="Amount" id="expenditure" class="expenditure">
+            <div class="row">
+              <span class="unit"></span>
+              <input type="text" name="expenditure" value=""  placeholder="Amount" id="expenditure" class="expenditure">
+            </div>
+            <div class="row">
+              <span class="unit"></span>
+              <input type="text" name="expenditure" value=""  placeholder="Amount" id="expenditure" class="expenditure">
+            </div>
+            <div class="row">
+              <span class="unit"></span>
+              <input type="text" name="expenditure" value=""  placeholder="Amount" id="expenditure" class="expenditure">
+            </div>
+            <div class="row">
+              <span class="unit"></span>
+              <input type="text" name="expenditure" value=""  placeholder="Amount" id="expenditure" class="expenditure">
+            </div>
+            <div class="row">
+              <span class="unit"></span>
+              <input type="text" name="expenditure" value=""  placeholder="Amount" id="expenditure" class="expenditure">
+            </div>
           </div>
-          <div class="column" id="columntwo">
+          <div class="column columntwo" id="columntwo">
             <label for="type">Expenditure Type</label>
-            <select id="pet-select">
+            <select id="expendituretype">
               <option value="">--Please choose an option--</option>
-              <option value="dog">Dog</option>
-              <option value="cat">Cat</option>
-              <option value="hamster">Hamster</option>
-              <option value="parrot">Parrot</option>
-              <option value="spider">Spider</option>
-              <option value="goldfish">Goldfish</option>
+              <option value="food">Food</option>
+              <option value="bills">Bills</option>
+              <option value="transport">Transport</option>
+              <option value="clothing">Clothing</option>
+              <option value="social">Social</option>
+              <option value="health">Health</option>
+              <option value="other">Other</option>
+            </select>
+            <select id="expendituretype">
+              <option value="">--Please choose an option--</option>
+              <option value="food">Food</option>
+              <option value="bills">Bills</option>
+              <option value="transport">Transport</option>
+              <option value="clothing">Clothing</option>
+              <option value="social">Social</option>
+              <option value="health">Health</option>
+              <option value="other">Other</option>
+            </select>
+            <select id="expendituretype">
+              <option value="">--Please choose an option--</option>
+              <option value="food">Food</option>
+              <option value="bills">Bills</option>
+              <option value="transport">Transport</option>
+              <option value="clothing">Clothing</option>
+              <option value="social">Social</option>
+              <option value="health">Health</option>
+              <option value="other">Other</option>
+            </select>
+            <select id="expendituretype">
+              <option value="">--Please choose an option--</option>
+              <option value="food">Food</option>
+              <option value="bills">Bills</option>
+              <option value="transport">Transport</option>
+              <option value="clothing">Clothing</option>
+              <option value="social">Social</option>
+              <option value="health">Health</option>
+              <option value="other">Other</option>
+            </select>
+            <select id="expendituretype">
+              <option value="">--Please choose an option--</option>
+              <option value="food">Food</option>
+              <option value="bills">Bills</option>
+              <option value="transport">Transport</option>
+              <option value="clothing">Clothing</option>
+              <option value="social">Social</option>
+              <option value="health">Health</option>
+              <option value="other">Other</option>
             </select>
           </div>
         </div>
@@ -55,7 +115,25 @@
         <h2>Your Financial Portfolio</h2>
       </div>
       <div class="graph">
-        <img src="placeholder.jpg" alt="Graph picture here" width="300px" height="300px">
+        <svg id="pie-chart" width="300" height="300">
+          <circle></circle>
+          <circle></circle>
+          <circle></circle>
+          <circle></circle>
+          <circle></circle>
+          <circle></circle>
+          <circle></circle>
+          <circle class="border" cx="150" cy="150" r="122" fill="transparent" stroke="black" stroke-width="5px"></circle>
+        </svg>
+        <ul id="pie-values">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
       </div>
     </section>
   </main>
