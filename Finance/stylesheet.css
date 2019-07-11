@@ -59,8 +59,8 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 50%;
   min-width: 300px;
+  width: 100%;
   text-align: center;
   border: solid black 2px;
   border-top: none;
@@ -123,6 +123,8 @@ input, select {
   align-self: center;
   width:100%;
   max-width: 200px;
+  border: black 2px solid;
+  height: 21px;
 }
 
 
@@ -133,4 +135,11 @@ button {
   width: 100px;
   align-self: center;
   margin: 20px 0 20px 0;
+}
+
+@media screen and (min-width: 600px) {
+  section {
+    width: 50%;
+  }
+
 }

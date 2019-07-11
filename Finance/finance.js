@@ -2,10 +2,12 @@ const addNewRow = document.getElementById("addnewrow");
 const totalDisplay = document.getElementById("totalsaved");
 const columnOne = document.getElementById("columnone");
 const columnTwo = document.getElementById("columntwo");
-let one = document.getElementById("expenditure").elements;
 let total = 0;
 let arrayOfExpenditure = [];
-const currency = document.getElementById("currency");
+const currency = document.getElementById('currency')
+const currencyIcon = document.querySelectorAll(".unit")
+const income = document.getElementById('monthly')
+const inputs = document.querySelectorAll(".expenditure");
 
 let data = [
   {
@@ -40,7 +42,6 @@ let data = [
 ];
 
 setInterval(function() {
-  let currencyIcon = document.querySelectorAll(".unit");
   let currencySelected = currency.value;
   for (let i = 0; i < currencyIcon.length; i++) {
     currencyIcon[i].innerHTML = currencySelected
@@ -54,16 +55,18 @@ addNewRow.addEventListener("click", function() {
 });
 
 setInterval(function(){
-  let inputs = document.querySelectorAll(".expenditure");
   for (let i = 0; i < inputs.length; i++) {
-    if (inputs[i].value === "" || isNaN(inputs[i].value) === true) {
-      let sentence = "<p>Please insert a number</p>"
+    if (income.value === "") {
+      let sentence = "<p>Please insert a monthly income</p>"
       totalDisplay.innerHTML = sentence
-    } else {
-      let turnToFloat = parseFloat(inputs[i].value)
-      arrayOfExpenditure.push(turnToFloat)
+    } else if (inputs[i].value === "" || isNaN(inputs[i].value) === true) {
+        let sentence = "<p>Please insert an expenditure</p>"
+        totalDisplay.innerHTML = sentence
+      } else {
+        let turnToFloat = parseFloat(inputs[i].value)
+        arrayOfExpenditure.push(turnToFloat)
+      }
     }
-  }
 
   if (arrayOfExpenditure.length != 0) {
     let sum = arrayOfExpenditure.reduce((total, amount) => total + amount);
@@ -74,16 +77,13 @@ setInterval(function(){
     let sentence = "<p>Your total savings every month are " + currencySelected + total2 + "</p>"
     totalDisplay.innerHTML = sentence
     arrayOfExpenditure.length = 0;
-  } else {
-    let sentence = "<p>Please insert a number</p>"
-    totalDisplay.innerHTML = sentence
   }
 
   const expenditureType = document.querySelectorAll("#expendituretype")
   for (let i = 0; i < expenditureType.length; i++) {
     for (let x = 0; x < data.length; x++) {
       if (expenditureType[i].value === data[x].name) {
-        data[x].value++
+        data[x].value += parseFloat(inputs[i].value)
       }
     }
   }
