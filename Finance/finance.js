@@ -1,58 +1,70 @@
-const addNewRow = document.getElementById("addnewrow");
-const totalDisplay = document.getElementById("totalsaved");
-const columnOne = document.getElementById("columnone");
-const columnTwo = document.getElementById("columntwo");
-let total = 0;
-let arrayOfExpenditure = [];
-const currency = document.getElementById('currency')
-const currencyIcon = document.querySelectorAll(".unit")
-const income = document.getElementById('monthly')
-const inputs = document.querySelectorAll(".expenditure");
+const addNewRow = document.getElementById("addnewrow"); //ADD NEW ROW BUTTON
+const totalDisplay = document.getElementById("totalsaved"); //TOTAL DISPLAYED
+const columnOne = document.getElementById("columnone"); //LEFT SIDE COLUMN OF FINANCE SECTION
+const columnTwo = document.getElementById("columntwo"); //RIGHT SIDE COLUMN OF FINANCE SECTION
+const currency = document.getElementById('currency'); //CURRENCY SELECT MENU
+const income = document.getElementById('monthly'); //MONTHLY INCOME INPUT
+let currencySelected = currency.value; // CURRENCY SELECTED FROM CURRENCY SELECT MENU
+let inputs = document.querySelectorAll(".expenditure"); //EXPENDITURE inputs
+let currencyIcon = document.querySelectorAll(".unit"); //SPAN ELEMENT LOCATED LEFT SIDE OF EXPENDITURE INPUT
+let arrayOfExpenditure = []; //EXPENDITURE INPUTS PUSHED HERE TO CALCULATE TOTAL USING REDUCE FUNCTION
+let expenditureType = document.querySelectorAll("#expendituretype");
 
+//DATA FOR PIE CHART AND LIST, COLOUR SCHEMES AND NAMES
 let data = [
   {
    "name": "food",
-   "color": "red",
+   "color": "#e82e2e",
     "value": 0
   }, {
    "name": "bills",
-   "color": "rebeccapurple",
+   "color": "#5ecc62",
     "value": 0
   }, {
    "name": "transport",
-   "color": "green",
+   "color": "#6f5ecc",
     "value": 0
   }, {
    "name": "clothing",
-   "color": "pink",
+   "color": "#ed24d6",
     "value": 0
   }, {
    "name": "social",
-   "color": "blue",
+   "color": "#2460ed",
     "value": 0
   }, {
    "name": "health",
-   "color": "yellow",
+   "color": "#a7d0d4",
     "value": 0
   }, {
    "name": "other",
-   "color": "grey",
+   "color": "#f28d42",
     "value": 0
   }
 ];
 
+//FUNCTION SET ON AN INTERVAL TO CHECK LENGTH OF CURRENCYICON AND THEN TO CHANGE THE CURRENCY ICON BASED ON CURRENCY SELECTED
+
 setInterval(function() {
+  let currencyIcon = document.querySelectorAll(".unit")
   let currencySelected = currency.value;
   for (let i = 0; i < currencyIcon.length; i++) {
     currencyIcon[i].innerHTML = currencySelected
   }
 }, 10)
 
+//CLICK EVENT FUNCTION THAT ADDS A NEW ROW FOR INPUT
+
 addNewRow.addEventListener("click", function() {
   let currencySelected = currency.value;
   columnOne.insertAdjacentHTML("beforeend",'<div class="row"><span class="unit">'+ currencySelected +'</span><input type="text" name="expenditure" value=""  placeholder="Amount" id="expenditure" class="expenditure"></div>');
   columnTwo.insertAdjacentHTML("beforeend",'<select id="expendituretype"><option value="">--Please choose an option--</option><option value="food">Food</option><option value="bills">Bills</option><option value="transport">Transport</option><option value="clothing">Clothing</option><option value="social">Social</option><option value="health">Health</option><option value="other">Other</option>elect>');
 });
+
+
+//FUNCTION FOR USER INTERACTION, CALCULATING TOTALS AND INTERACTION WITH PIE CHART AND LIST
+
+//FUNCTION TO CHECK IF USER HAS INPUT MONTHLY INCOME AND EXPENDITURE AND DISPLAY WHERE TOTALDISPLAY WOULD BE TO TELL USER.
 
 setInterval(function(){
   for (let i = 0; i < inputs.length; i++) {
@@ -63,30 +75,38 @@ setInterval(function(){
         let sentence = "<p>Please insert an expenditure</p>"
         totalDisplay.innerHTML = sentence
       } else {
-        let turnToFloat = parseFloat(inputs[i].value)
+        let turnToFloat = parseFloat(inputs[i].value) //TURN TO FLOAT INSTEAD OF INTEGER TO ALLOW FOR 0.00 CURRENCY
         arrayOfExpenditure.push(turnToFloat)
       }
-    }
+    };
+
+    //IF STATEMENT FOR CALCULATING SUM OF EXPENDITURE INPUTS AND THEN SUBTRACTING THEM FROM THE MONTHLY INCOME
 
   if (arrayOfExpenditure.length != 0) {
     let sum = arrayOfExpenditure.reduce((total, amount) => total + amount);
     let monthly = parseFloat(document.getElementById("monthly").value)
     let total = monthly - sum
     let total2 = total.toFixed(2)
-    let currencySelected = currency.options[currency.selectedIndex].value;
+    let currencySelected = currency.value;
     let sentence = "<p>Your total savings every month are " + currencySelected + total2 + "</p>"
     totalDisplay.innerHTML = sentence
-    arrayOfExpenditure.length = 0;
-  }
+    arrayOfExpenditure.length = 0; //RESETS ARRAY FOR NEXT INTERVAL
+  };
 
-  const expenditureType = document.querySelectorAll("#expendituretype")
+  //GETS ALL EXPENDITURE INPUTS AND EXPENDITURE TYPE SELECT MENU INPUTS AND ADDS THEM TO THE DATA ARRAY
+
+  inputs = document.querySelectorAll(".expenditure");
+  expenditureType = document.querySelectorAll("#expendituretype");
   for (let i = 0; i < expenditureType.length; i++) {
     for (let x = 0; x < data.length; x++) {
       if (expenditureType[i].value === data[x].name) {
-        data[x].value += parseFloat(inputs[i].value)
+        data[x].value += parseFloat(inputs[i].value) || 0
       }
     }
   }
+
+  //PIE CHART DISPLAY VARIABLES#
+  //STILL LEARNING THIS CODE
 
   totalValue = 0,
   radius = 60,
@@ -115,15 +135,17 @@ setInterval(function(){
     spaceLeft -= (data[c].value / totalValue) * circleLength;
 
     // Add value to list.
-    let listItem = document.getElementById('pie-values'),
-        valuePct = parseFloat((data[c].value / totalValue) * 100).toFixed(1);
+    let valuePct = parseFloat((data[c].value / totalValue) * 100).toFixed(2);
 
     // Add text to list item
+
+
+    //SELECTS ALL LIST ELEMENTS AND BEGINS TO ASSIGN THE INNERHTML BASED ON AN IF STATEMENT IF VALUEPCT IS NOT A NUMBER
 
     list = document.querySelectorAll('li')
 
     if (isNaN(valuePct) ) {
-      list[c].innerHTML = data[c].name + ' (' + 0 + '%)'
+      list[c].innerHTML = data[c].name + ' (' + "0.00" + '%)'
     } else {
       list[c].innerHTML = data[c].name + ' (' + valuePct + '%)'
     }
@@ -132,7 +154,9 @@ setInterval(function(){
     list[c].style.color = data[c].color;
   }
 
+  //RESETS DATA VALUES FOR NEXT INTERVAL
+
   for (let a = 0; a < data.length; a++) {
     data[a].value = 0;
   }
-}, 1000);
+}, 50);
