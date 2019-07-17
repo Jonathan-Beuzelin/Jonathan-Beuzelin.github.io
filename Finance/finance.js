@@ -4,6 +4,7 @@ const columnOne = document.getElementById("columnone"); //LEFT SIDE COLUMN OF FI
 const columnTwo = document.getElementById("columntwo"); //RIGHT SIDE COLUMN OF FINANCE SECTION
 const currency = document.getElementById('currency'); //CURRENCY SELECT MENU
 const income = document.getElementById('monthly'); //MONTHLY INCOME INPUT
+const remove = document.getElementById('remove');
 let currencySelected = currency.value; // CURRENCY SELECTED FROM CURRENCY SELECT MENU
 let inputs = document.querySelectorAll(".expenditure"); //EXPENDITURE inputs
 let currencyIcon = document.querySelectorAll(".unit"); //SPAN ELEMENT LOCATED LEFT SIDE OF EXPENDITURE INPUT
@@ -14,7 +15,6 @@ let rowData = localStorage.getItem('items') ? JSON.parse(localStorage.getItem('i
 
 localStorage.setItem('items', JSON.stringify(rowData));
 let rowItems = JSON.parse(localStorage.getItem('items'));
-
 
 //DATA FOR PIE CHART AND LIST, COLOUR SCHEMES AND NAMES
 let data = [
@@ -58,15 +58,23 @@ save.addEventListener('click', function(e) {
   rowData.push(income.value);
   rowData.push(currency.value);
   for (let i = 0; i < inputs.length; i++) {
-    rowData.push({'amount': inputs[i].value, 'type': expenditureType[i].value});
-    localStorage.setItem('items', JSON.stringify(rowData))
+    if (inputs[i] != "") {
+      rowData.push({'amount': inputs[i].value, 'type': expenditureType[i].value});
+      localStorage.setItem('items', JSON.stringify(rowData))
+    }
   }
 })
+
+remove.addEventListener('click', function(e) {
+  e.preventDefault();
+  localStorage.clear();
+  location.reload(true);
+});
 
 
 
 function placingSavedData() {
-let rowLength = rowData.length - 7
+let rowLength = rowData.length - 7;
 if (rowData.length > 7) {
   for (let i = 0; i < rowLength; i++) {
     createRow()
@@ -91,13 +99,13 @@ for (let i = 0; i < rowData.length - 2; i++) {
 //FUNCTION SET ON AN INTERVAL TO CHECK LENGTH OF CURRENCYICON AND THEN TO CHANGE THE CURRENCY ICON BASED ON CURRENCY SELECTED
 
 currency.addEventListener("change", function() {
-  currencyIconDisplay()
+  currencyIconDisplay();
 });
 
 //CLICK EVENT FUNCTION THAT ADDS A NEW ROW FOR INPUT
 
 addNewRow.addEventListener("click", function() {
-  createRow()
+  createRow();
 });
 
 
@@ -106,27 +114,27 @@ addNewRow.addEventListener("click", function() {
 //FUNCTION TO CHECK IF USER HAS INPUT MONTHLY INCOME AND EXPENDITURE AND DISPLAY WHERE TOTALDISPLAY WOULD BE TO TELL USER.
 
 document.addEventListener("change", function() {
-  checkingInputFields()
-  calculatingTotal()
-  assigningVariablesToType()
-  createListAndPieChart()
+  checkingInputFields();
+  calculatingTotal();
+  assigningVariablesToType();
+  createListAndPieChart();
+  console.log('ping');
 });
 
 
 function currencyIconDisplay() {
-  let currencyIcon = document.querySelectorAll(".unit")
+  let currencyIcon = document.querySelectorAll(".unit");
   let currencySelected = currency.value;
   for (let i = 0; i < currencyIcon.length; i++) {
-    currencyIcon[i].innerHTML = currencySelected
-  };
-};
-
+    currencyIcon[i].innerHTML = currencySelected;
+  }
+}
 
 function createRow() {
   let currencySelected = currency.value;
   columnOne.insertAdjacentHTML("beforeend",'<div class="row"><span class="unit">'+ currencySelected +'</span><input type="text" name="expenditure" value=""  placeholder="Amount" id="expenditure" class="expenditure"></div>');
   columnTwo.insertAdjacentHTML("beforeend",'<select id="expendituretype"><option value="">--Please choose an option--</option><option value="food">Food</option><option value="bills">Bills</option><option value="transport">Transport</option><option value="clothing">Clothing</option><option value="social">Social</option><option value="health">Health</option><option value="other">Other</option>elect>');
-};
+}
 
 function checkingInputFields() {
   for (let i = 0; i < inputs.length; i++) {
@@ -147,15 +155,15 @@ function checkingInputFields() {
 function calculatingTotal() {
   if (arrayOfExpenditure.length != 0) {
     let sum = arrayOfExpenditure.reduce((total, amount) => total + amount);
-    let monthly = parseFloat(document.getElementById("monthly").value)
-    let total = monthly - sum
-    let total2 = total.toFixed(2)
+    let monthly = parseFloat(document.getElementById("monthly").value);
+    let total = monthly - sum;
+    let total2 = total.toFixed(2);
     let currencySelected = currency.value;
-    let sentence = "<p>Your total savings every month are " + currencySelected + total2 + "</p>"
-    totalDisplay.innerHTML = sentence
+    let sentence = "<p>Your total savings every month are " + currencySelected + total2 + "</p>";
+    totalDisplay.innerHTML = sentence;
     arrayOfExpenditure.length = 0; //RESETS ARRAY FOR NEXT INTERVAL
-  };
-};
+  }
+}
 
 
 function assigningVariablesToType() {
@@ -165,6 +173,7 @@ function assigningVariablesToType() {
     for (let x = 0; x < data.length; x++) {
       if (expenditureType[i].value === data[x].name) {
         data[x].value += parseFloat(inputs[i].value) || 0
+        console.log(data[x].value)
       };
     };
   };
@@ -172,9 +181,9 @@ function assigningVariablesToType() {
 
 
 function createListAndPieChart() {
-  totalValue = 0,
-  radius = 60,
-  circleLength = Math.PI * (radius * 2)
+  totalValue = 0;
+  radius = 60;
+  circleLength = Math.PI * (radius * 2);
   spaceLeft = circleLength;
 
   for (let i = 0; i < data.length; i++) {
@@ -191,6 +200,7 @@ function createListAndPieChart() {
 
     // Set dash on circle
     circle[c].style.strokeDasharray = (spaceLeft) + " " + circleLength;
+    console.log(circle[c].style.strokeDasharray)
 
     // Set Stroke color
     circle[c].style.stroke = data[c].color;
@@ -225,9 +235,14 @@ function createListAndPieChart() {
   }
 }
 
-placingSavedData()
-currencyIconDisplay()
-checkingInputFields()
-calculatingTotal()
-assigningVariablesToType()
-createListAndPieChart()
+
+
+placingSavedData();
+currencyIconDisplay();
+
+setTimeout(function() {
+checkingInputFields();
+calculatingTotal();
+assigningVariablesToType();
+createListAndPieChart();
+}, 500);
