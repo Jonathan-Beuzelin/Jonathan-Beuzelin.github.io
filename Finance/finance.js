@@ -10,55 +10,94 @@ let currencyIcon = document.querySelectorAll(".unit"); //SPAN ELEMENT LOCATED LE
 let arrayOfExpenditure = []; //EXPENDITURE INPUTS PUSHED HERE TO CALCULATE TOTAL USING REDUCE FUNCTION
 let expenditureType = document.querySelectorAll("#expendituretype");
 
+let rowData = localStorage.getItem('items') ? JSON.parse(localStorage.getItem('items')) : [];
+
+localStorage.setItem('items', JSON.stringify(rowData));
+let rowItems = JSON.parse(localStorage.getItem('items'));
+
+
 //DATA FOR PIE CHART AND LIST, COLOUR SCHEMES AND NAMES
 let data = [
   {
    "name": "food",
    "color": "#e82e2e",
-    "value": 0
+   "value": 0
   }, {
    "name": "bills",
    "color": "#5ecc62",
-    "value": 0
+   "value": 0
   }, {
    "name": "transport",
    "color": "#6f5ecc",
-    "value": 0
+   "value": 0
   }, {
    "name": "clothing",
    "color": "#ed24d6",
-    "value": 0
+   "value": 0
   }, {
    "name": "social",
    "color": "#2460ed",
-    "value": 0
+   "value": 0
   }, {
    "name": "health",
    "color": "#a7d0d4",
-    "value": 0
+   "value": 0
   }, {
    "name": "other",
    "color": "#f28d42",
-    "value": 0
+   "value": 0
   }
 ];
 
+
+save.addEventListener('click', function(e) {
+  e.preventDefault();
+  let inputs = document.querySelectorAll(".expenditure"); //EXPENDITURE inputs
+  let expenditureType = document.querySelectorAll("#expendituretype");
+  rowData = [];
+  rowData.push(income.value);
+  rowData.push(currency.value);
+  for (let i = 0; i < inputs.length; i++) {
+    rowData.push({'amount': inputs[i].value, 'type': expenditureType[i].value});
+    localStorage.setItem('items', JSON.stringify(rowData))
+  }
+})
+
+
+
+function placingSavedData() {
+let rowLength = rowData.length - 7
+if (rowData.length > 7) {
+  for (let i = 0; i < rowLength; i++) {
+    createRow()
+  }
+}
+inputs = document.querySelectorAll(".expenditure"); //EXPENDITURE inputs
+expenditureType = document.querySelectorAll("#expendituretype");
+if (rowData.length > 0) {
+  income.value = rowData[0]
+  currency.value = rowData[1]
+} else {
+  income.value = ""
+  currency.value = "£"
+}
+for (let i = 0; i < rowData.length - 2; i++) {
+    inputs[i].value = rowData[i+2].amount
+    expenditureType[i].value = rowData[i+2].type
+  }
+}
+
+
 //FUNCTION SET ON AN INTERVAL TO CHECK LENGTH OF CURRENCYICON AND THEN TO CHANGE THE CURRENCY ICON BASED ON CURRENCY SELECTED
 
-setInterval(function() {
-  let currencyIcon = document.querySelectorAll(".unit")
-  let currencySelected = currency.value;
-  for (let i = 0; i < currencyIcon.length; i++) {
-    currencyIcon[i].innerHTML = currencySelected
-  }
-}, 10)
+currency.addEventListener("change", function() {
+  currencyIconDisplay()
+});
 
 //CLICK EVENT FUNCTION THAT ADDS A NEW ROW FOR INPUT
 
 addNewRow.addEventListener("click", function() {
-  let currencySelected = currency.value;
-  columnOne.insertAdjacentHTML("beforeend",'<div class="row"><span class="unit">'+ currencySelected +'</span><input type="text" name="expenditure" value=""  placeholder="Amount" id="expenditure" class="expenditure"></div>');
-  columnTwo.insertAdjacentHTML("beforeend",'<select id="expendituretype"><option value="">--Please choose an option--</option><option value="food">Food</option><option value="bills">Bills</option><option value="transport">Transport</option><option value="clothing">Clothing</option><option value="social">Social</option><option value="health">Health</option><option value="other">Other</option>elect>');
+  createRow()
 });
 
 
@@ -66,7 +105,30 @@ addNewRow.addEventListener("click", function() {
 
 //FUNCTION TO CHECK IF USER HAS INPUT MONTHLY INCOME AND EXPENDITURE AND DISPLAY WHERE TOTALDISPLAY WOULD BE TO TELL USER.
 
-setInterval(function(){
+document.addEventListener("change", function() {
+  checkingInputFields()
+  calculatingTotal()
+  assigningVariablesToType()
+  createListAndPieChart()
+});
+
+
+function currencyIconDisplay() {
+  let currencyIcon = document.querySelectorAll(".unit")
+  let currencySelected = currency.value;
+  for (let i = 0; i < currencyIcon.length; i++) {
+    currencyIcon[i].innerHTML = currencySelected
+  };
+};
+
+
+function createRow() {
+  let currencySelected = currency.value;
+  columnOne.insertAdjacentHTML("beforeend",'<div class="row"><span class="unit">'+ currencySelected +'</span><input type="text" name="expenditure" value=""  placeholder="Amount" id="expenditure" class="expenditure"></div>');
+  columnTwo.insertAdjacentHTML("beforeend",'<select id="expendituretype"><option value="">--Please choose an option--</option><option value="food">Food</option><option value="bills">Bills</option><option value="transport">Transport</option><option value="clothing">Clothing</option><option value="social">Social</option><option value="health">Health</option><option value="other">Other</option>elect>');
+};
+
+function checkingInputFields() {
   for (let i = 0; i < inputs.length; i++) {
     if (income.value === "") {
       let sentence = "<p>Please insert a monthly income</p>"
@@ -79,9 +141,10 @@ setInterval(function(){
         arrayOfExpenditure.push(turnToFloat)
       }
     };
+};
 
-    //IF STATEMENT FOR CALCULATING SUM OF EXPENDITURE INPUTS AND THEN SUBTRACTING THEM FROM THE MONTHLY INCOME
 
+function calculatingTotal() {
   if (arrayOfExpenditure.length != 0) {
     let sum = arrayOfExpenditure.reduce((total, amount) => total + amount);
     let monthly = parseFloat(document.getElementById("monthly").value)
@@ -92,22 +155,23 @@ setInterval(function(){
     totalDisplay.innerHTML = sentence
     arrayOfExpenditure.length = 0; //RESETS ARRAY FOR NEXT INTERVAL
   };
+};
 
-  //GETS ALL EXPENDITURE INPUTS AND EXPENDITURE TYPE SELECT MENU INPUTS AND ADDS THEM TO THE DATA ARRAY
 
+function assigningVariablesToType() {
   inputs = document.querySelectorAll(".expenditure");
   expenditureType = document.querySelectorAll("#expendituretype");
   for (let i = 0; i < expenditureType.length; i++) {
     for (let x = 0; x < data.length; x++) {
       if (expenditureType[i].value === data[x].name) {
         data[x].value += parseFloat(inputs[i].value) || 0
-      }
-    }
-  }
+      };
+    };
+  };
+};
 
-  //PIE CHART DISPLAY VARIABLES#
-  //STILL LEARNING THIS CODE
 
+function createListAndPieChart() {
   totalValue = 0,
   radius = 60,
   circleLength = Math.PI * (radius * 2)
@@ -159,4 +223,11 @@ setInterval(function(){
   for (let a = 0; a < data.length; a++) {
     data[a].value = 0;
   }
-}, 50);
+}
+
+placingSavedData()
+currencyIconDisplay()
+checkingInputFields()
+calculatingTotal()
+assigningVariablesToType()
+createListAndPieChart()
