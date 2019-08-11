@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="jquery.lettering-0.6.1.min.js" charset="utf-8"></script>
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="stylesheet.css">
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <h1>Translation While You Read Application</h1>
+    <h2>Using <a href="https://tech.yandex.com/translate/">Yandex API</a> & Credit To <a href="https://www.gutenberg.org/">The Project Gutenberg</a> For The Books</h2>
+  </header>
+  <nav>
+    <h2>Books</h2>
+    <a class="book_selection" href="#">Alice In Wonderland</a>
+    <a class="book_selection" href="#">Short Stories</a>
+  </nav>
+  <main class="book">
+    <h2 id="title">This application has french books for you to read.<br>Choose a book to get started & wait a few moments for your book to load!<br>Click on a word to translate it.</h2>
+    <p class="word_split" id="hello"></p>
+  </main>
+  <aside class="translation">
+    <h2>Translation</h2>
+    <div id="translationOutput"></div>
+      <table>
+        <thead>
+            <tr>
+                <th style="text-align:center" colspan="2">Word Type And Additional Words</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="text-align:center" id="dictionaryOutput"></td>
+                <td id="pos"></td>
+            </tr>
+        </tbody>
+      </table>
+  </aside>
+<script src="index.js" charset="utf-8"></script>
+</body>
+</html>
