@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&display=swap" rel="stylesheet">
+  <title>Holiday Calendar</title>
+</head>
+<body>
+  <header>
+    <h1>National Holiday Calendar</h1>
+    <h2>Find the holidays of the available countries up to 2024</h2>
+  </header>
+  <section>
+    <div class="select">
+      <h2>Select a country, a year and then press proceed.</h2>
+      <h2>Hover over a date to enlarge it and some dates contain multiple holidays so scroll down on the date to see them all and also additional information.</h2>
+      <div class="select-menu">
+        <select class="options" name="country" id="country">
+          <option value="gb">United Kingdom</option>
+          <option value="us">United States</option>
+          <option value="ie">Ireland</option>
+          <option value="fr">France</option>
+          <option value="fi">Finland</option>
+        </select>
+        <select class="options" name="year" id="year">
+          <option value="2019">2019</option>
+          <option value="2020">2020</option>
+          <option value="2021">2021</option>
+          <option value="2022">2022</option>
+          <option value="2023">2023</option>
+          <option value="2024">2024</option>
+        </select>
+        <button type="button" name="proceed" id="proceed">Proceed</button>
+      </div>
+    </div>
+  </section>
+  <main id="main">
+    <div class="change_month" id="changeMonth">
+    </div>
+    <div class="container" id="container">
+    </div>
+    <button class="top_reset" id="returnToTopButton">&#8593;</button>
+  </main>
+  <footer>
+    <p>Created by Jonathan Beuzelin</p>
+    <p>API by Calendarific</p>
+  </footer>
+  <script src="index.js" charset="utf-8"></script>
+</body>
+</html>
