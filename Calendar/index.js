@@ -29,6 +29,8 @@ document.getElementById('returnToTopButton').addEventListener("click", function(
   window.scrollTo(0, 0);
 })
 
+
+
 //BUTTON
 document.getElementById('proceed').addEventListener("click", function(){
   createNavigation()
@@ -69,6 +71,27 @@ function createNavigation() {
   const left = document.getElementById('left');
   const right = document.getElementById('right');
   const monthHeader = document.getElementById('monthHeader');
+  const arrows = document.getElementsByClassName('arrow')
+  window.addEventListener('scroll', function(){
+    if (window.scrollY > 490) {
+      left.style.top = "50%";
+      left.style.left = "6%"
+      right.style.top = "50%";
+      right.style.right = "6%";
+      for (var i = 0; i < arrows.length; i++) {
+        arrows[i].style.position ="fixed"
+        arrows[i].style.height = "40px";
+        arrows[i].style.width = "40px";
+      }
+    } else {
+      left.style.position = "static";
+      right.style.position = "static";
+      for (var i = 0; i < arrows.length; i++) {
+        arrows[i].style.height = "20px";
+        arrows[i].style.width = "20px";
+      }
+    }
+  });
 }
 
 function gridGenerator() {
