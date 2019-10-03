@@ -65,31 +65,25 @@ document.getElementById('proceed').addEventListener("click", function(){
 
 function createNavigation() {
   let changeMonth = document.getElementById('changeMonth');
-  changeMonth.innerHTML = '<a href="#" class="arrow left" id="left"></a>' +
+  changeMonth.innerHTML = '<a href="#" class="left" id="left"><img src="arrow.svg" alt=""></a>' +
                           '<h3 class="month" id="monthHeader">' + monthNames[displayMonth] + '</h3>' +
-                          '<a href="#" class="arrow right" id="right"></a>';
+                          '<a href="#" id="right"><img src="arrow.svg" alt=""></a>';
+  changeMonth.style.border = "solid 2px #201622";
   const left = document.getElementById('left');
   const right = document.getElementById('right');
   const monthHeader = document.getElementById('monthHeader');
-  const arrows = document.getElementsByClassName('arrow')
+  const arrows = document.getElementsByClassName('arrow');
+  const monthContainer = document.getElementById('monthContainer')
   window.addEventListener('scroll', function(){
-    if (window.scrollY > 490) {
-      left.style.top = "50%";
-      left.style.left = "6%"
-      right.style.top = "50%";
-      right.style.right = "6%";
-      for (var i = 0; i < arrows.length; i++) {
-        arrows[i].style.position ="fixed"
-        arrows[i].style.height = "40px";
-        arrows[i].style.width = "40px";
-      }
+    if (window.scrollY > 427) {
+      monthContainer.style.marginTop = "94px"
+      changeMonth.style.position = "fixed";
+      changeMonth.style.top = "5px";
+      changeMonth.style.left = "0";
+      changeMonth.style.right = "0";
     } else {
-      left.style.position = "static";
-      right.style.position = "static";
-      for (var i = 0; i < arrows.length; i++) {
-        arrows[i].style.height = "20px";
-        arrows[i].style.width = "20px";
-      }
+      changeMonth.style.position = "static"
+      monthContainer.style.marginTop = "40px"
     }
   });
 }
