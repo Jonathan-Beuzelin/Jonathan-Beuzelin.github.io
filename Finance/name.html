@@ -20,8 +20,9 @@
       <div class="inputform">
         <div class="section-header">
           <h2>Finances</h2>
+          <canvas id="myChart"></canvas>
           <label for="monthly">Monthly Income</label>
-          <select id="currency">
+          <select id="currency" class="currency-menu">
             <option value="£">£</option>
             <option value="$">$</option>
             <option value="€">€</option>
@@ -29,81 +30,36 @@
           <input type="text" name="monthly" value="" placeholder="Insert here" id="monthly">
         </div>
         <div class="column-seperator">
-          <div class="column" id="columnone">
-            <label for="expenditure">Expenditure</label>
-            <div class="row">
-              <span class="unit">£</span>
-              <input type="text" name="expenditure" value=""  placeholder="Amount" id="expenditure" class="expenditure">
-            </div>
-            <div class="row">
-              <span class="unit">£</span>
-              <input type="text" name="expenditure" value=""  placeholder="Amount" id="expenditure" class="expenditure">
-            </div>
-            <div class="row">
-              <span class="unit">£</span>
-              <input type="text" name="expenditure" value=""  placeholder="Amount" id="expenditure" class="expenditure">
-            </div>
-            <div class="row">
-              <span class="unit">£</span>
-              <input type="text" name="expenditure" value=""  placeholder="Amount" id="expenditure" class="expenditure">
-            </div>
-            <div class="row">
-              <span class="unit">£</span>
-              <input type="text" name="expenditure" value=""  placeholder="Amount" id="expenditure" class="expenditure">
-            </div>
-          </div>
           <div class="column columntwo" id="columntwo">
-            <label for="type">Expenditure Type</label>
-            <select id="expendituretype">
-              <option value="">--Please choose an option--</option>
-              <option value="food">Food</option>
-              <option value="bills">Bills</option>
-              <option value="transport">Transport</option>
-              <option value="clothing">Clothing</option>
-              <option value="social">Social</option>
-              <option value="health">Health</option>
-              <option value="other">Other</option>
-            </select>
-            <select id="expendituretype">
-              <option value="">--Please choose an option--</option>
-              <option value="food">Food</option>
-              <option value="bills">Bills</option>
-              <option value="transport">Transport</option>
-              <option value="clothing">Clothing</option>
-              <option value="social">Social</option>
-              <option value="health">Health</option>
-              <option value="other">Other</option>
-            </select>
-            <select id="expendituretype">
-              <option value="">--Please choose an option--</option>
-              <option value="food">Food</option>
-              <option value="bills">Bills</option>
-              <option value="transport">Transport</option>
-              <option value="clothing">Clothing</option>
-              <option value="social">Social</option>
-              <option value="health">Health</option>
-              <option value="other">Other</option>
-            </select>
-            <select id="expendituretype">
-              <option value="">--Please choose an option--</option>
-              <option value="food">Food</option>
-              <option value="bills">Bills</option>
-              <option value="transport">Transport</option>
-              <option value="clothing">Clothing</option>
-              <option value="social">Social</option>
-              <option value="health">Health</option>
-              <option value="other">Other</option>
-            </select>
-            <select id="expendituretype">
-              <option value="">--Please choose an option--</option>
-              <option value="food">Food</option>
-              <option value="bills">Bills</option>
-              <option value="transport">Transport</option>
-              <option value="clothing">Clothing</option>
-              <option value="social">Social</option>
-              <option value="health">Health</option>
-              <option value="other">Other</option>
-            </select>
+            <label for="type">Expenditure Name</label>
+            <input class="expendituretype" type="text" name="" value="" placeholder="Name">
+            <input class="expendituretype" type="text" name="" value="" placeholder="Name">
+            <input class="expendituretype" type="text" name="" value="" placeholder="Name">
+            <input class="expendituretype" type="text" name="" value="" placeholder="Name">
+            <input class="expendituretype" type="text" name="" value="" placeholder="Name">
+          </div>
+          <div class="column" id="columnone">
+            <label for="expenditure">Expenditure Amount</label>
+            <div class="row">
+              <span class="unit">£</span>
+              <input type="text" name="expenditure" value=""  placeholder="Amount" id="expenditure" class="expenditure">
+            </div>
+            <div class="row">
+              <span class="unit">£</span>
+              <input type="text" name="expenditure" value=""  placeholder="Amount" id="expenditure" class="expenditure">
+            </div>
+            <div class="row">
+              <span class="unit">£</span>
+              <input type="text" name="expenditure" value=""  placeholder="Amount" id="expenditure" class="expenditure">
+            </div>
+            <div class="row">
+              <span class="unit">£</span>
+              <input type="text" name="expenditure" value=""  placeholder="Amount" id="expenditure" class="expenditure">
+            </div>
+            <div class="row">
+              <span class="unit">£</span>
+              <input type="text" name="expenditure" value=""  placeholder="Amount" id="expenditure" class="expenditure">
+            </div>
           </div>
         </div>
         <div class="addmoresection">
@@ -117,11 +73,12 @@
       </div>
     </section>
     <section>
+      <div class="graph-section">
       <div class="section-header">
         <h2>Your Financial Portfolio</h2>
       </div>
       <div class="graph">
-        <svg id="pie-chart" width="300" height="300">
+        <svg id="pieChart" width="300" height="300">
           <circle></circle>
           <circle></circle>
           <circle></circle>
@@ -129,17 +86,19 @@
           <circle></circle>
           <circle></circle>
           <circle></circle>
-          <circle class="border" cx="150" cy="150" r="122" fill="transparent" stroke="black" stroke-width="5px"></circle>
+          <circle id="border" class="border" cx="150" cy="150" r="122" fill="transparent" stroke="#1B1827" stroke-width="5px"></circle>
         </svg>
-        <ul id="pie-values">
-          <li>Food (0.00%)</li>
-          <li>Bills (0.00%)</li>
-          <li>Transport (0.00%)</li>
-          <li>Clothing (0.00%)</li>
-          <li>Social (0.00%)</li>
-          <li>Health (0.00%)</li>
-          <li>Other (0.00%)</li>
+        <div class="values_header">
+          <h3>Percentages</h3>
+        </div>
+        <ul id="pieValues">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
         </ul>
+      </div>
       </div>
     </section>
   </main>
