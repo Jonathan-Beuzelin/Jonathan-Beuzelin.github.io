@@ -231,6 +231,9 @@ form .form-header {
   padding: 5px;
   border: #F7FAF9 2px solid;
   border-radius: 10px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 .form-input .submit:hover {
   background-color: #F7FAF9;
