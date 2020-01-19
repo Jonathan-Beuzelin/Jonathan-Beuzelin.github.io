@@ -1,0 +1,535 @@
+$background: #F7FAF9;
+$primary: #7B33C6;
+$secondary: #577FC2;
+$accent: #25283D;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $background;
+  font-family: 'Montserrat', sans-serif;
+}
+
+header {
+  height: 70px;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  background-color: $background;
+  border-bottom: 2px solid $accent;
+  h1 {
+    font-size: 26px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0 20px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: $secondary;
+  border: 2px solid $accent;
+  z-index: 3;
+  ul {
+    display: none;
+  }
+}
+
+article {
+  height: 90vh;
+  width: 100%;
+  text-shadow: 2px 2px $accent;
+  background: url(test2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top: solid 2px black;
+  border-bottom: solid 2px black;
+  h2 {
+    margin: 0 0 35px 0;
+    padding: 0 10px 0 0;
+  }
+  h3 {
+    font-size: 24px;
+    padding: 0 10px 0 0;
+  }
+  .slogan {
+    color: $background;
+    z-index: 1;
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    font-size: 30px;
+  }
+  .description {
+    color: $background;
+    z-index: 1;
+    position: absolute;
+    top: 55%;
+    left: 5%;
+    font-size: 25px;
+  }
+  .color {
+    height: 100%;
+    width: 100%;
+    background: purple;
+    opacity: 50%;
+  }
+}
+
+section {
+  width: 100%;
+  margin: 40px 0 40px 0;
+  text-shadow: $accent 2px 2px;
+  border: $accent 2px solid;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+section:last-of-type {
+  margin-bottom: 0;
+}
+
+.service-section {
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.services {
+  height: 100%;
+  width: 100%;
+  padding: 50px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: $primary;
+  p {
+    margin: 20px 0 20px 0;
+    font-size: 20px;
+    color: $background;
+  }
+  p:last-of-type {
+    margin-bottom: 40px;
+  }
+  button {
+    width: 200px;
+    opacity: 0%;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: 700;
+    color: $background;
+    text-shadow: 2px 2px $accent;
+    align-self: center;
+    background-color: $secondary;
+    border: $accent 2px solid;
+    border-radius: 10px;
+    transition: all 0.5s ease-in-out;
+  }
+  button:hover {
+    color: $accent;
+    text-shadow: $accent 0px 0px;
+    transform: scale(1.2);
+    background-color: $background;
+
+  }
+  button:focus {
+    outline: 0;
+  }
+}
+
+.contactus {
+  width: 100%;
+  padding: 20px;
+  margin: 0 0 70px 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: $primary;
+  text-shadow: $accent 2px 2px;
+  color: $background;
+  h3 {
+    margin-bottom: 20px;
+    font-size: 34px;
+  }
+}
+
+.information {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  ul {
+    margin-top: 20px;
+    list-style: none;
+    li {
+      padding-bottom: 10px;
+    }
+  }
+}
+
+form {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(87,127,194,0.9);
+  border: $accent 2px solid;
+  border-radius: 10px;
+  transition: all 0.7s ease-in-out;
+  opacity: 0%;
+  h3 {
+    text-align: center;
+  }
+}
+
+.form-input {
+  width: 90%;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  transition: all .5s ease-in-out;
+  input, textarea {
+    width: 100%;
+    margin: 10px 0 10px 0;
+    padding-bottom: 10px;
+    font-size: 20px;
+    text-shadow: $accent 2px 2px;
+    font-family: 'Montserrat', sans-serif;
+    color: $background;
+    border: none;
+    border-bottom: $background 2px solid;
+    background-color: inherit;
+  }
+  input::placeholder, textarea::placeholder {
+    color: $background;
+  }
+  input:focus, textarea:focus {
+    outline: 0;
+    transform: scale(1.1);
+  }
+  .submit {
+    background-color: $primary;
+    padding: 20px;
+    border: $background 2px solid;
+    border-radius: 10px;
+  }
+  .submit:hover {
+    background-color: $background;
+    text-shadow: $accent 0px 0px;
+    border: $accent 2px solid;
+    color: $accent;
+    font-weight: 700;
+    transition: all 0.2s ease-in-out;
+    transform: scale(1.1);
+  }
+  .submit:focus {
+    transform: scale(1);
+  }
+   Change autocomplete styles in WebKit
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover,
+  textarea:-webkit-autofill:focus,
+  select:-webkit-autofill,
+  select:-webkit-autofill:hover,
+  select:-webkit-autofill:focus {
+    border: none;
+    border-bottom: $background 2px solid;
+    -webkit-text-fill-color: $background;
+    -webkit-box-shadow:none;
+    text-shadow: $accent 2px 2px;
+    font-size: 20px;
+    transition: background-color 5000s ease-in-out 0s;
+  }
+}
+
+
+/*@media screen and (min-width: 900px) {
+
+
+  header {
+    height: 70px;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $background;
+    h1 {
+      padding-right: 20px;
+      font-size: 34px;
+      text-transform: uppercase;
+      border-right: black 4px solid;
+    }
+  }
+
+
+  .links {
+    font-size: 22px;
+    ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+    }
+    a {
+      margin: 0 20px 0 20px;
+      text-decoration: none;
+      font-weight: bold;
+      position: relative;
+    }
+    a:hover {
+      color: $accent;
+    }
+    a:visited {
+      color: $accent;
+    }
+    a:before {
+      width: 100%;
+      height: 2px;
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-color: #000;
+      visibility: hidden;
+      -webkit-transform: scaleX(0);
+      transform: scaleX(0);
+      -webkit-transition: all 0.3s ease-in-out 0s;
+      transition: all 0.3s ease-in-out 0s;
+    }
+    a:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    }
+  }
+
+
+  article {
+    height: 80vh;
+    width: 100%;
+    text-shadow: 2px 2px $accent;
+    background: url(hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top: solid 2px black;
+    border-bottom: solid 2px black;
+    .slogan {
+      color: $background;
+      z-index: 1;
+      position: absolute;
+      top: 40%;
+      left: 5%;
+      font-size: 25px;
+    }
+    .description {
+      color: $background;
+      z-index: 1;
+      position: absolute;
+      top: 49%;
+      left: 5%;
+      font-size: 25px;
+    }
+    .color {
+      height: 100%;
+      width: 100%;
+      background: purple;
+      opacity: 50%;
+    }
+  }
+
+  section {
+    width: 100%;
+    margin: 40px 0 40px 0;
+    text-shadow: $accent 2px 2px;
+    border: $accent 2px solid;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  section:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .service-section {
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+  }
+
+  .services {
+    height: 100%;
+    width: 100%;
+    padding: 50px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: $primary;
+    p {
+      margin: 20px 0 20px 0;
+      font-size: 24px;
+      color: $background;
+    }
+    p:last-of-type {
+      margin-bottom: 40px;
+    }
+    button {
+      width: 200px;
+      opacity: 0%;
+      padding: 20px;
+      font-size: 24px;
+      font-weight: 700;
+      color: $background;
+      text-shadow: 2px 2px $accent;
+      align-self: center;
+      background-color: $secondary;
+      border: $accent 2px solid;
+      border-radius: 10px;
+      transition: all 0.5s ease-in-out;
+    }
+    button:hover {
+      color: $accent;
+      text-shadow: $accent 0px 0px;
+      transform: scale(1.2);
+      background-color: $background;
+
+    }
+    button:focus {
+      outline: 0;
+    }
+  }
+
+  .credentials {
+    text-shadow: none;
+    text-align: center;
+    background-color: $background;
+    border: none;
+  }
+
+  .contactus {
+    width: 100%;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    background-color: $primary;
+    text-shadow: $accent 2px 2px;
+    color: $background;
+    h3 {
+      margin-bottom: 20px;
+      font-size: 34px;
+    }
+  }
+
+  .information {
+      margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    ul {
+      margin-top: 20px;
+      list-style: none;
+      li {
+        padding-bottom: 10px;
+      }
+    }
+  }
+
+  form {
+    padding: 20px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(87,127,194,0.9);
+    border: $accent 2px solid;
+    border-radius: 10px;
+    transition: all 0.7s ease-in-out;
+    opacity: 0%;
+  }
+
+  .form-input {
+    width: 90%;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    transition: all .5s ease-in-out;
+    input, textarea {
+      width: 100%;
+      margin: 10px 0 10px 0;
+      padding-bottom: 10px;
+      font-size: 20px;
+      text-shadow: $accent 2px 2px;
+      font-family: 'Montserrat', sans-serif;
+      color: $background;
+      border: none;
+      border-bottom: $background 2px solid;
+      background-color: inherit;
+    }
+    input::placeholder, textarea::placeholder {
+      color: $background;
+    }
+    input:focus, textarea:focus {
+      outline: 0;
+      transform: scale(1.1);
+    }
+    .submit {
+      background-color: $primary;
+      padding: 20px;
+      border: $background 2px solid;
+      border-radius: 10px;
+    }
+    .submit:hover {
+      background-color: $background;
+      text-shadow: $accent 0px 0px;
+      border: $accent 2px solid;
+      color: $accent;
+      font-weight: 700;
+      transition: all 0.2s ease-in-out;
+      transform: scale(1.1);
+    }
+    .submit:focus {
+      transform: scale(1);
+    }
+     Change autocomplete styles in WebKit
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    textarea:-webkit-autofill,
+    textarea:-webkit-autofill:hover,
+    textarea:-webkit-autofill:focus,
+    select:-webkit-autofill,
+    select:-webkit-autofill:hover,
+    select:-webkit-autofill:focus {
+      border: none;
+      border-bottom: $background 2px solid;
+      -webkit-text-fill-color: $background;
+      -webkit-box-shadow:none;
+      text-shadow: $accent 2px 2px;
+      font-size: 20px;
+      transition: background-color 5000s ease-in-out 0s;
+    }
+  }
+}
+*/
