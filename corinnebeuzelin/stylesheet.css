@@ -59,7 +59,8 @@ article h3 {
   font-size: 24px;
   padding: 0 10px 0 0;
 }
-article .slogan {
+
+.slogan {
   color: #F7FAF9;
   z-index: 1;
   position: absolute;
@@ -67,7 +68,8 @@ article .slogan {
   left: 5%;
   font-size: 30px;
 }
-article .description {
+
+.description {
   color: #F7FAF9;
   z-index: 1;
   position: absolute;
@@ -75,11 +77,12 @@ article .description {
   left: 5%;
   font-size: 25px;
 }
-article .color {
+
+.color {
   height: 100%;
   width: 100%;
   background: purple;
-  opacity: 50%;
+  opacity: 0.5;
 }
 
 section {
