@@ -31,16 +31,125 @@ header h1 {
 nav {
   display: flex;
   justify-content: center;
-  padding: 20px 0 20px 0;
   position: fixed;
   bottom: 0;
   width: 100%;
+  height: 70px;
   background-color: #577FC2;
   border: 2px solid #25283D;
   z-index: 3;
+  text-shadow: #25283D 2px 2px;
 }
-nav ul {
-  display: none;
+
+.menu {
+  transition: all 0.4s ease-in-out;
+  border: 2px #25283D solid;
+  border-bottom: none;
+  background-color: #577FC2;
+  position: absolute;
+  top: 70px;
+  width: 101%;
+  z-index: 1;
+  font-size: 20px;
+}
+.menu a {
+  margin: 0 20px 0 20px;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+}
+.menu a:hover {
+  color: #25283D;
+}
+.menu a:visited {
+  color: #F7FAF9;
+}
+.menu a:before {
+  width: 100%;
+  height: 2px;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+.menu a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+.menu li {
+  margin: 10px 0 10px 0;
+}
+.menu li:first-of-type {
+  margin-top: 30px;
+}
+.menu li:last-of-type {
+  padding-bottom: 20px;
+}
+
+.icon-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  vertical-align: middle;
+  flex-direction: row;
+  align-items: center;
+  z-index: 3;
+}
+
+.home img {
+  height: 55%;
+  width: 30px;
+}
+
+.menu-icon {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+  z-index: 4;
+}
+
+.menu-icon input {
+  opacity: 0%;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  z-index: 5;
+}
+
+.menu-icon span {
+  transition: all 0.4s ease-in-out;
+  margin-bottom: 10px;
+  background: black;
+  width: 40px;
+  height: 5px;
+  border-radius: 10px;
+}
+
+.menu-icon input:checked ~ span:first-of-type {
+  transform: rotate(45deg) translate(11px, 11px);
+}
+
+.menu-icon input:checked ~ span:nth-child(3) {
+  opacity: 0%;
+}
+
+.menu-icon input:checked ~ span:last-of-type {
+  transform: rotate(-45deg) translate(10px, -10px);
+}
+
+.menu-icon span:last-of-type {
+  margin-bottom: 0;
 }
 
 article {
@@ -153,7 +262,6 @@ section:last-of-type {
 .contactus {
   width: 100%;
   padding: 20px;
-  margin: 0 0 70px 0;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -285,7 +393,7 @@ form .form-header {
   }
 
 
-  .links {
+  .navbar {
     font-size: 22px;
     ul {
       display: flex;
