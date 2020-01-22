@@ -1,3 +1,6 @@
+const menu = document.getElementById('menu')
+const checkbox = document.querySelector("input[name=checkbox]");
+
 window.addEventListener('scroll', function() {
  fadeIn(document.querySelector('.servicebutton'))
  fadeIn(document.querySelector('form'))
@@ -16,3 +19,24 @@ function fadeIn(fadeInSubject) {
 		};
 	};
 };
+
+
+checkbox.addEventListener( 'change', function() {
+    if(this.checked) {
+      menu.style.top = "-205px"
+    } else {
+      menu.style.top = "70px"
+    }
+});
+
+
+let prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  let currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos || menu.style.top == "-205px") {
+    document.getElementById('nav').style.bottom = "0";
+  } else {
+    document.getElementById('nav').style.bottom = "-70px";
+  }
+  prevScrollpos = currentScrollPos;
+}
