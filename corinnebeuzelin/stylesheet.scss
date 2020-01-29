@@ -21,11 +21,13 @@ header {
   padding: 20px;
   display: flex;
   justify-content: center;
+  flex-direction: column;
   text-align: center;
   align-items: center;
   color: $accent;
   background-color: $background;
   border-bottom: 2px solid $accent;
+  margin-top: 70px;
   h1 {
     font-size: 26px;
     text-transform: uppercase;
@@ -34,10 +36,10 @@ header {
 }
 
 nav {
+  position: fixed;
+  top: 0;
   display: flex;
   justify-content: center;
-  position: fixed;
-  bottom: 0 ;
   width: 100%;
   height: 70px;
   background-color: $secondary;
@@ -47,12 +49,14 @@ nav {
 }
 
 .menu {
+  visibility: collapse;
+  opacity: 0%;
   transition: all 0.4s ease-in-out;
   border: 2px $accent solid;
-  border-bottom: none;
+  border-top: none;
   background-color: $secondary;
   position: absolute;
-  top: 70px;
+  top: 68px;
   width: 101%;
   z-index: 1;
   font-size: 20px;
@@ -110,8 +114,8 @@ nav {
 }
 
 .home img {
-  height: 55%;
-  width: 30px;
+  height: 47px;
+  width: 47px;
 }
 
 .menu-icon {
@@ -125,6 +129,7 @@ nav {
 }
 
 .menu-icon input {
+  -webkit-appearance: none;
   opacity: 0%;
   position: absolute;
   width: 50px;
@@ -180,7 +185,7 @@ article {
 .slogan {
   z-index: 1;
   position: absolute;
-  top: 20%;
+  top: 30%;
   left: 5%;
   font-size: 30px;
 }
@@ -370,21 +375,20 @@ form {
   textarea:-webkit-autofill:focus,
   select:-webkit-autofill,
   select:-webkit-autofill:hover,
-  select:-webkit-autofill:focus {
+  select:-webkit-autofill:focus
+  input:-webkit-autofill:active {
     border: none;
     border-bottom: $background 2px solid;
     -webkit-text-fill-color: $background;
     -webkit-box-shadow:none;
+    background: none;
     text-shadow: $accent 2px 2px;
     font-size: 20px;
-    transition: background-color 5000s ease-in-out 0s;
   }
 }
 
 
 /*@media screen and (min-width: 900px) {
-
-
   header {
     height: 70px;
     width: 100%;
@@ -400,8 +404,6 @@ form {
       border-right: black 4px solid;
     }
   }
-
-
   .navbar {
     font-size: 22px;
     ul {
@@ -441,8 +443,6 @@ form {
     transform: scaleX(1);
     }
   }
-
-
   article {
     height: 80vh;
     width: 100%;
@@ -475,7 +475,6 @@ form {
       opacity: 50%;
     }
   }
-
   section {
     width: 100%;
     margin: 40px 0 40px 0;
@@ -484,18 +483,15 @@ form {
     border-radius: 10px;
     overflow: hidden;
   }
-
   section:last-of-type {
     margin-bottom: 0;
   }
-
   .service-section {
     height: 400px;
     display: flex;
     justify-content: center;
     font-weight: 700;
   }
-
   .services {
     height: 100%;
     width: 100%;
@@ -532,20 +528,17 @@ form {
       text-shadow: $accent 0px 0px;
       transform: scale(1.2);
       background-color: $background;
-
     }
     button:focus {
       outline: 0;
     }
   }
-
   .credentials {
     text-shadow: none;
     text-align: center;
     background-color: $background;
     border: none;
   }
-
   .contactus {
     width: 100%;
     padding: 100px;
@@ -560,7 +553,6 @@ form {
       font-size: 34px;
     }
   }
-
   .information {
       margin-right: 10px;
     display: flex;
@@ -574,7 +566,6 @@ form {
       }
     }
   }
-
   form {
     padding: 20px;
     margin-left: 10px;
@@ -588,7 +579,6 @@ form {
     transition: all 0.7s ease-in-out;
     opacity: 0%;
   }
-
   .form-input {
     width: 90%;
     padding-bottom: 20px;
