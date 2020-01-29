@@ -44,6 +44,7 @@ nav {
 }
 
 .menu {
+  visibility: collapse;
   opacity: 0%;
   transition: all 0.4s ease-in-out;
   border: 2px #25283D solid;
@@ -108,8 +109,8 @@ nav {
 }
 
 .home img {
-  height: 55%;
-  width: 30px;
+  height: 47px;
+  width: 47px;
 }
 
 .menu-icon {
@@ -367,14 +368,14 @@ form .form-header {
 .form-input textarea:-webkit-autofill:focus,
 .form-input select:-webkit-autofill,
 .form-input select:-webkit-autofill:hover,
-.form-input select:-webkit-autofill:focus {
+.form-input select:-webkit-autofill:focus input:-webkit-autofill:active {
   border: none;
   border-bottom: #F7FAF9 2px solid;
   -webkit-text-fill-color: #F7FAF9;
   -webkit-box-shadow: none;
+  background: none;
   text-shadow: #25283D 2px 2px;
   font-size: 20px;
-  transition: background-color 5000s ease-in-out 0s;
 }
 
 /*@media screen and (min-width: 900px) {

@@ -10,13 +10,11 @@ window.addEventListener('scroll', function() {
 function fadeIn(fadeInSubject) {
   const position = fadeInSubject.getBoundingClientRect();
   // checking whether fully visible
-  if (position.top >= 0 && position.bottom <= window.innerHeight) {
+  if (position.top >= 0 && position.bottom - 200 <= window.innerHeight) {
     if (fadeInSubject.style.opacity != "100%") {
       fadeInSubject.style.opacity = "100%"
+      fadeInSubject.style.transform = "translate(0, 10px)"
     }
-    if (fadeInSubject.style.marginTop = "0") {
-      fadeInSubject.style.marginTop = "20px"
-    };
   };
 };
 
@@ -24,12 +22,14 @@ function fadeIn(fadeInSubject) {
 checkbox.addEventListener('change', function() {
   if (this.checked) {
     menu.style.opacity = "100%"
+    menu.style.visibility = "visible"
   } else {
+    menu.style.visibility = "collapse"
     menu.style.opacity = "0%"
   }
 });
 
-let prevScrollpos = window.pageYOffset;
+/*let prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
   let currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos || menu.style.top == "-205px") {
@@ -38,4 +38,4 @@ window.onscroll = function() {
     document.getElementById('nav').style.top = "-70px";
   }
   prevScrollpos = currentScrollPos;
-}
+}*/
