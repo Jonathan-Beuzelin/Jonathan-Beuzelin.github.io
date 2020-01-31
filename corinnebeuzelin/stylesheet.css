@@ -125,7 +125,7 @@ nav {
 
 .menu-icon input {
   -webkit-appearance: none;
-  opacity: 0%;
+  visibility: hidden;
   position: absolute;
   width: 50px;
   height: 50px;
@@ -147,6 +147,18 @@ nav {
 
 .menu-icon input:checked ~ span:nth-child(3) {
   opacity: 0%;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  /*Best for Internet Explorer 8 */
+  filter: alpha(opacity=50);
+  /*Internet Explorer 5, 6, 7, 8 */
+  -moz-opacity: 0.5;
+  /* Old Mozilla Browsers */
+  -webkit-opacity: 0.5;
+  /* Old Webkit browsers (Safari, Chrome, various others) */
+  -khtml-opacity: 0.5;
+  /* Really old Safari browsers and Konqueror */
+  opacity: 0.5;
+  /* Modern browsers */
 }
 
 .menu-icon input:checked ~ span:last-of-type {
@@ -376,6 +388,14 @@ form .form-header {
   background: none;
   text-shadow: #25283D 2px 2px;
   font-size: 20px;
+}
+
+footer {
+  margin-top: 20px;
+  background-color: #577FC2;
+  color: #25283D;
+  border: #25283D solid 2px;
+  padding: 10px;
 }
 
 /*@media screen and (min-width: 900px) {
