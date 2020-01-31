@@ -124,16 +124,6 @@ nav {
 }
 
 .menu-icon input {
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-  /*Best for Internet Explorer 8 */
-  filter: alpha(opacity=50);
-  /*Internet Explorer 5, 6, 7, 8 */
-  -moz-opacity: 0;
-  /* Old Mozilla Browsers */
-  -webkit-opacity: 0;
-  /* Old Webkit browsers (Safari, Chrome, various others) */
-  -khtml-opacity: 0;
-  /* Really old Safari browsers and Konqueror */
   opacity: 0;
   /* Modern browsers */
   position: absolute;
@@ -314,16 +304,6 @@ form {
   border: #25283D 2px solid;
   border-radius: 10px;
   transition: all 0.7s ease-in-out;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-  /*Best for Internet Explorer 8 */
-  filter: alpha(opacity=50);
-  /*Internet Explorer 5, 6, 7, 8 */
-  -moz-opacity: 0;
-  /* Old Mozilla Browsers */
-  -webkit-opacity: 0;
-  /* Old Webkit browsers (Safari, Chrome, various others) */
-  -khtml-opacity: 0;
-  /* Really old Safari browsers and Konqueror */
   opacity: 0;
   /* Modern browsers */
 }
