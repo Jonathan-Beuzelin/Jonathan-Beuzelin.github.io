@@ -156,18 +156,7 @@ nav {
 }
 
 .menu-icon input:checked ~ span:nth-child(3) {
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-  /*Best for Internet Explorer 8 */
-  filter: alpha(opacity=50);
-  /*Internet Explorer 5, 6, 7, 8 */
-  -moz-opacity: 0;
-  /* Old Mozilla Browsers */
-  -webkit-opacity: 0;
-  /* Old Webkit browsers (Safari, Chrome, various others) */
-  -khtml-opacity: 0;
-  /* Really old Safari browsers and Konqueror */
   opacity: 0;
-  /* Modern browsers */
 }
 
 .menu-icon input:checked ~ span:last-of-type {
@@ -269,18 +258,7 @@ section:last-of-type {
   transition: all 0.5s ease-in-out;
   margin: 10px 0 10px 0;
   font-family: "Montserrat", sans-serif;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-  /*Best for Internet Explorer 8 */
-  filter: alpha(opacity=50);
-  /*Internet Explorer 5, 6, 7, 8 */
-  -moz-opacity: 0;
-  /* Old Mozilla Browsers */
-  -webkit-opacity: 0;
-  /* Old Webkit browsers (Safari, Chrome, various others) */
-  -khtml-opacity: 0;
-  /* Really old Safari browsers and Konqueror */
   opacity: 0;
-  /* Modern browsers */
 }
 .services button:hover {
   color: #25283D;
