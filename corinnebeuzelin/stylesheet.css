@@ -158,7 +158,7 @@ nav {
 }
 
 article {
-  height: 90vh;
+  height: 80vh;
   width: 100%;
   text-shadow: 2px 2px #25283D;
   background: url(test2.jpg);
@@ -206,6 +206,8 @@ section {
   border: #25283D 2px solid;
   border-radius: 10px;
   overflow: hidden;
+  padding: 20px;
+  background-color: #7B33C6;
 }
 
 section:last-of-type {
@@ -222,7 +224,6 @@ section:last-of-type {
 .services {
   height: 100%;
   width: 100%;
-  padding: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -233,30 +234,33 @@ section:last-of-type {
   padding-top: 20px;
 }
 .services p {
-  margin: 20px 0 20px 0;
+  margin: 35px 0 35px 0;
   font-size: 16px;
 }
-.services button {
+.services .buttonlink {
+  display: inline-block;
   width: auto;
   opacity: 0%;
   padding: 10px;
   font-size: 16px;
   color: #F7FAF9;
+  font-weight: 400;
   text-shadow: 2px 2px #25283D;
   background-color: #577FC2;
   border: #25283D 2px solid;
   border-radius: 10px;
   transition: all 0.5s ease-in-out;
-  margin: 10px 0 10px 0;
   font-family: "Montserrat", sans-serif;
+  text-decoration: none;
 }
-.services button:hover {
+.services .buttonlink:hover {
   color: #25283D;
   text-shadow: #25283D 0px 0px;
-  transform: scale(1.2);
+  transform: scale(1.1);
   background-color: #F7FAF9;
+  font-weight: bold;
 }
-.services button:focus {
+.services .buttonlink:focus {
   outline: 0;
 }
 
@@ -266,7 +270,6 @@ section:last-of-type {
 
 .contactus {
   width: 100%;
-  padding: 20px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -285,6 +288,7 @@ section:last-of-type {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  margin-bottom: 30px;
 }
 .information ul {
   margin-top: 20px;

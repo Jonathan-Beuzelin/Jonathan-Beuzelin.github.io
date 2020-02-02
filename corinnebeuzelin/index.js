@@ -2,7 +2,7 @@ const menu = document.getElementById('menu')
 const checkbox = document.querySelector("input[name=checkbox]");
 
 window.addEventListener('scroll', function() {
-  fadeIn(document.querySelector('.servicebutton'))
+  fadeIn(document.querySelector('.buttonlink'))
   fadeIn(document.querySelector('form'))
 });
 
@@ -13,7 +13,6 @@ function fadeIn(fadeInSubject) {
   if (position.top >= 0 && position.bottom - 200 <= window.innerHeight) {
     if (fadeInSubject.style.opacity != "100%") {
       fadeInSubject.style.opacity = "100%"
-      fadeInSubject.style.transform = "translate(0, 10px)"
     }
   };
 };

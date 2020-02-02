@@ -165,7 +165,7 @@ nav {
 }
 
 article {
-  height: 90vh;
+  height: 80vh;
   width: 100%;
   text-shadow: 2px 2px $accent;
   background: url(test2.jpg);
@@ -211,6 +211,8 @@ section {
   border: $accent 2px solid;
   border-radius: 10px;
   overflow: hidden;
+  padding: 20px;
+  background-color: $primary;
 }
 
 section:last-of-type {
@@ -227,7 +229,6 @@ section:last-of-type {
 .services {
   height: 100%;
   width: 100%;
-  padding: 50px;
   display: flex;
   justify-content: center;
   align-items:center;
@@ -237,32 +238,35 @@ section:last-of-type {
     padding-top: 20px;
   }
   p {
-    margin: 20px 0 20px 0;
+    margin: 35px 0 35px 0;
     font-size: 16px;
   }
 
-  button {
+  .buttonlink {
+    display: inline-block;
     width: auto;
     opacity: 0%;
     padding: 10px;
     font-size: 16px;
     color: $background;
+    font-weight: 400;
     text-shadow: 2px 2px $accent;
     background-color: $secondary;
     border: $accent 2px solid;
     border-radius: 10px;
     transition: all 0.5s ease-in-out;
-    margin: 10px 0 10px 0;
     font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
   }
-  button:hover {
+  .buttonlink:hover {
     color: $accent;
     text-shadow: $accent 0px 0px;
-    transform: scale(1.2);
+    transform: scale(1.1);
     background-color: $background;
+    font-weight: bold;
 
   }
-  button:focus {
+  .buttonlink:focus {
     outline: 0;
   }
 }
@@ -273,7 +277,6 @@ section:last-of-type {
 
 .contactus {
   width: 100%;
-  padding: 20px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -292,6 +295,7 @@ section:last-of-type {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  margin-bottom: 30px;
   ul {
     margin-top: 20px;
     list-style: none;
