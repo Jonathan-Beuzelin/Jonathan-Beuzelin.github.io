@@ -124,8 +124,8 @@ nav {
 }
 
 .menu-icon input {
-  opacity: 0;
-  /* Modern browsers */
+  -webkit-appearance: none;
+  opacity: 0%;
   position: absolute;
   width: 50px;
   height: 50px;
@@ -146,7 +146,7 @@ nav {
 }
 
 .menu-icon input:checked ~ span:nth-child(3) {
-  opacity: 0;
+  opacity: 0%;
 }
 
 .menu-icon input:checked ~ span:last-of-type {
@@ -238,6 +238,7 @@ section:last-of-type {
 }
 .services button {
   width: auto;
+  opacity: 0%;
   padding: 10px;
   font-size: 16px;
   color: #F7FAF9;
@@ -248,7 +249,6 @@ section:last-of-type {
   transition: all 0.5s ease-in-out;
   margin: 10px 0 10px 0;
   font-family: "Montserrat", sans-serif;
-  opacity: 0;
 }
 .services button:hover {
   color: #25283D;
@@ -304,8 +304,7 @@ form {
   border: #25283D 2px solid;
   border-radius: 10px;
   transition: all 0.7s ease-in-out;
-  opacity: 0;
-  /* Modern browsers */
+  opacity: 0%;
 }
 form .form-header {
   text-align: center;
@@ -369,22 +368,14 @@ form .form-header {
 .form-input textarea:-webkit-autofill:focus,
 .form-input select:-webkit-autofill,
 .form-input select:-webkit-autofill:hover,
-.form-input select:-webkit-autofill:focus input:-webkit-autofill:active {
-  -webkit-box-shadow: 0 0 0px 1000px #577FC2 inset;
+.form-input select:-webkit-autofill:focus,
+.form-input input:-webkit-autofill:active {
   border: none;
   border-bottom: #F7FAF9 2px solid;
   -webkit-text-fill-color: #F7FAF9;
-  background: none;
+  -webkit-box-shadow: inset 0 0 0px 2px #577FC2;
   text-shadow: #25283D 2px 2px;
   font-size: 20px;
-}
-
-footer {
-  margin-top: 20px;
-  background-color: #577FC2;
-  color: #25283D;
-  border: #25283D solid 2px;
-  padding: 10px;
 }
 
 /*@media screen and (min-width: 900px) {

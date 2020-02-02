@@ -10,7 +10,7 @@ window.addEventListener('scroll', function() {
 function fadeIn(fadeInSubject) {
   const position = fadeInSubject.getBoundingClientRect();
   // checking whether fully visible
-  if (position.top >= 0 && position.bottom <= window.innerHeight) {
+  if (position.top >= 0 && position.bottom - 200 <= window.innerHeight) {
     if (fadeInSubject.style.opacity != "100%") {
       fadeInSubject.style.opacity = "100%"
       fadeInSubject.style.transform = "translate(0, 10px)"
