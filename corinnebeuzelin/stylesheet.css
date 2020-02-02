@@ -21,6 +21,7 @@ header {
   align-items: center;
   color: #25283D;
   background-color: #F7FAF9;
+  border-top: 2px solid #25283D;
   border-bottom: 2px solid #25283D;
   margin-top: 70px;
 }
@@ -230,9 +231,6 @@ section:last-of-type {
   flex-direction: column;
   background-color: #7B33C6;
 }
-.services h2 {
-  padding-top: 20px;
-}
 .services p {
   margin: 35px 0 35px 0;
   font-size: 16px;
@@ -265,6 +263,8 @@ section:last-of-type {
 }
 
 .contact-section {
+  display: flex;
+  justify-content: center;
   margin-bottom: 50px;
 }
 
@@ -280,7 +280,7 @@ section:last-of-type {
 }
 .contactus h3 {
   line-height: 1.5;
-  margin-bottom: 20px;
+  margin-bottom: 35px;
   font-size: 34px;
 }
 
@@ -288,7 +288,7 @@ section:last-of-type {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin-bottom: 30px;
+  margin-bottom: 35px;
 }
 .information ul {
   margin-top: 20px;
