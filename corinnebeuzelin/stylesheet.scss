@@ -206,14 +206,21 @@ article {
 
 
 section {
+  display: flex;
+  justify-content: center;
   width: 100%;
   margin: 40px 0 40px 0;
   text-shadow: $accent 2px 2px;
   border: $accent 2px solid;
   border-radius: 10px;
   overflow: hidden;
-  padding: 20px;
+  padding: 30px;
   background-color: $primary;
+  h3 {
+    line-height: 1.5;
+    margin-bottom: 35px;
+    font-size: 34px;
+  }
 }
 
 section:last-of-type {
@@ -221,9 +228,6 @@ section:last-of-type {
 }
 
 .service-section {
-  height: 400px;
-  display: flex;
-  justify-content: center;
   font-weight: 700;
 }
 
@@ -269,12 +273,6 @@ section:last-of-type {
   }
 }
 
-.contact-section {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
-}
-
 .contactus {
   width: 100%;
   display: flex;
@@ -284,11 +282,6 @@ section:last-of-type {
   background-color: $primary;
   text-shadow: $accent 2px 2px;
   color: $background;
-  h3 {
-    line-height: 1.5;
-    margin-bottom: 35px;
-    font-size: 34px;
-  }
 }
 
 .information {
@@ -391,7 +384,7 @@ input:-webkit-autofill,
 }
 
 
-/*@media screen and (min-width: 900px) {
+@media screen and (min-width: 900px) {
   header {
     height: 70px;
     width: 100%;
@@ -646,4 +639,3 @@ input:-webkit-autofill,
     }
   }
 }
-*/

@@ -201,14 +201,21 @@ article h3 {
 }
 
 section {
+  display: flex;
+  justify-content: center;
   width: 100%;
   margin: 40px 0 40px 0;
   text-shadow: #25283D 2px 2px;
   border: #25283D 2px solid;
   border-radius: 10px;
   overflow: hidden;
-  padding: 20px;
+  padding: 30px;
   background-color: #7B33C6;
+}
+section h3 {
+  line-height: 1.5;
+  margin-bottom: 35px;
+  font-size: 34px;
 }
 
 section:last-of-type {
@@ -216,9 +223,6 @@ section:last-of-type {
 }
 
 .service-section {
-  height: 400px;
-  display: flex;
-  justify-content: center;
   font-weight: 700;
 }
 
@@ -262,12 +266,6 @@ section:last-of-type {
   outline: 0;
 }
 
-.contact-section {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
-}
-
 .contactus {
   width: 100%;
   display: flex;
@@ -277,11 +275,6 @@ section:last-of-type {
   background-color: #7B33C6;
   text-shadow: #25283D 2px 2px;
   color: #F7FAF9;
-}
-.contactus h3 {
-  line-height: 1.5;
-  margin-bottom: 35px;
-  font-size: 34px;
 }
 
 .information {
@@ -382,7 +375,7 @@ form .form-header {
   font-size: 20px;
 }
 
-/*@media screen and (min-width: 900px) {
+@media screen and (min-width: 900px) {
   header {
     height: 70px;
     width: 100%;
@@ -390,102 +383,108 @@ form .form-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: $background;
-    h1 {
-      padding-right: 20px;
-      font-size: 34px;
-      text-transform: uppercase;
-      border-right: black 4px solid;
-    }
+    background-color: #F7FAF9;
   }
+  header h1 {
+    padding-right: 20px;
+    font-size: 34px;
+    text-transform: uppercase;
+    border-right: black 4px solid;
+  }
+
   .navbar {
     font-size: 22px;
-    ul {
-      display: flex;
-      justify-content: center;
-      list-style: none;
-    }
-    a {
-      margin: 0 20px 0 20px;
-      text-decoration: none;
-      font-weight: bold;
-      position: relative;
-    }
-    a:hover {
-      color: $accent;
-    }
-    a:visited {
-      color: $accent;
-    }
-    a:before {
-      width: 100%;
-      height: 2px;
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      background-color: #000;
-      visibility: hidden;
-      -webkit-transform: scaleX(0);
-      transform: scaleX(0);
-      -webkit-transition: all 0.3s ease-in-out 0s;
-      transition: all 0.3s ease-in-out 0s;
-    }
-    a:hover:before {
+  }
+  .navbar ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+  }
+  .navbar a {
+    margin: 0 20px 0 20px;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+  }
+  .navbar a:hover {
+    color: #25283D;
+  }
+  .navbar a:visited {
+    color: #25283D;
+  }
+  .navbar a:before {
+    width: 100%;
+    height: 2px;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+  }
+  .navbar a:hover:before {
     visibility: visible;
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
-    }
   }
+
   article {
     height: 80vh;
     width: 100%;
-    text-shadow: 2px 2px $accent;
+    text-shadow: 2px 2px #25283D;
     background: url(hero.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     border-top: solid 2px black;
     border-bottom: solid 2px black;
-    .slogan {
-      color: $background;
-      z-index: 1;
-      position: absolute;
-      top: 40%;
-      left: 5%;
-      font-size: 25px;
-    }
-    .description {
-      color: $background;
-      z-index: 1;
-      position: absolute;
-      top: 49%;
-      left: 5%;
-      font-size: 25px;
-    }
-    .color {
-      height: 100%;
-      width: 100%;
-      background: purple;
-      opacity: 50%;
-    }
   }
+  article .slogan {
+    color: #F7FAF9;
+    z-index: 1;
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    font-size: 25px;
+  }
+  article .description {
+    color: #F7FAF9;
+    z-index: 1;
+    position: absolute;
+    top: 49%;
+    left: 5%;
+    font-size: 25px;
+  }
+  article .color {
+    height: 100%;
+    width: 100%;
+    background: purple;
+    opacity: 50%;
+  }
+
   section {
     width: 100%;
     margin: 40px 0 40px 0;
-    text-shadow: $accent 2px 2px;
-    border: $accent 2px solid;
+    text-shadow: #25283D 2px 2px;
+    border: #25283D 2px solid;
     border-radius: 10px;
     overflow: hidden;
   }
+
   section:last-of-type {
     margin-bottom: 0;
   }
+
   .service-section {
     height: 400px;
     display: flex;
     justify-content: center;
     font-weight: 700;
   }
+
   .services {
     height: 100%;
     width: 100%;
@@ -494,72 +493,76 @@ form .form-header {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    background-color: $primary;
-    p {
-      margin: 20px 0 20px 0;
-      font-size: 24px;
-      color: $background;
-    }
-    p:last-of-type {
-      margin-bottom: 40px;
-    }
-    button {
-      width: 200px;
-      opacity: 0%;
-      padding: 20px;
-      font-size: 24px;
-      font-weight: 700;
-      color: $background;
-      text-shadow: 2px 2px $accent;
-      align-self: center;
-      background-color: $secondary;
-      border: $accent 2px solid;
-      border-radius: 10px;
-      transition: all 0.5s ease-in-out;
-    }
-    button:hover {
-      color: $accent;
-      text-shadow: $accent 0px 0px;
-      transform: scale(1.2);
-      background-color: $background;
-    }
-    button:focus {
-      outline: 0;
-    }
+    background-color: #7B33C6;
   }
+  .services p {
+    margin: 20px 0 20px 0;
+    font-size: 24px;
+    color: #F7FAF9;
+  }
+  .services p:last-of-type {
+    margin-bottom: 40px;
+  }
+  .services button {
+    width: 200px;
+    opacity: 0%;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #F7FAF9;
+    text-shadow: 2px 2px #25283D;
+    align-self: center;
+    background-color: #577FC2;
+    border: #25283D 2px solid;
+    border-radius: 10px;
+    transition: all 0.5s ease-in-out;
+  }
+  .services button:hover {
+    color: #25283D;
+    text-shadow: #25283D 0px 0px;
+    transform: scale(1.2);
+    background-color: #F7FAF9;
+  }
+  .services button:focus {
+    outline: 0;
+  }
+
   .credentials {
     text-shadow: none;
     text-align: center;
-    background-color: $background;
+    background-color: #F7FAF9;
     border: none;
   }
+
   .contactus {
     width: 100%;
     padding: 100px;
     display: flex;
     justify-content: center;
     flex-direction: row;
-    background-color: $primary;
-    text-shadow: $accent 2px 2px;
-    color: $background;
-    h3 {
-      margin-bottom: 20px;
-      font-size: 34px;
-    }
+    background-color: #7B33C6;
+    text-shadow: #25283D 2px 2px;
+    color: #F7FAF9;
   }
+  .contactus h3 {
+    margin-bottom: 20px;
+    font-size: 34px;
+  }
+
   .information {
-      margin-right: 10px;
+    margin-right: 10px;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    ul {
-      margin-top: 20px;
-      list-style: none;
-      li {
-        padding-bottom: 10px;
-      }
-    }
   }
+  .information ul {
+    margin-top: 20px;
+    list-style: none;
+  }
+  .information ul li {
+    padding-bottom: 10px;
+  }
+
   form {
     padding: 20px;
     margin-left: 10px;
@@ -567,76 +570,75 @@ form .form-header {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    background-color: rgba(87,127,194,0.9);
-    border: $accent 2px solid;
+    background-color: rgba(87, 127, 194, 0.9);
+    border: #25283D 2px solid;
     border-radius: 10px;
     transition: all 0.7s ease-in-out;
     opacity: 0%;
   }
+
   .form-input {
     width: 90%;
     padding-bottom: 20px;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    transition: all .5s ease-in-out;
-    input, textarea {
-      width: 100%;
-      margin: 10px 0 10px 0;
-      padding-bottom: 10px;
-      font-size: 20px;
-      text-shadow: $accent 2px 2px;
-      font-family: 'Montserrat', sans-serif;
-      color: $background;
-      border: none;
-      border-bottom: $background 2px solid;
-      background-color: inherit;
-    }
-    input::placeholder, textarea::placeholder {
-      color: $background;
-    }
-    input:focus, textarea:focus {
-      outline: 0;
-      transform: scale(1.1);
-    }
-    .submit {
-      background-color: $primary;
-      padding: 20px;
-      border: $background 2px solid;
-      border-radius: 10px;
-    }
-    .submit:hover {
-      background-color: $background;
-      text-shadow: $accent 0px 0px;
-      border: $accent 2px solid;
-      color: $accent;
-      font-weight: 700;
-      transition: all 0.2s ease-in-out;
-      transform: scale(1.1);
-    }
-    .submit:focus {
-      transform: scale(1);
-    }
-     Change autocomplete styles in WebKit
-    input:-webkit-autofill,
-    input:-webkit-autofill:hover,
-    input:-webkit-autofill:focus,
-    textarea:-webkit-autofill,
-    textarea:-webkit-autofill:hover,
-    textarea:-webkit-autofill:focus,
-    select:-webkit-autofill,
-    select:-webkit-autofill:hover,
-    select:-webkit-autofill:focus {
-      border: none;
-      border-bottom: $background 2px solid;
-      -webkit-text-fill-color: $background;
-      -webkit-box-shadow:none;
-      text-shadow: $accent 2px 2px;
-      font-size: 20px;
-      transition: background-color 5000s ease-in-out 0s;
-    }
+    transition: all 0.5s ease-in-out;
+  }
+  .form-input input, .form-input textarea {
+    width: 100%;
+    margin: 10px 0 10px 0;
+    padding-bottom: 10px;
+    font-size: 20px;
+    text-shadow: #25283D 2px 2px;
+    font-family: "Montserrat", sans-serif;
+    color: #F7FAF9;
+    border: none;
+    border-bottom: #F7FAF9 2px solid;
+    background-color: inherit;
+  }
+  .form-input input::placeholder, .form-input textarea::placeholder {
+    color: #F7FAF9;
+  }
+  .form-input input:focus, .form-input textarea:focus {
+    outline: 0;
+    transform: scale(1.1);
+  }
+  .form-input .submit {
+    background-color: #7B33C6;
+    padding: 20px;
+    border: #F7FAF9 2px solid;
+    border-radius: 10px;
+  }
+  .form-input .submit:hover {
+    background-color: #F7FAF9;
+    text-shadow: #25283D 0px 0px;
+    border: #25283D 2px solid;
+    color: #25283D;
+    font-weight: 700;
+    transition: all 0.2s ease-in-out;
+    transform: scale(1.1);
+  }
+  .form-input .submit:focus {
+    transform: scale(1);
+  }
+  .form-input Change autocomplete styles in WebKit input:-webkit-autofill,
+.form-input input:-webkit-autofill:hover,
+.form-input input:-webkit-autofill:focus,
+.form-input textarea:-webkit-autofill,
+.form-input textarea:-webkit-autofill:hover,
+.form-input textarea:-webkit-autofill:focus,
+.form-input select:-webkit-autofill,
+.form-input select:-webkit-autofill:hover,
+.form-input select:-webkit-autofill:focus {
+    border: none;
+    border-bottom: #F7FAF9 2px solid;
+    -webkit-text-fill-color: #F7FAF9;
+    -webkit-box-shadow: none;
+    text-shadow: #25283D 2px 2px;
+    font-size: 20px;
+    transition: background-color 5000s ease-in-out 0s;
   }
 }
-*/
 
 /*# sourceMappingURL=stylesheet.css.map */
