@@ -93,6 +93,7 @@ nav {
   transform: scaleX(1);
   }
   li {
+    list-style: none;
     margin: 10px 0 10px 0;
   }
   li:first-of-type {
@@ -219,7 +220,6 @@ section {
   text-shadow: $accent 2px 2px;
   border: $accent 2px solid;
   border-radius: 10px;
-  overflow: hidden;
   padding: 30px;
   background-color: $primary;
   h3 {
@@ -279,8 +279,21 @@ section:last-of-type {
   }
 }
 
+.credentials {
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+  height: 100%;
+  align-items:center;
+  flex-direction: column;
+  background-color: $primary;
+  p {
+    margin: 35px 0 35px 0;
+    font-size: 16px;
+  }
+}
+
 .contactus {
-  width: 100%;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -394,57 +407,66 @@ input:-webkit-autofill,
   header {
     height: 70px;
     width: 100%;
-    padding: 20px;
+    padding: 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: row;
     background-color: $background;
+    margin-top: 0px;
     h1 {
+      height: 100%;
       padding-right: 20px;
-      font-size: 34px;
+      font-size: 26px;
       text-transform: uppercase;
       border-right: black 4px solid;
     }
   }
-  .navbar {
-    font-size: 22px;
-    ul {
+
+  nav {
+    display: flex;
+    justify-content: center;
+    position: static;
+    width: 100%;
+    height: 100%;
+    background-color: $background;
+    border: none;
+    z-index: 1;
+    text-shadow: $accent 2px 2px;
+  }
+
+  .icon-container {
+    display: none;
+  }
+
+  .menu {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    visibility: visible;
+    opacity: 100%;
+    transition: all 0.4s ease-in-out;
+    border: none;
+    border-top: none;
+    background-color: $secondary;
+    position: static;
+    width: 101%;
+    height: 100%;
+    z-index: 4;
+    font-size: 20px;
+    li {
       display: flex;
       justify-content: center;
-      list-style: none;
     }
     a {
-      margin: 0 20px 0 20px;
-      text-decoration: none;
-      font-weight: bold;
-      position: relative;
-    }
-    a:hover {
-      color: $accent;
-    }
-    a:visited {
-      color: $accent;
-    }
-    a:before {
-      width: 100%;
-      height: 2px;
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      background-color: #000;
-      visibility: hidden;
-      -webkit-transform: scaleX(0);
-      transform: scaleX(0);
-      -webkit-transition: all 0.3s ease-in-out 0s;
-      transition: all 0.3s ease-in-out 0s;
-    }
-    a:hover:before {
-    visibility: visible;
-    -webkit-transform: scaleX(1);
-    transform: scaleX(1);
+      align-self: center;
     }
   }
+  .menu li:first-of-type, .menu li:last-of-type {
+    margin: 10px 0 10px 0;
+    padding-bottom: 0;
+  }
+
   article {
     height: 80vh;
     width: 100%;
@@ -478,7 +500,7 @@ input:-webkit-autofill,
     }
   }
   section {
-    width: 100%;
+    width: 48%;
     margin: 40px 0 40px 0;
     text-shadow: $accent 2px 2px;
     border: $accent 2px solid;
@@ -486,7 +508,13 @@ input:-webkit-autofill,
     overflow: hidden;
   }
   section:last-of-type {
-    margin-bottom: 0;
+    margin-bottom: 30px;
+  }
+
+  .collapsable-row {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
   }
   .service-section {
     height: 400px;
@@ -536,10 +564,14 @@ input:-webkit-autofill,
     }
   }
   .credentials {
-    text-shadow: none;
-    text-align: center;
-    background-color: $background;
-    border: none;
+    height: 400px;
+    background-color: $primary;
+  }
+
+  .contact-section {
+    margin: 40px auto 40px auto;
+    width: 98%;
+    align-self: center;
   }
   .contactus {
     width: 100%;
