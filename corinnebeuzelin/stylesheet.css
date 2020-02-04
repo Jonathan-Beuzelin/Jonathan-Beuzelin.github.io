@@ -23,7 +23,7 @@ header {
   background-color: #F7FAF9;
   border-top: 2px solid #25283D;
   border-bottom: 2px solid #25283D;
-  margin-top: 70px;
+  margin-top: 50px;
 }
 header h1 {
   font-size: 26px;
@@ -37,7 +37,7 @@ nav {
   display: flex;
   justify-content: center;
   width: 100%;
-  height: 70px;
+  height: 50px;
   background-color: #577FC2;
   border: 2px solid #25283D;
   z-index: 3;
@@ -52,7 +52,7 @@ nav {
   border-top: none;
   background-color: #577FC2;
   position: absolute;
-  top: 68px;
+  top: 48px;
   width: 101%;
   z-index: 1;
   font-size: 20px;
@@ -102,16 +102,22 @@ nav {
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   vertical-align: middle;
+  padding: 0 20px 0 20px;
   flex-direction: row;
   align-items: center;
   z-index: 3;
 }
 
+.home {
+  display: flex;
+  justify-content: center;
+}
+
 .home img {
-  height: 47px;
-  width: 47px;
+  height: 42px;
+  width: 42px;
 }
 
 .menu-icon {
@@ -138,12 +144,12 @@ nav {
   margin-bottom: 10px;
   background: black;
   width: 40px;
-  height: 5px;
+  height: 3px;
   border-radius: 10px;
 }
 
 .menu-icon input:checked ~ span:first-of-type {
-  transform: rotate(45deg) translate(11px, 11px);
+  transform: rotate(45deg) translate(9px, 9px);
 }
 
 .menu-icon input:checked ~ span:nth-child(3) {
