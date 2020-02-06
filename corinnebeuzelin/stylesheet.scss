@@ -68,10 +68,13 @@ nav {
     position: relative;
   }
   a:hover {
-    color: $accent;
+    color: $background;
   }
   a:visited {
     color: $background;
+  }
+  a:active {
+    color: $primary;
   }
   a:before {
     width: 100%;
