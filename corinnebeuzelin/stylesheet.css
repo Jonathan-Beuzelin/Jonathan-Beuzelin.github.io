@@ -96,7 +96,7 @@ nav {
   margin-top: 30px;
 }
 .menu li:last-of-type {
-  padding-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .icon-container {
@@ -218,6 +218,9 @@ section {
   padding: 30px;
   background-color: #7B33C6;
 }
+section h2 {
+  text-align: left;
+}
 section h3 {
   line-height: 1.5;
   margin-bottom: 35px;
@@ -240,6 +243,7 @@ section:last-of-type {
   align-items: center;
   flex-direction: column;
   background-color: #7B33C6;
+  font-weight: 700;
 }
 .services p {
   margin: 35px 0 35px 0;
@@ -249,15 +253,15 @@ section:last-of-type {
   display: inline-block;
   width: auto;
   opacity: 0%;
-  padding: 10px;
-  font-size: 16px;
+  padding: 5px;
+  font-size: 21px;
   color: #F7FAF9;
   font-weight: 400;
   text-shadow: 2px 2px #25283D;
   background-color: #577FC2;
   border: #25283D 2px solid;
   border-radius: 10px;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.2s ease-in-out;
   font-family: "Montserrat", sans-serif;
   text-decoration: none;
 }
@@ -295,6 +299,10 @@ section:last-of-type {
   text-shadow: #25283D 2px 2px;
   color: #F7FAF9;
 }
+.contactus h3 {
+  margin-bottom: 20px;
+  font-size: 34px;
+}
 
 .information {
   display: flex;
@@ -319,7 +327,7 @@ form {
   background-color: rgba(87, 127, 194, 0.9);
   border: #25283D 2px solid;
   border-radius: 10px;
-  transition: all 0.7s ease-in-out;
+  transition: all 0.5s ease-in-out;
   opacity: 0%;
 }
 form .form-header {
@@ -376,21 +384,24 @@ form .form-header {
 .form-input .submit:focus {
   transform: scale(1);
 }
-.form-input Change autocomplete styles in WebKit input:-webkit-autofill,
-.form-input input:-webkit-autofill:hover,
-.form-input input:-webkit-autofill:focus,
-.form-input textarea:-webkit-autofill,
-.form-input textarea:-webkit-autofill:hover,
-.form-input textarea:-webkit-autofill:focus,
-.form-input select:-webkit-autofill,
-.form-input select:-webkit-autofill:hover,
-.form-input select:-webkit-autofill:focus,
-.form-input input:-webkit-autofill:active {
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus,
+input:-webkit-autofill:active,
+input:-webkit-autofill:visited {
   border: none;
   border-bottom: #F7FAF9 2px solid;
   -webkit-text-fill-color: #F7FAF9;
-  -webkit-box-shadow: inset 0 0 0px 2px #577FC2;
+  -webkit-box-shadow: inset 0 0 0px 2000px #5A78C2;
   text-shadow: #25283D 2px 2px;
+  transition: background-color 5000s ease-in-out 0s;
   font-size: 20px;
 }
 
@@ -399,31 +410,23 @@ form .form-header {
     height: 70px;
     width: 100%;
     padding: 0px;
-    display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    background-color: #F7FAF9;
     margin-top: 0px;
   }
   header h1 {
     height: 100%;
-    padding-right: 20px;
-    font-size: 26px;
-    text-transform: uppercase;
     border-right: black 4px solid;
   }
 
   nav {
     display: flex;
-    justify-content: center;
     position: static;
-    width: 100%;
     height: 100%;
     background-color: #F7FAF9;
     border: none;
     z-index: 1;
-    text-shadow: #25283D 2px 2px;
   }
 
   .icon-container {
@@ -432,19 +435,13 @@ form .form-header {
 
   .menu {
     display: flex;
+    position: static;
     justify-content: space-around;
     flex-direction: row;
     visibility: visible;
-    opacity: 100%;
-    transition: all 0.4s ease-in-out;
-    border: none;
-    border-top: none;
-    background-color: #577FC2;
-    position: static;
-    width: 101%;
     height: 100%;
-    z-index: 4;
-    font-size: 20px;
+    opacity: 100%;
+    border: none;
   }
   .menu li {
     display: flex;
@@ -460,45 +457,23 @@ form .form-header {
   }
 
   article {
-    height: 80vh;
-    width: 100%;
-    text-shadow: 2px 2px #25283D;
     background: url(hero.jpg);
-    background-repeat: no-repeat;
     background-size: cover;
-    border-top: solid 2px black;
-    border-bottom: solid 2px black;
   }
   article .slogan {
     color: #F7FAF9;
-    z-index: 1;
     position: absolute;
     top: 40%;
     left: 5%;
-    font-size: 25px;
   }
   article .description {
-    color: #F7FAF9;
-    z-index: 1;
     position: absolute;
     top: 49%;
     left: 5%;
-    font-size: 25px;
-  }
-  article .color {
-    height: 100%;
-    width: 100%;
-    background: purple;
-    opacity: 50%;
   }
 
   section {
     width: 48%;
-    margin: 40px 0 40px 0;
-    text-shadow: #25283D 2px 2px;
-    border: #25283D 2px solid;
-    border-radius: 10px;
-    overflow: hidden;
   }
 
   section:last-of-type {
@@ -513,60 +488,21 @@ form .form-header {
 
   .service-section {
     height: 400px;
-    display: flex;
-    justify-content: center;
-    font-weight: 700;
   }
 
   .services {
-    height: 100%;
-    width: 100%;
     padding: 50px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    background-color: #7B33C6;
   }
   .services p {
-    margin: 20px 0 20px 0;
-    font-size: 24px;
-    color: #F7FAF9;
-  }
-  .services p:last-of-type {
-    margin-bottom: 40px;
-  }
-  .services button {
-    width: 200px;
-    opacity: 0%;
-    padding: 20px;
-    font-size: 24px;
-    font-weight: 700;
-    color: #F7FAF9;
-    text-shadow: 2px 2px #25283D;
-    align-self: center;
-    background-color: #577FC2;
-    border: #25283D 2px solid;
-    border-radius: 10px;
-    transition: all 0.5s ease-in-out;
-  }
-  .services button:hover {
-    color: #25283D;
-    text-shadow: #25283D 0px 0px;
-    transform: scale(1.2);
-    background-color: #F7FAF9;
-  }
-  .services button:focus {
-    outline: 0;
+    font-size: 19px;
   }
 
   .credentials {
     height: 400px;
-    background-color: #7B33C6;
   }
 
   .contact-section {
-    margin: 40px auto 40px auto;
+    margin: 0px auto 40px auto;
     width: 98%;
     align-self: center;
   }
@@ -574,107 +510,33 @@ form .form-header {
   .contactus {
     width: 100%;
     padding: 100px;
-    display: flex;
-    justify-content: center;
     flex-direction: row;
-    background-color: #7B33C6;
-    text-shadow: #25283D 2px 2px;
-    color: #F7FAF9;
-  }
-  .contactus h3 {
-    margin-bottom: 20px;
-    font-size: 34px;
   }
 
   .information {
     margin-right: 10px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-  }
-  .information ul {
-    margin-top: 20px;
-    list-style: none;
-  }
-  .information ul li {
-    padding-bottom: 10px;
   }
 
   form {
-    padding: 20px;
-    margin-left: 10px;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    background-color: rgba(87, 127, 194, 0.9);
-    border: #25283D 2px solid;
-    border-radius: 10px;
-    transition: all 0.7s ease-in-out;
-    opacity: 0%;
+    margin-left: 10px;
   }
 
-  .form-input {
-    width: 90%;
-    padding-bottom: 20px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    transition: all 0.5s ease-in-out;
-  }
   .form-input input, .form-input textarea {
-    width: 100%;
-    margin: 10px 0 10px 0;
-    padding-bottom: 10px;
     font-size: 20px;
-    text-shadow: #25283D 2px 2px;
-    font-family: "Montserrat", sans-serif;
-    color: #F7FAF9;
-    border: none;
-    border-bottom: #F7FAF9 2px solid;
-    background-color: inherit;
   }
-  .form-input input::placeholder, .form-input textarea::placeholder {
-    color: #F7FAF9;
+}
+@media screen and (orientation: landscape) {
+  article h2 {
+    margin: 0 0 15px 0;
   }
-  .form-input input:focus, .form-input textarea:focus {
-    outline: 0;
-    transform: scale(1.1);
-  }
-  .form-input .submit {
-    background-color: #7B33C6;
-    padding: 20px;
-    border: #F7FAF9 2px solid;
-    border-radius: 10px;
-  }
-  .form-input .submit:hover {
-    background-color: #F7FAF9;
-    text-shadow: #25283D 0px 0px;
-    border: #25283D 2px solid;
-    color: #25283D;
-    font-weight: 700;
-    transition: all 0.2s ease-in-out;
-    transform: scale(1.1);
-  }
-  .form-input .submit:focus {
-    transform: scale(1);
-  }
-  .form-input Change autocomplete styles in WebKit input:-webkit-autofill,
-.form-input input:-webkit-autofill:hover,
-.form-input input:-webkit-autofill:focus,
-.form-input textarea:-webkit-autofill,
-.form-input textarea:-webkit-autofill:hover,
-.form-input textarea:-webkit-autofill:focus,
-.form-input select:-webkit-autofill,
-.form-input select:-webkit-autofill:hover,
-.form-input select:-webkit-autofill:focus {
-    border: none;
-    border-bottom: #F7FAF9 2px solid;
-    -webkit-text-fill-color: #F7FAF9;
-    -webkit-box-shadow: none;
-    text-shadow: #25283D 2px 2px;
-    font-size: 20px;
-    transition: background-color 5000s ease-in-out 0s;
+
+  .slogan {
+    top: 43%;
+    left: 5%;
   }
 }
 
