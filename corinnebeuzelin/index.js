@@ -28,6 +28,10 @@ checkbox.addEventListener('change', function() {
   }
 });
 
+if (window.innerWidth <= 900) {
+  document.querySelector('.desktop-home').innerHTML = "<h1>Corinne Beuzelin</h1>"
+}
+
 /*let prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
   let currentScrollPos = window.pageYOffset;
