@@ -140,8 +140,7 @@ nav {
   z-index: 4;
 }
 
-.menu-icon input, .menu-icon input:checked {
-  -webkit-appearance: none;
+.menu-icon input[type=checkbox], .menu-icon input[type=checkbox]:checked {
   -webkit-border-radius:0px;
   opacity: 0%;
   position: absolute;
@@ -159,16 +158,16 @@ nav {
   border-radius: 10px;
 }
 
-.menu-icon input:checked ~ span:first-of-type {
+.menu-icon input[type=checkbox]:checked ~ span[type=checkbox]:first-of-type {
   transform: rotate(45deg) translate(9px, 9px);
 }
 
-.menu-icon input:checked ~ span:nth-child(3) {
+.menu-icon input[type=checkbox]:checked ~ span:nth-child(3) {
   opacity: 0%;
 }
 
 
-.menu-icon input:checked ~ span:last-of-type {
+.menu-icon input[type=checkbox]:checked ~ span:last-of-type {
   transform: rotate(-45deg) translate(10px, -10px);
 }
 
