@@ -137,6 +137,7 @@ nav {
 
 .menu-icon input[type=checkbox], .menu-icon input[type=checkbox]:checked {
   -webkit-appearance: none;
+  outline: none;
   -webkit-border-radius: 0px;
   opacity: 0%;
   position: absolute;
