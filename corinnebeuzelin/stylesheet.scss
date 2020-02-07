@@ -141,6 +141,7 @@ nav {
 }
 
 .menu-icon input[type=checkbox], .menu-icon input[type=checkbox]:checked {
+  -webkit-appearance: none;
   -webkit-border-radius:0px;
   opacity: 0%;
   position: absolute;
@@ -158,7 +159,7 @@ nav {
   border-radius: 10px;
 }
 
-.menu-icon input[type=checkbox]:checked ~ span[type=checkbox]:first-of-type {
+.menu-icon input[type=checkbox]:checked ~ span:first-of-type {
   transform: rotate(45deg) translate(9px, 9px);
 }
 
