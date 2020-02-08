@@ -9,6 +9,10 @@ body {
   font-family: "Montserrat", sans-serif;
   color: #F7FAF9;
 }
+body a[href^=tel] {
+  text-decoration: inherit;
+  color: inherit;
+}
 
 header {
   height: 70px;
