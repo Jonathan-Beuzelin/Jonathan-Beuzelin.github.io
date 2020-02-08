@@ -377,6 +377,7 @@ form .form-header {
   font-family: "Montserrat", sans-serif;
   color: #F7FAF9;
   border: none;
+  border-radius: 0;
   border-bottom: #F7FAF9 2px solid;
   background-color: inherit;
 }
