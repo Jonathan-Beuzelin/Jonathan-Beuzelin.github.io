@@ -329,6 +329,9 @@ section:last-of-type {
   flex-direction: column;
   margin-bottom: 35px;
 }
+.information a:visited {
+  color: #F7FAF9;
+}
 .information ul {
   margin-top: 20px;
   list-style: none;

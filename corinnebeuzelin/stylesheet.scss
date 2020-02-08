@@ -339,6 +339,9 @@ section:last-of-type {
   justify-content: center;
   flex-direction: column;
   margin-bottom: 35px;
+  a:visited {
+    color: $background
+  }
   ul {
     margin-top: 20px;
     list-style: none;
