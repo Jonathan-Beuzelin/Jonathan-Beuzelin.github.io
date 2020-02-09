@@ -424,10 +424,10 @@ select:-webkit-autofill:focus,
 input:-webkit-autofill:active,
 input:-webkit-autofill:visited {
   border: none;
-  border-bottom: #F7FAF9 2px solid !important;
-  -webkit-text-fill-color: #F7FAF9 !important;
-  -webkit-box-shadow: inset 0 0 0px 2000px #5A78C2 !important;
-  text-shadow: #25283D 2px 2px !important;
+  border-bottom: #F7FAF9 2px solid;
+  -webkit-text-fill-color: #F7FAF9;
+  -webkit-box-shadow: inset 0 0 0px 200000px #577FC2;
+  text-shadow: #25283D 2px 2px;
   transition: background-color 5000s ease-in-out 0s;
   font-size: 20px;
 }

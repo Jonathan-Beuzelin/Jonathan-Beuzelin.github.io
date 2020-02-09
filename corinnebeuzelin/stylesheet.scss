@@ -435,10 +435,10 @@ select:-webkit-autofill:focus,
 input:-webkit-autofill:active,
 input:-webkit-autofill:visited {
   border: none;
-  border-bottom: $background 2px solid !important;
-  -webkit-text-fill-color: $background !important;
-  -webkit-box-shadow: inset 0 0 0px 2000px #5A78C2 !important;
-  text-shadow: $accent 2px 2px !important;
+  border-bottom: $background 2px solid;
+  -webkit-text-fill-color: $background;
+  -webkit-box-shadow: inset 0 0 0px 200000px $secondary;
+  text-shadow: $accent 2px 2px;
   transition: background-color 5000s ease-in-out 0s;
   font-size: 20px;
 }
