@@ -5,9 +5,9 @@
 }
 
 body {
-  background-color: #F7FAF9;
+  background-color: #F5EFF1;
   font-family: "Montserrat", sans-serif;
-  color: #F7FAF9;
+  color: #F5EFF1;
 }
 body a[href^=tel] {
   text-decoration: inherit;
@@ -23,10 +23,10 @@ header {
   flex-direction: column;
   text-align: center;
   align-items: center;
-  color: #25283D;
-  background-color: #F7FAF9;
-  border-top: 2px solid #25283D;
-  border-bottom: 2px solid #25283D;
+  color: #232024;
+  background-color: #F5EFF1;
+  border-top: 2px solid #232024;
+  border-bottom: 2px solid #232024;
   margin-top: 50px;
   transition: all 0.4s ease-in-out;
 }
@@ -43,19 +43,19 @@ nav {
   justify-content: center;
   width: 100%;
   height: 50px;
-  background-color: #577FC2;
-  border: 2px solid #25283D;
+  background-color: #3498DB;
+  border: 2px solid #232024;
   z-index: 3;
-  text-shadow: #25283D 2px 2px;
+  text-shadow: #232024 2px 2px;
 }
 
 .menu {
   visibility: collapse;
   opacity: 0%;
   transition: all 0.4s ease-in-out;
-  border: 2px #25283D solid;
+  border: 2px #232024 solid;
   border-top: none;
-  background-color: #577FC2;
+  background-color: #3498DB;
   position: absolute;
   top: 48px;
   width: 101%;
@@ -69,13 +69,13 @@ nav {
   position: relative;
 }
 .menu a:hover {
-  color: #F7FAF9;
+  color: #F5EFF1;
 }
 .menu a:visited {
-  color: #F7FAF9;
+  color: #F5EFF1;
 }
 .menu a:active {
-  color: rgba(123, 51, 198, 0.7);
+  color: #3498DB;
 }
 .menu a:before {
   width: 100%;
@@ -84,7 +84,7 @@ nav {
   position: absolute;
   bottom: 0;
   left: 0;
-  background-color: #000;
+  background-color: #e6318b;
   visibility: hidden;
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
@@ -194,12 +194,12 @@ nav {
 article {
   height: 80vh;
   width: 100%;
-  text-shadow: 2px 2px #25283D;
+  text-shadow: 2px 2px #232024;
   background: url(test2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  border-top: solid 2px black;
-  border-bottom: solid 2px black;
+  border-top: solid 2px #232024;
+  border-bottom: solid 2px #232024;
 }
 article h2 {
   margin: 0 0 35px 0;
@@ -218,18 +218,10 @@ article h3 {
   font-size: 30px;
 }
 
-.description {
-  z-index: 1;
-  position: absolute;
-  top: 55%;
-  left: 5%;
-  font-size: 25px;
-}
-
 .color {
   height: 100%;
   width: 100%;
-  background: purple;
+  background: #e6318b;
   opacity: 0.5;
 }
 
@@ -238,11 +230,12 @@ section {
   justify-content: center;
   width: 100%;
   margin: 40px 0 40px 0;
-  text-shadow: #25283D 2px 2px;
-  border: #25283D 2px solid;
+  text-shadow: #232024 2px 2px;
+  box-shadow: 0px 0px 8px 2px #232024;
+  border: #232024 2px solid;
   border-radius: 10px;
   padding: 30px;
-  background-color: rgba(123, 51, 198, 0.7);
+  background-color: #3498DB;
 }
 section h2 {
   text-align: left;
@@ -280,21 +273,21 @@ section:last-of-type {
   opacity: 0%;
   padding: 5px;
   font-size: 21px;
-  color: #F7FAF9;
-  font-weight: 400;
-  text-shadow: 2px 2px #25283D;
-  background-color: #577FC2;
-  border: #25283D 2px solid;
+  color: #F5EFF1;
+  font-weight: 600;
+  text-shadow: 2px 2px #232024;
+  background-color: #e6318b;
+  border: #232024 2px solid;
   border-radius: 10px;
   transition: all 0.2s ease-in-out;
   font-family: "Montserrat", sans-serif;
   text-decoration: none;
 }
 .services .buttonlink:hover {
-  color: #25283D;
-  text-shadow: #25283D 0px 0px;
+  color: #232024;
+  text-shadow: #232024 0px 0px;
   transform: scale(1.1);
-  background-color: #F7FAF9;
+  background-color: #F5EFF1;
   font-weight: bold;
 }
 .services .buttonlink:focus {
@@ -319,8 +312,8 @@ section:last-of-type {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  text-shadow: #25283D 2px 2px;
-  color: #F7FAF9;
+  text-shadow: #232024 2px 2px;
+  color: #F5EFF1;
 }
 .contactus h3 {
   margin-bottom: 20px;
@@ -334,7 +327,7 @@ section:last-of-type {
   margin-bottom: 35px;
 }
 .information a:visited {
-  color: #F7FAF9;
+  color: #F5EFF1;
 }
 .information ul {
   margin-top: 20px;
@@ -350,8 +343,9 @@ form {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  background-color: rgba(87, 127, 194, 0.9);
-  border: #25283D 2px solid;
+  background-color: #e6318b;
+  box-shadow: 0px 0px 8px 2px #232024;
+  border: #232024 2px solid;
   border-radius: 10px;
   transition: all 0.5s ease-in-out;
   opacity: 0%;
@@ -373,16 +367,16 @@ form .form-header {
   margin: 10px 0 10px 0;
   padding-bottom: 10px;
   font-size: 16px;
-  text-shadow: #25283D 2px 2px;
+  text-shadow: #232024 1px 2px;
   font-family: "Montserrat", sans-serif;
-  color: #F7FAF9;
+  color: #F5EFF1;
   border: none;
   border-radius: 0;
-  border-bottom: #F7FAF9 2px solid;
+  border-bottom: #F5EFF1 2px solid;
   background-color: inherit;
 }
 .form-input input::placeholder, .form-input textarea::placeholder {
-  color: #F7FAF9;
+  color: #F5EFF1;
 }
 .form-input input:focus, .form-input textarea:focus {
   outline: 0;
@@ -391,19 +385,20 @@ form .form-header {
 .form-input .submit {
   align-self: center;
   width: auto;
-  background-color: rgba(123, 51, 198, 0.7);
+  background-color: #3498DB;
   padding: 5px;
-  border: #F7FAF9 2px solid;
+  border: #F5EFF1 2px solid;
+  font-weight: 600;
   border-radius: 10px;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 .form-input .submit:hover {
-  background-color: #F7FAF9;
-  text-shadow: #25283D 0px 0px;
-  border: #25283D 2px solid;
-  color: #25283D;
+  background-color: #F5EFF1;
+  text-shadow: #232024 0px 0px;
+  border: #232024 2px solid;
+  color: #232024;
   font-weight: 700;
   transition: all 0.2s ease-in-out;
   transform: scale(1.1);
@@ -424,17 +419,17 @@ select:-webkit-autofill:focus,
 input:-webkit-autofill:active,
 input:-webkit-autofill:visited {
   border: none;
-  border-bottom: #F7FAF9 2px solid;
-  -webkit-text-fill-color: #F7FAF9;
-  -webkit-box-shadow: inset 0 0 0px 200000px #577FC2;
-  text-shadow: #25283D 2px 2px;
+  border-bottom: #F5EFF1 2px solid;
+  -webkit-text-fill-color: #F5EFF1;
+  -webkit-box-shadow: inset 0 0 0px 200000px #e6318b;
+  text-shadow: #232024 2px 2px;
   transition: background-color 5000s ease-in-out 0s;
   font-size: 20px;
 }
 
 footer {
-  background-color: #577FC2;
-  border: #25283D 2px solid;
+  background-color: #e6318b;
+  border: #232024 2px solid;
   border-bottom: none;
 }
 
@@ -454,21 +449,21 @@ footer {
     height: 100%;
   }
   header .desktop-home:hover {
-    background-color: rgba(123, 51, 198, 0.7);
+    background-color: #e6318b;
   }
   header .desktop-home a {
     text-decoration: none;
   }
   header .desktop-home a:visited {
-    color: #25283D;
+    color: #232024;
   }
   header .desktop-home a:hover {
-    color: #F7FAF9;
-    text-shadow: 2px 2px #25283D;
+    color: #F5EFF1;
+    text-shadow: 2px 2px #232024;
   }
   header .desktop-home a:active {
-    color: #25283D;
-    background-color: #F7FAF9;
+    color: #232024;
+    background-color: #F5EFF1;
     text-shadow: none;
   }
 
@@ -476,7 +471,7 @@ footer {
     display: flex;
     position: static;
     height: 100%;
-    background-color: #F7FAF9;
+    background-color: #F5EFF1;
     border: none;
     z-index: 1;
   }
@@ -494,7 +489,7 @@ footer {
     height: 100%;
     opacity: 100%;
     border: none;
-    border-left: 2px #25283D solid;
+    border-left: 2px #232024 solid;
   }
   .menu li {
     display: flex;
@@ -514,7 +509,7 @@ footer {
     background-size: cover;
   }
   article .slogan {
-    color: #F7FAF9;
+    color: #F5EFF1;
     position: absolute;
     top: 40%;
     left: 5%;
