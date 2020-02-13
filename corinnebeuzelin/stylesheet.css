@@ -43,7 +43,7 @@ nav {
   justify-content: center;
   width: 100%;
   height: 50px;
-  background-color: #3498DB;
+  background-color: #2678ab;
   border: 2px solid #232024;
   z-index: 3;
   text-shadow: #232024 2px 2px;
@@ -55,7 +55,7 @@ nav {
   transition: all 0.4s ease-in-out;
   border: 2px #232024 solid;
   border-top: none;
-  background-color: #3498DB;
+  background-color: #2678ab;
   position: absolute;
   top: 48px;
   width: 101%;
@@ -75,7 +75,7 @@ nav {
   color: #F5EFF1;
 }
 .menu a:active {
-  color: #3498DB;
+  color: #2678ab;
 }
 .menu a:before {
   width: 100%;
@@ -84,7 +84,7 @@ nav {
   position: absolute;
   bottom: 0;
   left: 0;
-  background-color: #e6318b;
+  background-color: #D88861;
   visibility: hidden;
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
@@ -221,7 +221,7 @@ article h3 {
 .color {
   height: 100%;
   width: 100%;
-  background: #e6318b;
+  background: #D88861;
   opacity: 0.5;
 }
 
@@ -235,7 +235,7 @@ section {
   border: #232024 2px solid;
   border-radius: 10px;
   padding: 30px;
-  background-color: #3498DB;
+  background-color: #2678ab;
 }
 section h2 {
   text-align: left;
@@ -276,7 +276,7 @@ section:last-of-type {
   color: #F5EFF1;
   font-weight: 600;
   text-shadow: 2px 2px #232024;
-  background-color: #e6318b;
+  background-color: #D88861;
   border: #232024 2px solid;
   border-radius: 10px;
   transition: all 0.2s ease-in-out;
@@ -343,7 +343,7 @@ form {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  background-color: #e6318b;
+  background-color: #D88861;
   box-shadow: 0px 0px 8px 2px #232024;
   border: #232024 2px solid;
   border-radius: 10px;
@@ -385,7 +385,7 @@ form .form-header {
 .form-input .submit {
   align-self: center;
   width: auto;
-  background-color: #3498DB;
+  background-color: #2678ab;
   padding: 5px;
   border: #F5EFF1 2px solid;
   font-weight: 600;
@@ -421,14 +421,14 @@ input:-webkit-autofill:visited {
   border: none;
   border-bottom: #F5EFF1 2px solid;
   -webkit-text-fill-color: #F5EFF1;
-  -webkit-box-shadow: inset 0 0 0px 200000px #e6318b;
+  -webkit-box-shadow: inset 0 0 0px 200000px #D88861;
   text-shadow: #232024 2px 2px;
   transition: background-color 5000s ease-in-out 0s;
   font-size: 20px;
 }
 
 footer {
-  background-color: #e6318b;
+  background-color: #D88861;
   border: #232024 2px solid;
   border-bottom: none;
 }
@@ -449,7 +449,7 @@ footer {
     height: 100%;
   }
   header .desktop-home:hover {
-    background-color: #e6318b;
+    background-color: #D88861;
   }
   header .desktop-home a {
     text-decoration: none;
