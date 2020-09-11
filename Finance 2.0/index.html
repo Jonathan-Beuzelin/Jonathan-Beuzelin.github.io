@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="stylesheet.css">
+  <title>Document</title>
+</head>
+<body>
+  <nav>
+      <input type="checkbox" id="checkbox" name="checkbox" value="">
+      <div class="hamburger lineone"></div>
+      <div class="hamburger linetwo"></div>
+      <div class="hamburger linethree"></div>
+      <ul id="list">
+        <li>Lorem ipsum</li>
+        <li>Lorem ipsum</li>
+        <li>Lorem ipsum</li>
+        <li>Lorem ipsum</li>
+        <li>Lorem ipsum</li>
+        <li>Lorem ipsum</li>
+      </ul>
+  </nav>
+  <div class="container">
+  <header>
+    <h1>Dashboard</h1>
+  </header>
+  <div class="section-container">
+    <section>
+      <h2>Recent Activity</h2>
+      <ul>
+        <li>23/09/2020 - £300 RENT</li>
+        <li>24/01/2020 - £50 PHONE BILL</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Bill Calender</h2>
+    </section>
+    <section>
+      <h2>Monthly Overview</h2>
+      <canvas id="monthlyChart"</canvas>
+    </section>
+    <section>
+      <h2>Yearly Overview</h2>
+      <canvas id="yearlyChart"></canvas>
+    </section>
+  </div>
+  </div>
+  <script src="node_modules/chart.js/dist/Chart.js"></script>
+  <script src="index.js" charset="utf-8"></script>
+</body>
+</html>
