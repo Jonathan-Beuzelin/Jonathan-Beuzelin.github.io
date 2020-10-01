@@ -9,46 +9,62 @@
   <title>Document</title>
 </head>
 <body>
-  <nav>
-      <input type="checkbox" id="checkbox" name="checkbox" value="">
-      <div class="hamburger lineone"></div>
-      <div class="hamburger linetwo"></div>
-      <div class="hamburger linethree"></div>
-      <ul id="list">
-        <li>Lorem ipsum</li>
-        <li>Lorem ipsum</li>
-        <li>Lorem ipsum</li>
-        <li>Lorem ipsum</li>
-        <li>Lorem ipsum</li>
-        <li>Lorem ipsum</li>
-      </ul>
-  </nav>
-  <div class="container">
+  <section class="left-side-container">
+    <div class="title">
+      <h1>logo</h1>
+    </div>
+   <nav>
+       <input type="checkbox" id="checkbox" name="checkbox" value="">
+       <div class="hamburger lineone"></div>
+       <div class="hamburger linetwo"></div>
+       <div class="hamburger linethree"></div>
+       <ul id="list">
+         <li>Lorem ipsum</li>
+         <li>Lorem ipsum</li>
+         <li>Lorem ipsum</li>
+         <li>Lorem ipsum</li>
+         <li>Lorem ipsum</li>
+         <li>Lorem ipsum</li>
+       </ul>
+   </nav>
+ </section>
+  <main class="main-container">
   <header>
-    <h1>Dashboard</h1>
+    <h2>Dashboard</h2>
   </header>
-  <div class="section-container">
-    <section>
-      <h2>Recent Activity</h2>
-      <ul>
-        <li>23/09/2020 - £300 RENT</li>
-        <li>24/01/2020 - £50 PHONE BILL</li>
-      </ul>
-    </section>
-    <section>
-      <h2>Bill Calender</h2>
-    </section>
-    <section>
-      <h2>Monthly Overview</h2>
-      <canvas id="monthlyChart"</canvas>
-    </section>
-    <section>
-      <h2>Yearly Overview</h2>
+  <section class="square-content-holder">
+    <div class="square-content top-row">
+      <h2>Upcoming Bills</h2>
+      <div class="grid">
+        <h3>Date</h3>
+        <h3>Name</h3>
+        <h3>Bill</h3>
+        <p>23/09/2020</p>
+        <p>PHONE BILL</p>
+        <p>£50</p>
+        <p>23/03/2020</p>
+      </div>
+    </div>
+    <div class="square-content top-row">
+      <h2>Accounts</h2>
+      <div class="grid">
+        <h3>Account Name</h3>
+        <h3>Account Number</h3>
+        <h3>Funds</h3>
+        <p>Halifax Current Account</p>
+        <p>202348885</p>
+        <p>£400</p>
+      </div>
+    </div>
+    <div class="square-content bottom-row">
+      <canvas id="monthlyChart"></canvas>
+    </div>
+    <div class="square-content bottom-row">
       <canvas id="yearlyChart"></canvas>
-    </section>
+    </div>
+  </main>
   </div>
-  </div>
-  <script src="node_modules/chart.js/dist/Chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
   <script src="index.js" charset="utf-8"></script>
 </body>
 </html>
