@@ -7,7 +7,7 @@
 body {
   font-family: 'Source Sans Pro', sans-serif;
   display: flex;
-  flex-direction:row;
+  flex-direction: column;
   text-align: center;
 }
 
@@ -36,8 +36,7 @@ header {
 .left-side-container {
   display: flex;
   flex-direction: column;
-  padding: 5px;
-  height: 100vh;
+  height: auto;
 }
 
 .title {
@@ -49,10 +48,9 @@ padding: 25px 25px;
 }
 
 nav {
+  position: absolute;
   width: 100%;
   height: 100%;
-  border: solid 2px lightgrey;
-  border-top: none;
 }
 
 .hamburger {
@@ -60,30 +58,34 @@ nav {
   height: 3px;
   background-color: black;
   border-radius: 5px;
-  margin: 0 0 10px 0;
+  margin: 10px 0 10px 10px;
   transition: all 0.3s ease-in-out;
+  z-index: 3;
 }
 #list {
   display: flex;
   justify-content: space-around;
   flex-direction: column;
   position: absolute;
-  top: 0;
+  top: 86px;
   left: -595px;
   transition: all 0.3s ease-in-out;
   padding: 70px 10px 10px 10px;
   width: 100%;
-  height: 100%;
-  z-index: 0;
+  height: 90%;
+  z-index: 1;
+  background-color: lightgrey;
 }
 
 
 #checkbox {
   position: absolute;
+  top: 0;
+  left: 0;
   width: 35px;
   height: 35px;
   opacity: 0;
-  z-index: 1;
+  z-index: 2;
 }
 #checkbox:checked ~ #list {
   position: absolute;
@@ -118,16 +120,14 @@ nav {
   padding: 5px;
 }
 
-.top-row {
-  margin: 0 0 56px 0;
-}
 
 .square-content {
   position:relative;
   text-align:center;
-  height: 45.5%;
-  width: 47%;
+  height: 25%;
+  width: 100%;
   border: black solid 2px;
+  margin: 0 0 56px 0;
 }
 
 .grid {
@@ -139,12 +139,23 @@ nav {
 
 @media (min-width: 600px) {
 
+  body {
+    display: flex;
+    flex-direction: row;
+  }
   header {
     width: 100%;
   }
 
+  nav {
+    position: static;
+    border: solid 2px lightgrey;
+    border-top: none;
+  }
+
   .left-side-container {
     width: 25%;
+    height: 100vh;
     padding: 0;
     max-width: 240px;
   }
@@ -153,11 +164,21 @@ nav {
     margin-top: 50px;
   }
 
+  .square-content {
+    height: 45.5%;
+    width: 47%;
+  }
+
+  .top-row {
+    margin: 0 0 56px 0;
+  }
+
   #checkbox, .hamburger {
     display: none;
   }
   #list {
     position: static;
+    background-color: transparent;
   }
 
 }
