@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(180deg, #FFFFFF 0%, #F6F7FB 100%);
+}
+
+.body-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 420px;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+
+.header-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-container img {
+    height: 40px;
+}
+
+
+main {
+ width: 100%;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; 
+    height: 534px;
+}
+
+.profile-picture {
+    width: 100%;
+    border-radius: 15px;
+}
+
+
+.text-container {
+    color: white;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px 0;
+}
+
+.footer-container img {
+    padding: 10px;
+}
+
+.button-container {
+    background: #FFFFFF;
+    box-shadow: 0px 10px 20px #E9E9EA;
+    border-radius: 100%;
+}
+
+.heart:hover {
+    background: #DBFFF4;
+    box-shadow: 0px 10px 20px #CCF1E6;
+}
+
+.cross:hover {
+    background: #FFE7EF;
+    box-shadow: 0px 10px 20px #EDD9DF;
+}
+
+.feedback {
+    width: 185px;
+    position: absolute;
+    top: 50px;
+    left: 15px;
+    transform: rotate(-35deg)
+}
