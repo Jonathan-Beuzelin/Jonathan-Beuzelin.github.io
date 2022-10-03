@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.body-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background: linear-gradient(180deg, #FFFFFF 0%, #F6F7FB 100%);
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+    height: 100vh;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+
+.header-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-container img {
+    max-height: 40px;
+}
+
+main {
+    width: 100%;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; 
+
+}
+
+
+.profile-picture {
+    width: 100%;
+    border-radius: 15px;
+}
+
+
+.no-more-dogs {
+    text-align: center;
+}
+
+.text-container {
+    color: white;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+.footer-container img {
+    padding: 10px;
+}
+
+.button-container {
+    background: #FFFFFF;
+    box-shadow: 0px 10px 20px #E9E9EA;
+    border-radius: 100%;
+}
+
+.heart:hover {
+    background: #DBFFF4;
+    box-shadow: 0px 10px 20px #CCF1E6;
+}
+
+.cross:hover {
+    background: #FFE7EF;
+    box-shadow: 0px 10px 20px #EDD9DF;
+}
+
+.feedback {
+    width: 185px;
+    position: absolute;
+    top: 50px;
+    left: 15px;
+    transform: rotate(-35deg)
+}
+
+
+
+
